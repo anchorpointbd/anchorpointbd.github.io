@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anchor Point | Technical Consultancy & Project Services</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  /* NAVIGATION */
+  nav {
+    background: #0a2540;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .logo {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .logo span { color: #00a8e8; }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  nav ul li a:hover { color: #00a8e8; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #0a2540 0%, #1a3a5c 60%, #00a8e8 100%);
+    color: white;
+    padding: 100px 40px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+  .hero h1 span { color: #00a8e8; }
+  .hero p {
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto 35px;
+    color: #cce4f7;
+  }
+  .btn {
+    display: inline-block;
+    background: #00a8e8;
+    color: white;
+    padding: 14px 35px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background 0.3s;
+  }
+  .btn:hover { background: #007bb5; }
+
+  /* SECTION COMMON */
+  section {
+    padding: 70px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #0a2540;
+    margin-bottom: 12px;
+  }
+  .section-sub {
+    text-align: center;
+    color: #666;
+    margin-bottom: 50px;
+    font-size: 15px;
+  }
+  .divider {
+    width: 50px;
+    height: 3px;
+    background: #00a8e8;
+    margin: 10px auto 40px;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+  .about-text h3 {
+    font-size: 22px;
+    color: #0a2540;
+    margin-bottom: 15px;
+  }
+  .about-text p {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 15px;
+  }
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .stat-box {
+    background: #f0f8ff;
+    border-left: 4px solid #00a8e8;
+    padding: 20px;
+    border-radius: 4px;
+  }
+  .stat-box h4 {
+    font-size: 26px;
+    color: #0a2540;
+    font-weight: 700;
+  }
+  .stat-box p {
+    color: #666;
+    font-size: 13px;
+    margin: 0;
+  }
+
+  /* SERVICES */
+  .services-bg {
+    background: #f7fafd;
+    padding: 70px 40px;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.07);
+    transition: transform 0.3s;
+    border-top: 3px solid #00a8e8;
+  }
+  .service-card:hover { transform: translateY(-5px); }
+  .service-icon {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  .service-card h4 {
+    font-size: 17px;
+    color: #0a2540;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .service-card p {
+    color: #666;
+    font-size: 14px;
+  }
+
+  /* WHY US */
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+  }
+  .why-card {
+    text-align: center;
+    padding: 25px 15px;
+  }
+  .why-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  .why-card h4 {
+    color: #0a2540;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .why-card p {
+    color: #777;
+    font-size: 13px;
+  }
+
+  /* CONTACT */
+  .contact-bg {
+    background: #0a2540;
+    padding: 70px 40px;
+    color: white;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .contact-info h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  .contact-info p {
+    color: #aac4df;
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  .contact-item .icon {
+    font-size: 22px;
+    margin-top: 2px;
+  }
+  .contact-item div h5 {
+    color: #00a8e8;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+  }
+  .contact-item div p {
+    color: #ccc;
+    font-size: 15px;
+    margin: 0;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    background: #1a3a5c;
+    border: 1px solid #2a4a6c;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    font-family: inherit;
+  }
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder { color: #7a9ab8; }
+  .contact-form textarea { height: 120px; resize: vertical; }
+  .contact-form .btn { width: 100%; text-align: center; border: none; cursor: pointer; }
+
+  /* FOOTER */
+  footer {
+    background: #061828;
+    color: #666;
+    text-align: center;
+    padding: 25px 40px;
+    font-size: 13px;
+  }
+  footer span { color: #00a8e8; }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 28px; }
+    .hero p { font-size: 15px; }
+    nav ul { display: none; }
+    .about-grid,
+    .contact-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr 1fr; }
+    section { padding: 50px 20px; }
+    .services-bg,
+    .contact-bg { padding: 50px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="logo">ANCHOR <span>POINT</span></div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Technical Consultancy &<br><span>Project Services</span></h1>
+  <p>Anchor Point delivers expert commissioning, project management, and technical consultancy services across marine, industrial, and commercial sectors in Bangladesh.</p>
+  <a href="#contact" class="btn">Get In Touch</a>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2 class="section-title">About Anchor Point</h2>
+  <div class="divider"></div>
+  <div class="about-grid">
+    <div class="about-text">
+      <h3>Your Trusted Local Partner in Bangladesh</h3>
+      <p>Anchor Point is a registered consultancy firm based in Dhaka, Bangladesh, established in December 2025. We specialize in technical commissioning, project coordination, and consultancy services for international manufacturers and suppliers operating in the Bangladesh market.</p>
+      <p>Our team brings deep expertise in marine and industrial systems, combined with strong local networks across Chattogram port, naval establishments, and commercial sectors. We bridge the gap between foreign principals and local execution — reliably, professionally, and accountably.</p>
+      <p>Anchor Point operates as an authorized local service representative for international equipment suppliers, handling end-to-end project delivery including site coordination, commissioning supervision, documentation, and after-sales warranty support.</p>
+    </div>
+    <div class="about-stats">
+      <div class="stat-box">
+        <h4>🇧🇩</h4>
+        <p>Registered in Bangladesh, December 2025</p>
+      </div>
+      <div class="stat-box">
+        <h4>⚓</h4>
+        <p>Marine & Naval Sector Experience</p>
+      </div>
+      <div class="stat-box">
+        <h4>🌏</h4>
+        <p>International Supplier Partnerships</p>
+      </div>
+      <div class="stat-box">
+        <h4>✅</h4>
+        <p>End-to-End Project Accountability</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<div class="services-bg" id="services">
+  <h2 class="section-title">Our Services</h2>
+  <div class="divider"></div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">⚙️</div>
+      <h4>Commissioning & Installation Supervision</h4>
+      <p>On-site supervision and coordination of equipment commissioning for marine, industrial, and commercial installations across Bangladesh.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🚢</div>
+      <h4>Marine Technical Services</h4>
+      <p>Specialized support for HVAC, refrigeration, and mechanical systems aboard naval vessels and commercial ships at Bangladeshi shipyards and ports.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📋</div>
+      <h4>Project Management Consultancy</h4>
+      <p>Full project lifecycle management — from planning and procurement coordination to execution oversight and final acceptance documentation.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔧</div>
+      <h4>After-Sales & Warranty Support</h4>
+      <p>Local warranty representation for international suppliers, including fault diagnosis, technical visits, and spare parts coordination.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🤝</div>
+      <h4>Indenting & Procurement Advisory</h4>
+      <p>Connecting international manufacturers with Bangladeshi buyers across marine, industrial, and government sectors through professional indenting services.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📄</div>
+      <h4>Technical Documentation & Reporting</h4>
+      <p>Preparation of commissioning reports, acceptance documents, compliance certificates, and technical manuals for regulatory and client submissions.</p>
+    </div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<section id="why">
+  <h2 class="section-title">Why Choose Anchor Point</h2>
+  <div class="divider"></div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">🏛️</div>
+      <h4>Government & Naval Experience</h4>
+      <p>Proven capability working with Bangladesh Navy and government establishments.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">⚡</div>
+      <h4>Fast Mobilization</h4>
+      <p>Local teams in Dhaka and Chattogram ready to deploy within days of project confirmation.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🌐</div>
+      <h4>International Standards</h4>
+      <p>We work to international quality and documentation standards expected by foreign principals.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🔒</div>
+      <h4>Accountable & Transparent</h4>
+      <p>Full documentation at every stage. You know exactly what is happening on your project.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact-bg" id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Get In Touch</h3>
+      <p>Ready to discuss your project? Reach out to us and we will respond within 24 hours.</p>
+      <div class="contact-item">
+        <div class="icon">📧</div>
+        <div>
+          <h5>Email</h5>
+          <p>info@anchorpoint.com.bd</p>
+          <p>sabbir@anchorpoint.com.bd</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="icon">📞</div>
+        <div>
+          <h5>Phone</h5>
+          <p>+880-XXXXXXXXXX</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="icon">📍</div>
+        <div>
+          <h5>Address</h5>
+          <p>Dhaka, Bangladesh</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="icon">🏦</div>
+        <div>
+          <h5>Banking</h5>
+          <p>Eastern Bank Limited (EBL)</p>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <form action="https://formspree.io/f/XXXXXXXX" method="POST">
+        <input type="text" name="name" placeholder="Your Full Name" required>
+        <input type="email" name="email" placeholder="Your Email Address" required>
+        <input type="text" name="subject" placeholder="Subject">
+        <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 <span>Anchor Point</span> | Technical Consultancy & Project Services | Dhaka, Bangladesh | Trade License: XXXXXXXXX</p>
+</footer>
+
+</body>
+</html>
