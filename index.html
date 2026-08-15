@@ -487,11 +487,24 @@
       display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
     }
     .nv-box {
-      background: var(--light); border-radius: 6px;
-      padding: 24px 18px; text-align: center;
-      border-bottom: 3px solid var(--blue);
-    }
-    .nv-box .nv-icon { font-size: 28px; margin-bottom: 10px; }
+  background: var(--light);
+  border-radius: 5px;
+  padding: 24px 18px;
+  text-align: center;
+  border: 1px solid rgba(10,37,64,0.06);
+  border-bottom: 3px solid var(--blue);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.nv-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+    .nv-box .nv-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+  line-height: 1;
+}
     .nv-box h5 {
       font-family: 'Barlow Condensed', sans-serif;
       font-size: .95rem; font-weight: 700;
@@ -499,8 +512,11 @@
     }
     .nv-box p { font-family: 'Inter', sans-serif; font-size: .78rem; color: #64748b; }
     .nv-box.featured {
-      background: var(--navy); grid-column: span 2;
-    }
+  background: var(--navy);
+  grid-column: span 2;
+  border: 1px solid rgba(0,168,232,0.25);
+  border-bottom: 3px solid var(--blue);
+}
     .nv-box.featured h5 { color: white; font-size: 1rem; }
     .nv-box.featured p { color: var(--muted); font-size: .82rem; }
 
