@@ -62,7 +62,7 @@
       max-width: 580px; line-height: 1.8;
       margin-top: 14px;
     }
-    .btn {
+    .btn {outline: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -78,6 +78,13 @@
   cursor: pointer;
   transition: all .2s ease;
   border: none;
+}
+    .btn:focus-visible,
+.nav-cta:focus-visible,
+.cf-submit:focus-visible,
+.nav-hamburger:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
 }
     .btn-primary {
   background: var(--blue);
@@ -154,7 +161,7 @@
     .nav-links {
   display: flex;
   align-items: center;
-  gap: 34px;
+  gap: 30px;
   list-style: none;
 }
     .nav-links a {
@@ -166,6 +173,20 @@
   color: #8aaabb;
   transition: color .2s ease;
   position: relative;
+}
+    .nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0;
+  height: 1px;
+  background: var(--blue);
+  transition: width .2s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
     .nav-links a:hover { color: var(--white); }
     .nav-links a::after {
@@ -205,17 +226,43 @@
       cursor: pointer; padding: 4px; background: none; border: none;
     }
     .nav-hamburger span {
-      display: block; width: 24px; height: 2px;
-      background: var(--white); border-radius: 2px; transition: all .3s;
-    }
+  display: block; width: 24px; height: 2px;
+  background: var(--white); border-radius: 2px; transition: all .3s;
+}
+
+.nav-hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
     .nav-mobile {
   display: none;
   flex-direction: column;
-  padding: 4px 24px 22px;
+  padding: 0 24px 22px;
   gap: 2px;
-  border-top: 1px solid rgba(255,255,255,0.04);
+  background: rgba(6,24,40,0.98);
 }
-    .nav-mobile.open { display: flex; }
+    .nav-mobile.open {
+  display: flex;
+  animation: mobileMenuIn .2s ease;
+}
+
+@keyframes mobileMenuIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
     .nav-mobile a {
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 16px; font-weight: 600; letter-spacing: 1.5px;
@@ -387,8 +434,9 @@
     }
     .process-step { text-align: center; position: relative; }
     .step-num {
-  width: 64px;
-  height: 64px;
+  width: 72px;
+  height: 72px;
+  box-shadow: 0 5px 18px rgba(0,168,232,0.12);
   background: var(--navy);
   border-radius: 50%;
   display: flex;
@@ -503,7 +551,7 @@
   border-radius: 6px;
   text-align: center;
   box-shadow: 0 2px 14px rgba(0,0,0,0.05);
-  border: 1px solid rgba(10,37,64,0.05);
+  border: 1px solid rgba(10,37,64,0.04);
   transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
   position: relative;
   overflow: hidden;
@@ -812,10 +860,10 @@
 
     /* ─── FOOTER ─────────────────────────────────────────────────── */
     footer {
-      background: var(--deep);
-      border-top: 1px solid var(--rule);
-      padding: 28px 0;
-    }
+  background: #04131f;
+  border-top: 1px solid var(--rule);
+  padding: 32px 0;
+}
     .footer-inner {
   display: flex;
   justify-content: space-between;
@@ -834,9 +882,26 @@
       font-size: 9px; letter-spacing: 3px;
       text-transform: uppercase; color: var(--muted); margin-top: 2px;
     }
-    .footer-copy { font-family: 'Inter', sans-serif; font-size: .78rem; color: #4a6a8a; }
-    .footer-copy span { color: var(--blue); }
-    .footer-email { font-family: 'Inter', sans-serif; font-size: .78rem; color: #4a6a8a; }
+    .footer-copy {
+  font-family: 'Inter', sans-serif;
+  font-size: .76rem;
+  color: #58748d;
+}
+
+.footer-copy span {
+  color: var(--blue);
+}
+
+.footer-email {
+  font-family: 'Inter', sans-serif;
+  font-size: .78rem;
+  color: #58748d;
+  transition: color .2s ease;
+}
+
+.footer-email:hover {
+  color: var(--blue);
+}
     .footer-email a {
   transition: color .2s ease;
 }
@@ -865,16 +930,50 @@
       .nav-links, .nav-cta { display: none; }
       .nav-hamburger { display: flex; }
       .problem-grid, .services-grid { grid-template-columns: 1fr; }
+      .service-card {
+  padding: 30px 26px;
+}
       .process-steps { grid-template-columns: 1fr 1fr; }
       .process-steps::before { display: none; }
       .sectors-grid { grid-template-columns: 1fr 1fr; }
       .network-inner, .contact-wrap { grid-template-columns: 1fr; gap: 40px; }
       .network-visual { grid-template-columns: 1fr 1fr; }
+      .contact-form-wrap {
+  padding: 30px;
+}
     }
     @media (max-width: 560px) {
+      .contact-form-wrap {
+  padding: 24px 20px;
+}
+      .hero-title {
+  font-size: clamp(2.6rem, 12vw, 4rem);
+  line-height: 1.02;
+}
+
+.hero-body {
+  font-size: .95rem;
+  line-height: 1.75;
+}
+
+.hero-actions .btn {outline: none;
+  width: 100%;
+  justify-content: center;
+}
+      .btn:focus-visible,
+.nav-cta:focus-visible,
+.cf-submit:focus-visible,
+.nav-hamburger:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
       .process-steps { grid-template-columns: 1fr; }
       .sectors-grid { grid-template-columns: 1fr 1fr; }
-      .hero-stats { gap: 26px; }
+      .hero-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 18px;
+}
       .footer-inner { flex-direction: column; text-align: center; }
       .container {
     padding-left: 20px;
@@ -898,11 +997,18 @@
     align-items: stretch;
   }
 
-  .hero-actions .btn {
+  .hero-actions .btn {outline: none;
     justify-content: center;
     width: 100%;
   }
-
+      .btn:focus-visible,
+.nav-cta:focus-visible,
+.cf-submit:focus-visible,
+.nav-hamburger:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+      
   .hero-stats {
     gap: 24px 30px;
     margin-top: 48px;
@@ -933,7 +1039,7 @@
         <div class="logo-text" style="display:none;">ANCHOR <span>POINT</span></div>
       </a>
       <ul class="nav-links">
-        <li><a href="#gap">About</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#sectors">Sectors</a></li>
         <li><a href="#network">Network</a></li>
@@ -945,7 +1051,7 @@
       </button>
     </div>
     <div class="nav-mobile" id="mobile-menu">
-      <a href="#gap">About</a>
+      <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#sectors">Sectors</a>
       <a href="#network">Network</a>
@@ -1008,7 +1114,7 @@
 
 
 <!-- ═══════════════ THE GAP WE CLOSE ═════════════════════════════ -->
-<section id="gap" id="about">
+<section id="about">
   <div class="container">
     <div class="eyebrow reveal">About Anchor Point</div>
     <h2 class="section-title reveal">What Most Projects Get Wrong</h2>
@@ -1291,12 +1397,12 @@
         <h3>Send Us a Message</h3>
         <form id="contact-form" action="https://formspree.io/f/meajewyn" method="POST">
           <div class="cf-group">
-            <label>Full Name</label>
-            <input type="text" name="name" placeholder="Your full name" required />
+            <label for="contact-name">Full Name</label>
+            <input id="contact-name" type="text" name="name" placeholder="Your full name" autocomplete="name" required />
           </div>
           <div class="cf-group">
-            <label>Email Address</label>
-            <input type="email" name="email" placeholder="your@email.com" required />
+            <label for="contact-email">Email Address</label>
+            <input id="contact-email" type="email" name="email" placeholder="your@email.com" autocomplete="email" required />
           </div>
           <div class="cf-group">
             <label>Project Type</label>
@@ -1313,8 +1419,8 @@
             </select>
           </div>
           <div class="cf-group">
-            <label>Tell Us About Your Project</label>
-            <textarea name="message" placeholder="Describe your requirement, challenge, or project — as much or as little as you know right now..." required></textarea>
+            <label for="contact-message">Tell Us About Your Project</label>
+            <textarea id="contact-message" name="message" placeholder="Describe your requirement, challenge, or project — as much or as little as you know right now..." required></textarea>
           </div>
           <button type="submit" class="cf-submit">Send Message →</button>
         </form>
@@ -1363,9 +1469,15 @@
   // Mobile menu
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
-  hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('active');
+});
   mobileMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    a.addEventListener('click', () => {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('active');
+});
   });
 
   // Scroll reveal with stagger
@@ -1389,7 +1501,9 @@
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
-      btn.textContent = 'Sending…'; btn.disabled = true;
+      btn.textContent = 'Sending…';
+btn.disabled = true;
+btn.setAttribute('aria-busy', 'true');
       try {
         const res = await fetch(form.action, {
           method: 'POST', body: new FormData(form),
@@ -1397,12 +1511,17 @@
         });
         if (res.ok) {
           form.style.display = 'none';
-          successMsg.style.display = 'block';
+successMsg.style.display = 'block';
+successMsg.setAttribute('role', 'status');
         } else {
-          btn.textContent = 'Error — please try again'; btn.disabled = false;
+          btn.textContent = 'Error — please try again';
+btn.disabled = false;
+btn.removeAttribute('aria-busy');
         }
       } catch {
-        btn.textContent = 'Error — please try again'; btn.disabled = false;
+        btn.textContent = 'Error — please try again';
+btn.disabled = false;
+btn.removeAttribute('aria-busy');
       }
     });
   }
