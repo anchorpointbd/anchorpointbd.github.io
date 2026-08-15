@@ -63,21 +63,36 @@
       margin-top: 14px;
     }
     .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 13px 28px;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 13px; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase; border-radius: 3px;
-      cursor: pointer; transition: all .2s ease;
-      border: none;
-    }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 12px 28px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all .2s ease;
+  border: none;
+}
     .btn-primary { background: var(--blue); color: var(--white); }
     .btn-primary:hover { background: var(--blue2); transform: translateY(-2px); }
     .btn-ghost {
-      background: transparent; color: var(--white);
-      border: 1.5px solid rgba(255,255,255,0.3);
-    }
-    .btn-ghost:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,0.28);
+}
+
+.btn-ghost:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: var(--blue);
+  color: var(--white);
+  transform: translateY(-2px);
+}
 
     /* ─── SCROLL REVEAL ──────────────────────────────────────────── */
     .reveal {
