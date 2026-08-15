@@ -570,9 +570,12 @@
     .cd-value a { color: var(--blue); }
     /* Form */
     .contact-form-wrap {
-      background: white; padding: 40px;
-      border-radius: 8px; box-shadow: 0 4px 32px rgba(0,0,0,0.08);
-    }
+  background: white;
+  padding: 40px;
+  border-radius: 6px;
+  border: 1px solid rgba(10,37,64,0.06);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
     .contact-form-wrap h3 {
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 1.3rem; font-weight: 700;
@@ -586,26 +589,47 @@
       margin-bottom: 6px;
     }
     .cf-group input,
-    .cf-group select,
-    .cf-group textarea {
-      width: 100%; padding: 12px 15px;
-      border: 1px solid #dde4ed; border-radius: 4px;
-      font-family: 'Inter', sans-serif; font-size: .9rem;
-      color: #333; background: #fafcff;
-      transition: border-color .2s; outline: none;
-    }
+.cf-group select,
+.cf-group textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #d8e1ea;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: .9rem;
+  color: #333;
+  background: #fafcff;
+  transition: border-color .2s, box-shadow .2s, background .2s;
+  outline: none;
+}
     .cf-group input:focus,
-    .cf-group select:focus,
-    .cf-group textarea:focus { border-color: var(--blue); background: white; }
+.cf-group select:focus,
+.cf-group textarea:focus {
+  border-color: var(--blue);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(0,168,232,0.08);
+}
     .cf-group textarea { height: 110px; resize: vertical; }
     .cf-submit {
-      background: var(--navy); color: white;
-      padding: 14px 30px; border: none; border-radius: 4px;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 14px; font-weight: 700; letter-spacing: 1px;
-      cursor: pointer; width: 100%; transition: background .25s;
-    }
-    .cf-submit:hover { background: var(--blue); }
+  background: var(--navy);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background .25s, transform .2s, box-shadow .2s;
+}
+
+.cf-submit:hover {
+  background: var(--blue);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 16px rgba(0,168,232,0.22);
+}
     #form-success {
       display: none;
       background: rgba(0,168,232,0.08);
