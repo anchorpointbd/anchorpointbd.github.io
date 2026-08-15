@@ -500,18 +500,33 @@
     .sector-card {
   background: white;
   padding: 30px 20px;
-  border-radius: 5px;
+  border-radius: 6px;
   text-align: center;
   box-shadow: 0 2px 14px rgba(0,0,0,0.05);
-  border: 1px solid rgba(10,37,64,0.06);
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  border: 1px solid rgba(10,37,64,0.05);
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
   position: relative;
   overflow: hidden;
 }
     .sector-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 32px rgba(0,0,0,0.10);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.10);
   border-color: rgba(0,168,232,0.25);
+}
+    .sector-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--blue);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .3s ease;
+}
+.sector-card:hover::before {
+  transform: scaleX(1);
 }
     .sector-card::after {
   content: '';
@@ -534,14 +549,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 16px;
-  font-size: 32px;
+  font-size: 34px;
+  margin-bottom: 16px;
+  line-height: 1;
+  transition: transform .3s ease;
+}
+    .sector-card:hover .sector-icon {
+  transform: translateY(-2px) scale(1.05);
 }
     .sector-name {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1rem; font-weight: 700;
-      color: var(--navy); margin-bottom: 7px;
-    }
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
     .sector-sub { font-family: 'Inter', sans-serif; font-size: .8rem; color: #64748b; line-height: 1.55; }
 
     /* ─── NETWORK ────────────────────────────────────────────────── */
