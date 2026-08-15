@@ -671,9 +671,12 @@
       padding: 28px 0;
     }
     .footer-inner {
-      display: flex; justify-content: space-between;
-      align-items: center; flex-wrap: wrap; gap: 14px;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px 28px;
+}
     .footer-logo .logo-text {
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 18px; font-weight: 800; letter-spacing: 3px;
@@ -688,6 +691,13 @@
     .footer-copy { font-family: 'Inter', sans-serif; font-size: .78rem; color: #4a6a8a; }
     .footer-copy span { color: var(--blue); }
     .footer-email { font-family: 'Inter', sans-serif; font-size: .78rem; color: #4a6a8a; }
+    .footer-email a {
+  transition: color .2s ease;
+}
+
+.footer-email a:hover {
+  color: var(--white);
+}
 
     /* ─── WHATSAPP FLOAT ─────────────────────────────────────────── */
     #wa-float {
@@ -1177,8 +1187,12 @@
         <div class="logo-text">ANCHOR <span>POINT</span></div>
         <div class="tagline">anchored in excellence</div>
       </div>
-      <p class="footer-copy">© 2025–2026 <span>Anchor Point</span> | Trade License: DNCC/031944/2025 | Dhaka, Bangladesh</p>
-      <p class="footer-email">info@<span style="color:var(--blue)">anchorpoint</span>.com.bd</p>
+      <p class="footer-copy">© 2026 <span>Anchor Point</span> | Trade License: DNCC/031944/2025 | Dhaka, Bangladesh</p>
+      <p class="footer-email">
+  <a href="mailto:info@anchorpoint.com.bd">
+    info@<span style="color:var(--blue)">anchorpoint</span>.com.bd
+  </a>
+</p>
     </div>
   </div>
 </footer>
