@@ -123,9 +123,11 @@
     }
     #navbar.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.45); }
     .nav-inner {
-      display: flex; align-items: center; justify-content: space-between;
-      height: 68px;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
     .nav-logo {
   display: flex;
   flex-direction: column;
@@ -150,25 +152,54 @@
       margin-top: 2px;
     }
     .nav-links {
-      display: flex; align-items: center; gap: 32px;
-      list-style: none;
-    }
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  list-style: none;
+}
     .nav-links a {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 13px; font-weight: 600; letter-spacing: 1.5px;
-      text-transform: uppercase; color: #8aaabb;
-      transition: color .2s;
-    }
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #8aaabb;
+  transition: color .2s ease;
+  position: relative;
+}
     .nav-links a:hover { color: var(--white); }
+    .nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0;
+  height: 1px;
+  background: var(--blue);
+  transition: width .2s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
     .nav-cta {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 12px; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 9px 20px; border-radius: 3px;
-      background: var(--blue); color: var(--white);
-      transition: background .2s;
-    }
-    .nav-cta:hover { background: var(--blue2); }
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 21px;
+  border-radius: 3px;
+  background: var(--blue);
+  color: var(--white);
+  box-shadow: 0 3px 12px rgba(0,168,232,0.15);
+  transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+    .nav-cta:hover {
+  background: var(--blue2);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 16px rgba(0,168,232,0.24);
+}
     .nav-hamburger {
       display: none; flex-direction: column; gap: 5px;
       cursor: pointer; padding: 4px; background: none; border: none;
@@ -178,9 +209,12 @@
       background: var(--white); border-radius: 2px; transition: all .3s;
     }
     .nav-mobile {
-      display: none; flex-direction: column;
-      padding: 0 24px 20px; gap: 2px;
-    }
+  display: none;
+  flex-direction: column;
+  padding: 4px 24px 22px;
+  gap: 2px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
     .nav-mobile.open { display: flex; }
     .nav-mobile a {
       font-family: 'Barlow Condensed', sans-serif;
