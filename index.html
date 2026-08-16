@@ -161,14 +161,24 @@
   opacity: 0;
   transform: translate3d(0, 28px, 0);
   transition:
-    opacity .55s cubic-bezier(.22,1,.36,1),
-    transform .55s cubic-bezier(.22,1,.36,1);
+    opacity .65s cubic-bezier(.22,1,.36,1),
+    transform .65s cubic-bezier(.22,1,.36,1);
   will-change: opacity, transform;
 }
 
 .reveal.visible {
   opacity: 1;
   transform: translate3d(0,0,0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
 }
 
 /* Directional entrance */
@@ -417,20 +427,6 @@
   width: 100%;
 }
     .nav-links a:hover { color: var(--white); }
-    .nav-links a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -7px;
-  width: 0;
-  height: 1px;
-  background: var(--blue);
-  transition: width .2s ease;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
     .nav-cta {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 12px;
@@ -2064,6 +2060,219 @@ textarea:focus-visible {
 #contact-form[aria-busy="true"] textarea {
   opacity: .72;
 }
+    /* ─── PREMIUM CARD INTERACTION ───────────────────────────── */
+
+.problem-card,
+.service-card,
+.sector-card,
+.nv-box,
+.process-step {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.problem-card,
+.service-card,
+.sector-card,
+.nv-box {
+  will-change: transform;
+}
+
+/* Desktop pointer interaction */
+@media (hover: hover) and (pointer: fine) {
+
+  .problem-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 16px 38px rgba(0,0,0,0.10);
+  }
+
+  .service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 34px rgba(0,168,232,0.10);
+  }
+
+  .sector-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 16px 38px rgba(0,0,0,0.11);
+  }
+
+  .nv-box:hover {
+    transform: translateY(-5px);
+  }
+
+  .process-step:hover .step-num {
+    transform: scale(1.08);
+    box-shadow:
+      0 0 0 7px rgba(0,168,232,0.08),
+      0 8px 24px rgba(0,168,232,0.20);
+  }
+}
+
+.step-num {
+  transition:
+    transform .35s cubic-bezier(.22,1,.36,1),
+    box-shadow .35s ease;
+}
+    /* ─── HERO PREMIUM MOTION ────────────────────────────────── */
+
+.hero-content {
+  animation: heroContentIn .9s cubic-bezier(.22,1,.36,1) both;
+}
+
+.hero-badge {
+  animation: heroBadgeIn .7s ease both;
+}
+
+.hero-anchor {
+  animation: heroAnchorFloat 10s ease-in-out infinite;
+}
+
+@keyframes heroContentIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes heroBadgeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(-12px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes heroAnchorFloat {
+  0%, 100% {
+    transform: translate3d(0,-50%,0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(-10px,-50%,0) rotate(2deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-content,
+  .hero-badge,
+  .hero-anchor {
+    animation: none;
+  }
+}
+    /* ─── PREMIUM MOBILE EXPERIENCE ──────────────────────────── */
+
+@media (max-width: 900px) {
+
+  section {
+    padding: 76px 0;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
+
+  .section-body {
+    font-size: .93rem;
+  }
+
+  .problem-card,
+  .service-card,
+  .sector-card,
+  .nv-box {
+    transition:
+      transform .55s cubic-bezier(.22,1,.36,1),
+      box-shadow .55s ease,
+      opacity .55s ease;
+  }
+
+  .problem-card:active,
+  .service-card:active,
+  .sector-card:active,
+  .nv-box:active {
+    transform: scale(.985);
+  }
+
+  .nav-mobile a {
+    transition:
+      color .25s ease,
+      padding-left .25s ease,
+      background .25s ease;
+  }
+
+  .nav-mobile a:hover,
+  .nav-mobile a:focus-visible {
+    color: var(--white);
+    padding-left: 8px;
+    background: rgba(0,168,232,0.06);
+  }
+}
+
+@media (max-width: 560px) {
+
+  section {
+    padding: 64px 0;
+  }
+
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .problem-card,
+  .service-card,
+  .sector-card {
+    border-radius: 8px;
+  }
+
+  .problem-card {
+    padding: 27px 24px;
+  }
+
+  .service-card {
+    padding: 28px 24px;
+  }
+
+  .sector-card {
+    padding: 27px 18px;
+  }
+
+  .hero-badge {
+    margin-bottom: 22px;
+  }
+
+  .hero-actions {
+    gap: 10px;
+  }
+
+  .hero-stats {
+    margin-top: 42px;
+  }
+}#wa-float {
+  animation: waEntrance .8s cubic-bezier(.22,1,.36,1) 1.2s both;
+}
+
+@keyframes waEntrance {
+  from {
+    opacity: 0;
+    transform: translate3d(0,20px,0) scale(.85);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0,0,0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #wa-float {
+    animation: none;
+  }
+}
   </style>
   <script type="application/ld+json">
 {
@@ -2098,7 +2307,12 @@ textarea:focus-visible {
   <div class="container">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">
-        <img src="Logo_test.svg" alt="Anchor Point logo" />
+        <img
+  src="Logo_test.svg"
+  alt="Anchor Point logo"
+  width="160"
+  height="46"
+/>
         <div class="tagline">anchored in excellence</div>
       </a>
       <ul class="nav-links">
@@ -2464,7 +2678,12 @@ textarea:focus-visible {
       <!-- Right form -->
       <div class="contact-form-wrap reveal">
         <h3>Send Us a Message</h3>
-        <form id="contact-form" action="https://formspree.io/f/meajewyn" method="POST">
+        <form
+  id="contact-form"
+  action="https://formspree.io/f/meajewyn"
+  method="POST"
+  autocomplete="on"
+>
           <div class="cf-group">
             <label for="contact-name">Full Name</label>
             <input id="contact-name" type="text" name="name" placeholder="Your full name" autocomplete="name" required />
@@ -2474,8 +2693,8 @@ textarea:focus-visible {
             <input id="contact-email" type="email" name="email" placeholder="your@email.com" autocomplete="email" required />
           </div>
           <div class="cf-group">
-            <label for="project-type">Project Type</label>
-            <select id="project-type" name="project_type">
+            <label for="contact-project-type">Project Type</label>
+<select id="contact-project-type" name="project_type">
               <option value="">Select a category</option>
               <option>Marine / Naval</option>
               <option>Industrial / Manufacturing</option>
@@ -2496,7 +2715,11 @@ textarea:focus-visible {
   Your information is used only to respond to your enquiry.
 </p>
         </form>
-        <div id="form-success" role="status" aria-live="polite">
+        <div
+  id="form-success"
+  role="status"
+  aria-live="polite"
+>
   ✓ Message sent — we will be in touch shortly.
 </div>
       </div>
@@ -2530,7 +2753,7 @@ textarea:focus-visible {
   ↑
 </button>
 <!-- ═══════════════ WHATSAPP FLOAT ════════════════════════════════ -->
-<a id="wa-float" href="https://wa.me/8801796115231" target="_blank" rel="noopener" aria-label="Contact Anchor Point on WhatsApp">
+<a id="wa-float" href="https://wa.me/8801796115231" target="_blank" rel="noopener noreferrer" aria-label="Contact Anchor Point on WhatsApp" title="Chat with Anchor Point on WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
   </svg>
@@ -2552,120 +2775,61 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 
-/* ─── MOBILE MENU ───────────────────────────────────────────── */
+  // Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
 
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobile-menu');
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
 
-if (hamburger && mobileMenu) {
-
-  hamburger.addEventListener('click', () => {
-
-    const isOpen = mobileMenu.classList.toggle('open');
-
-    hamburger.setAttribute(
-      'aria-expanded',
-      isOpen ? 'true' : 'false'
-    );
-
-    hamburger.setAttribute(
-      'aria-label',
-      isOpen ? 'Close menu' : 'Open menu'
-    );
-
-  });
-
-  mobileMenu.querySelectorAll('a').forEach(link => {
-
-    link.addEventListener('click', () => {
-
-      mobileMenu.classList.remove('open');
-
-      hamburger.setAttribute(
-        'aria-expanded',
-        'false'
-      );
-
+      hamburger.classList.toggle('active', isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
       hamburger.setAttribute(
         'aria-label',
-        'Open menu'
+        isOpen ? 'Close menu' : 'Open menu'
       );
-
     });
 
-  });
-
-}
-
-
-/* ─── PREMIUM SCROLL REVEAL ─────────────────────────────────── */
-
-const revealElements =
-  document.querySelectorAll('.reveal');
-
-const prefersReducedMotion =
-  window.matchMedia(
-    '(prefers-reduced-motion: reduce)'
-  ).matches;
-
-if (!prefersReducedMotion && revealElements.length) {
-
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-
-      entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-
-          const element = entry.target;
-
-          const siblings = [
-            ...element.parentElement.querySelectorAll(
-              ':scope > .reveal'
-            )
-          ];
-
-          const index = siblings.indexOf(element);
-
-          const delay =
-            Math.min(Math.max(index, 0) * 70, 280);
-
-          clearTimeout(element._revealTimer);
-
-          element._revealTimer = setTimeout(() => {
-
-            element.classList.add('visible');
-
-          }, delay);
-
-        } else {
-
-          /*
-           * Remove the class when leaving the viewport.
-           * This allows the animation to replay when
-           * the user scrolls back in the opposite direction.
-           */
-
-          entry.target.classList.remove('visible');
-
-          clearTimeout(entry.target._revealTimer);
-
-        }
-
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
       });
+    });
+  }
 
-    },
-    {
-      threshold: 0.12,
-      rootMargin: '0px 0px -8% 0px'
-    }
-  );
 
-  revealElements.forEach(element => {
-    revealObserver.observe(element);
+  // Premium scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      const element = entry.target;
+      const parent = element.parentElement;
+
+      const siblings = parent
+        ? [...parent.querySelectorAll('.reveal')]
+        : [];
+
+      const index = siblings.indexOf(element);
+      const delay = Math.min(Math.max(index, 0) * 70, 280);
+
+      element.style.transitionDelay = `${delay}ms`;
+      element.classList.add('visible');
+
+      revealObserver.unobserve(element);
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -70px 0px'
   });
 
-} else {
+  reveals.forEach(element => revealObserver.observe(element));
 
   revealElements.forEach(element => {
     element.classList.add('visible');
