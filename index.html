@@ -100,6 +100,11 @@
 .nav-hamburger:focus-visible {
   outline: 2px solid var(--blue);
   outline-offset: 3px;
+.cd-value a:focus-visible,
+.footer-email a:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
 }
     .btn-primary {
   background: var(--blue);
@@ -114,6 +119,11 @@
 #wa-float:focus-visible {
   outline: 2px solid var(--blue);
   outline-offset: 4px;
+  .cd-value a:focus-visible,
+.footer-email a:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
 }
     .btn-primary:hover {
   background: var(--blue2);
@@ -140,8 +150,24 @@
     }
     .reveal.visible { opacity: 1; transform: none; }
     @media (prefers-reduced-motion: reduce) {
-      .reveal { opacity: 1; transform: none; transition: none; }
-    }
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
 
     /* ─── NAVBAR ─────────────────────────────────────────────────── */
     #navbar {
@@ -922,6 +948,14 @@
   cursor: wait;
   transform: none;
 }
+    .form-note {
+  margin-top: 12px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: .72rem;
+  color: #8a9aad;
+  line-height: 1.5;
+}
     #form-success {
   display: none;
   background: rgba(0,168,232,0.08);
@@ -1080,6 +1114,11 @@
 .nav-hamburger:focus-visible {
   outline: 2px solid var(--blue);
   outline-offset: 3px;
+  .cd-value a:focus-visible,
+.footer-email a:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
 }
       .process-steps { grid-template-columns: 1fr; }
       .sectors-grid { grid-template-columns: 1fr 1fr; }
@@ -1121,6 +1160,11 @@
 .nav-hamburger:focus-visible {
   outline: 2px solid var(--blue);
   outline-offset: 3px;
+.cd-value a:focus-visible,
+.footer-email a:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
 }
       
   .hero-stats {
@@ -1543,6 +1587,9 @@
             <textarea id="contact-message" name="message" placeholder="Describe your requirement, challenge, or project — as much or as little as you know right now..." required></textarea>
           </div>
           <button type="submit" class="cf-submit">Send Message →</button>
+<p class="form-note">
+  Your information is used only to respond to your enquiry.
+</p>
         </form>
         <div id="form-success" role="status" aria-live="polite">
   ✓ Message sent — we will be in touch shortly.
