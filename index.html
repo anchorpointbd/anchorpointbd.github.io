@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#061828" />
   <title>Anchor Point | Technical Consultancy & Engineering Solutions Bangladesh</title>
   <meta name="description" content="Anchor Point is a technical consultancy in Dhaka, Bangladesh providing engineering support, project feasibility, marine and naval services, international vendor bridging, site inspection and technical advisory solutions." />
+  <meta name="robots" content="index, follow" />
   <meta name="keywords" content="technical consultancy Bangladesh, engineering consultancy Dhaka, marine consultancy Bangladesh, naval engineering, project feasibility, technical advisory, vendor sourcing Bangladesh, site inspection, engineering solutions" />
   <meta name="author" content="Anchor Point" />
   <link rel="canonical" href="https://anchorpoint.com.bd/" />
@@ -105,7 +107,15 @@
   box-shadow: 0 5px 18px rgba(0,168,232,0.18);
 }
 
-.btn-primary:hover {
+.btn:focus-visible,
+.nav-links a:focus-visible,
+.nav-cta:focus-visible,
+.nav-mobile a:focus-visible,
+#wa-float:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 4px;
+}
+    .btn-primary:hover {
   background: var(--blue2);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(0,168,232,0.28);
@@ -363,6 +373,15 @@
   margin-bottom: 40px;
 }
     .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-trust {
+  margin-top: 16px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #6f91ad;
+}
     .hero-stats {
   display: flex;
   gap: 50px;
@@ -373,7 +392,7 @@
 }
     .hero-stat-val {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 1.9rem;
+  font-size: 1.75rem;
   font-weight: 800;
   color: var(--blue);
   line-height: 1;
@@ -384,6 +403,14 @@
       font-size: 11px; color: var(--muted);
       text-transform: uppercase; letter-spacing: 1px; margin-top: 5px;
     }
+    .hero-stat-label::after {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 1px;
+  background: rgba(0,168,232,0.45);
+  margin-top: 7px;
+}
 
     /* ─── SECTIONS BASE ──────────────────────────────────────────── */
     section { padding: 90px 0; }
@@ -840,7 +867,7 @@
 .cf-group textarea:focus {
   border-color: var(--blue);
   background: white;
-  box-shadow: 0 0 0 3px rgba(0,168,232,0.08);
+  box-shadow: 0 0 0 3px rgba(0,168,232,0.10);
 }
     .cf-group textarea { height: 110px; resize: vertical; }
     .cf-submit {
@@ -859,10 +886,29 @@
   transition: background .25s ease, transform .2s ease, box-shadow .2s ease;
 }
 
+.cf-submit {
+  background: var(--navy);
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  width: 100%;
+  transition: background .25s, transform .2s, box-shadow .2s;
+}
+
 .cf-submit:hover {
   background: var(--blue);
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(0,168,232,0.20);
+  box-shadow: 0 5px 18px rgba(0,168,232,0.20);
+}
+
+.cf-submit:active {
+  transform: translateY(0);
 }
     #form-success {
       display: none;
@@ -942,6 +988,23 @@
 
     /* ─── RESPONSIVE ─────────────────────────────────────────────── */
     @media (max-width: 900px) {
+        section {
+    padding: 72px 0;
+  }
+        .container {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+      .hero-title {
+    font-size: clamp(2.5rem, 11vw, 4rem);
+  }
+        .hero-body {
+    font-size: .96rem;
+    line-height: 1.75;
+  }
+        .btn {
+    min-height: 46px;
+  }
       .nav-links, .nav-cta { display: none; }
       .nav-hamburger { display: flex; }
       .problem-grid, .services-grid { grid-template-columns: 1fr; }
@@ -958,6 +1021,10 @@
 }
     }
     @media (max-width: 560px) {
+        .hero-trust {
+    font-size: 9px;
+    letter-spacing: 1.2px;
+  }
       .nav-logo img {
   height: 38px;
 }
@@ -1095,7 +1162,7 @@
     <div class="hero-content">
       <div class="hero-badge">
         <div class="dot"></div>
-        <span>anchored in excellence</span>
+        <span>⚓ Technical Consultancy · Bangladesh</span>
       </div>
       <h1 class="hero-title">
   Technical Clarity.<br>
@@ -1105,9 +1172,13 @@
   Anchor Point helps organizations identify technical gaps, evaluate practical solutions, and connect with the right expertise to move projects forward — from initial assessment to implementation.
 </p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Start a Conversation</a>
-        <a href="#services" class="btn btn-ghost">Explore Our Services</a>
-      </div>
+  <a href="#contact" class="btn btn-primary">Start a Conversation</a>
+  <a href="#services" class="btn btn-ghost">Explore Our Services</a>
+</div>
+
+<p class="hero-trust">
+  Independent expertise · Practical solutions · Nationwide network
+</p>
      <div class="hero-stats">
   <div>
     <div class="hero-stat-val">01</div>
