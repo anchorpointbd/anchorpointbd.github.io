@@ -824,7 +824,14 @@
       text-transform: uppercase; color: var(--navy); margin-bottom: 3px;
     }
     .cd-value { font-family: 'Inter', sans-serif; font-size: .9rem; color: #64748b; line-height: 1.55; }
-    .cd-value a { color: var(--blue); }
+    .cd-value a {
+  color: var(--blue);
+  transition: color .2s ease;
+}
+
+.cd-value a:hover {
+  color: var(--blue2);
+}
     /* Form */
     .contact-form-wrap {
   background: white;
@@ -910,14 +917,23 @@
 .cf-submit:active {
   transform: translateY(0);
 }
+    .cf-submit:disabled {
+  opacity: .65;
+  cursor: wait;
+  transform: none;
+}
     #form-success {
-      display: none;
-      background: rgba(0,168,232,0.08);
-      border: 1px solid rgba(0,168,232,0.3);
-      border-radius: 4px; padding: 16px 20px;
-      font-family: 'Inter', sans-serif;
-      font-size: .9rem; color: var(--blue); margin-top: 12px;
-    }
+  display: none;
+  background: rgba(0,168,232,0.08);
+  border: 1px solid rgba(0,168,232,0.3);
+  border-radius: 4px;
+  padding: 18px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: .9rem;
+  color: var(--blue2);
+  margin-top: 12px;
+  line-height: 1.6;
+}
 
     /* ─── FOOTER ─────────────────────────────────────────────────── */
     footer {
@@ -957,24 +973,26 @@
   font-family: 'Inter', sans-serif;
   font-size: .78rem;
   color: #58748d;
+}
+
+.footer-email a {
+  color: inherit;
   transition: color .2s ease;
+}
+
+.footer-email a:hover {
+  color: var(--blue);
 }
 
 .footer-email:hover {
   color: var(--blue);
 }
-    .footer-email a {
-  transition: color .2s ease;
-}
 
-.footer-email a:hover {
-  color: var(--white);
-}
 
     /* ─── WHATSAPP FLOAT ─────────────────────────────────────────── */
     #wa-float {
       position: fixed; bottom: 28px; right: 28px; z-index: 9999;
-      width: 54px; height: 54px; border-radius: 50%;
+      width: 56px; height: 56px; border-radius: 50%;
       background: #25d366;
       display: flex; align-items: center; justify-content: center;
       box-shadow: 0 4px 20px rgba(37,211,102,0.4);
@@ -1021,6 +1039,17 @@
 }
     }
     @media (max-width: 560px) {
+        #wa-float {
+    width: 50px;
+    height: 50px;
+    right: 18px;
+    bottom: 18px;
+  }
+
+  #wa-float svg {
+    width: 25px;
+    height: 25px;
+  }
         .hero-trust {
     font-size: 9px;
     letter-spacing: 1.2px;
@@ -1459,7 +1488,9 @@
           <div class="cd-icon">📞</div>
           <div>
             <div class="cd-label">Phone & WhatsApp</div>
-            <div class="cd-value">+88-01796115231</div>
+            <div class="cd-value">
+  <a href="tel:+8801796115231">+88-01796115231</a>
+</div>
           </div>
         </div>
         <div class="contact-detail reveal">
@@ -1513,7 +1544,9 @@
           </div>
           <button type="submit" class="cf-submit">Send Message →</button>
         </form>
-        <div id="form-success">✓ Message sent — we will be in touch shortly.</div>
+        <div id="form-success" role="status" aria-live="polite">
+  ✓ Message sent — we will be in touch shortly.
+</div>
       </div>
     </div>
   </div>
@@ -1531,7 +1564,7 @@
       <p class="footer-copy">© 2026 <span>Anchor Point</span> | Trade License: DNCC/031944/2025 | Dhaka, Bangladesh</p>
       <p class="footer-email">
   <a href="mailto:info@anchorpoint.com.bd">
-    info@<span style="color:var(--blue)">anchorpoint</span>.com.bd
+    info@<span>anchorpoint</span>.com.bd
   </a>
 </p>
     </div>
