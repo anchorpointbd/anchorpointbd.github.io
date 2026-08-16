@@ -312,19 +312,6 @@
   color: var(--white);
   box-shadow: 0 5px 18px rgba(0,168,232,0.18);
 }
-
-.btn:focus-visible,
-.nav-links a:focus-visible,
-.nav-cta:focus-visible,
-.nav-mobile a:focus-visible,
-#wa-float:focus-visible {
-  outline: 2px solid var(--blue);
-  outline-offset: 4px;
-  .cd-value a:focus-visible,
-.footer-email a:focus-visible {
-  outline: 2px solid var(--blue);
-  outline-offset: 3px;
-}
 }
     .btn-primary:hover {
   background: var(--blue2);
@@ -1304,21 +1291,6 @@
   transition: background .25s ease, transform .2s ease, box-shadow .2s ease;
 }
 
-.cf-submit {
-  background: var(--navy);
-  color: white;
-  padding: 14px 30px;
-  border: none;
-  border-radius: 4px;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  cursor: pointer;
-  width: 100%;
-  transition: background .25s, transform .2s, box-shadow .2s;
-}
-
 .cf-submit:hover {
   background: var(--blue);
   transform: translateY(-1px);
@@ -1539,17 +1511,6 @@
     justify-content: center;
     width: 100%;
   }
-      .btn:focus-visible,
-.nav-cta:focus-visible,
-.cf-submit:focus-visible,
-.nav-hamburger:focus-visible {
-  outline: 2px solid var(--blue);
-  outline-offset: 3px;
-.cd-value a:focus-visible,
-.footer-email a:focus-visible {
-  outline: 2px solid var(--blue);
-  outline-offset: 3px;
-}
 }
       
   .hero-stats {
@@ -2462,6 +2423,146 @@ textarea:focus-visible {
   #wa-float {
     animation: none;
   }
+}
+     /* ═══════════════════════════════════════════════════════════════
+   CHAPTER 17 — FINAL PERFORMANCE
+   ═══════════════════════════════════════════════════════════════ */
+
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent decorative artwork from consuming pointer events */
+.hero-anchor,
+.hero-grid-bg,
+#vision::before {
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Premium text selection */
+::selection {
+  background: rgba(0,168,232,.22);
+  color: var(--navy);
+}
+
+/* Keep scrolling comfortable */
+section {
+  scroll-margin-top: 82px;
+}
+
+/* Reduced-motion safety */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+}
+     /* ═══════════════════════════════════════════════════════════════
+   FINAL FOCUS SYSTEM
+   ═══════════════════════════════════════════════════════════════ */
+
+.btn:focus-visible,
+.nav-links a:focus-visible,
+.nav-cta:focus-visible,
+.nav-mobile a:focus-visible,
+.nav-hamburger:focus-visible,
+#wa-float:focus-visible,
+#back-to-top:focus-visible,
+.cd-value a:focus-visible,
+.footer-email a:focus-visible,
+.cf-submit:focus-visible,
+.cf-group input:focus-visible,
+.cf-group select:focus-visible,
+.cf-group textarea:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+     /* ─── FINAL CONTACT BUTTON ─────────────────────────────────── */
+
+.cf-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 48px;
+
+  background: var(--navy);
+  color: var(--white);
+
+  padding: 14px 30px;
+
+  border: none;
+  border-radius: 4px;
+
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 14px rgba(10,37,64,.14);
+
+  transition:
+    background .25s ease,
+    transform .2s ease,
+    box-shadow .25s ease,
+    opacity .25s ease;
+}
+
+.cf-submit:hover {
+  background: var(--blue);
+  transform: translateY(-1px);
+  box-shadow:
+    0 7px 20px rgba(0,168,232,.22);
+}
+
+.cf-submit:active {
+  transform: translateY(0);
+}
+
+.cf-submit:disabled {
+  opacity: .65;
+  cursor: wait;
+  transform: none;
+  box-shadow: none;
 }
   </style>
   <script type="application/ld+json">
