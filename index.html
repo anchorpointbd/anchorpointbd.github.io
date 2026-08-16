@@ -1493,8 +1493,6 @@
   hamburger.setAttribute('aria-expanded', isOpen);
   hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
 });
-  hamburger.classList.toggle('active');
-});
   mobileMenu.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
   mobileMenu.classList.remove('open');
