@@ -8,11 +8,16 @@
   <meta name="keywords" content="technical consultancy Bangladesh, engineering consultancy Dhaka, marine consultancy Bangladesh, naval engineering, project feasibility, technical advisory, vendor sourcing Bangladesh, site inspection, engineering solutions" />
   <meta name="author" content="Anchor Point" />
   <link rel="canonical" href="https://anchorpoint.com.bd/" />
+  <link rel="icon" href="Logo_test.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#061828" />
   <meta property="og:title" content="Anchor Point | Technical Consultancy & Engineering Solutions" />
 <meta property="og:description" content="Technical consultancy, engineering support, marine and naval services, project advisory and international vendor bridging across Bangladesh." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://anchorpoint.com.bd/" />
 <meta property="og:site_name" content="Anchor Point" />
+  <meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Anchor Point | Technical Consultancy & Engineering Solutions" />
+<meta name="twitter:description" content="Technical consultancy and engineering solutions across Bangladesh." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -150,7 +155,7 @@
   min-width: 150px;
 }
     .nav-logo img {
-  height: 40px;
+  height: 46px;
   width: auto;
   object-fit: contain;
 }
@@ -260,7 +265,9 @@
   display: flex;
   animation: mobileMenuIn .2s ease;
 }
-
+.nav-mobile {
+  background: rgba(6,24,40,0.98);
+}
 @keyframes mobileMenuIn {
   from {
     opacity: 0;
@@ -951,6 +958,9 @@
 }
     }
     @media (max-width: 560px) {
+      .nav-logo img {
+  height: 38px;
+}
       .contact-form-wrap {
   padding: 24px 20px;
 }
@@ -1044,7 +1054,7 @@
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">
         <img src="Logo_test.svg" alt="Anchor Point logo" />
-        <div class="logo-text" style="display:none;">ANCHOR <span>POINT</span></div>
+        <div class="tagline">anchored in excellence</div>
       </a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
@@ -1054,7 +1064,7 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a href="#contact" class="nav-cta">Contact Us</a>
-      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -1414,7 +1424,7 @@
           </div>
           <div class="cf-group">
             <label>Project Type</label>
-            <select name="project_type">
+            <select name="project_type" aria-label="Project Type">
               <option value="">Select a category</option>
               <option>Marine / Naval</option>
               <option>Industrial / Manufacturing</option>
@@ -1459,7 +1469,7 @@
 
 
 <!-- ═══════════════ WHATSAPP FLOAT ════════════════════════════════ -->
-<a id="wa-float" href="https://wa.me/8801796115231" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<a id="wa-float" href="https://wa.me/8801796115231" target="_blank" rel="noopener" aria-label="Contact Anchor Point on WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
   </svg>
@@ -1478,7 +1488,11 @@
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
   hamburger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
+  const isOpen = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('active', isOpen);
+  hamburger.setAttribute('aria-expanded', isOpen);
+  hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+});
   hamburger.classList.toggle('active');
 });
   mobileMenu.querySelectorAll('a').forEach(a => {
@@ -1522,13 +1536,11 @@ btn.setAttribute('aria-busy', 'true');
 successMsg.style.display = 'block';
 successMsg.setAttribute('role', 'status');
         } else {
-          btn.textContent = 'Error — please try again';
-btn.disabled = false;
+          btn.textContent = 'Unable to send — please try again'; btn.disabled = false;
 btn.removeAttribute('aria-busy');
         }
       } catch {
-        btn.textContent = 'Error — please try again';
-btn.disabled = false;
+        btn.textContent = 'Unable to send — please try again'; btn.disabled = false;
 btn.removeAttribute('aria-busy');
       }
     });
