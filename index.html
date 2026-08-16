@@ -144,42 +144,196 @@
 }
 
     /* ─── SCROLL REVEAL ──────────────────────────────────────────── */
-    .reveal {
+    /* ─── PREMIUM SCROLL REVEAL — CHAPTER 3 ───────────────────────── */
+
+.reveal {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity .45s ease, transform .45s ease;
+  transform: translate3d(0, 28px, 0);
+  transition:
+    opacity .55s cubic-bezier(.22,1,.36,1),
+    transform .55s cubic-bezier(.22,1,.36,1);
+  will-change: opacity, transform;
 }
 
 .reveal.visible {
   opacity: 1;
-  transform: none;
+  transform: translate3d(0,0,0);
+}
+
+/* Directional entrance */
+.reveal.from-left {
+  transform: translate3d(-30px,0,0);
+}
+
+.reveal.from-right {
+  transform: translate3d(30px,0,0);
+}
+
+.reveal.from-scale {
+  transform: scale(.94);
+}
+
+.reveal.visible.from-left,
+.reveal.visible.from-right {
+  transform: translate3d(0,0,0);
+}
+
+.reveal.visible.from-scale {
+  transform: scale(1);
+}
+
+/* Faster animation for cards */
+.problem-card.reveal,
+.service-card.reveal,
+.sector-card.reveal,
+.nv-box.reveal {
+  transition-duration: .45s;
+}
+
+/* Interactive card base */
+.problem-card,
+.service-card,
+.sector-card,
+.nv-box {
+  will-change: transform;
+}
+
+/* Problem cards */
+.problem-card:hover {
+  transform: translateY(-7px);
+}
+
+/* Service cards */
+.service-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 2px;
+  background: var(--blue);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s ease;
+}
+
+.service-card:hover::after {
+  transform: scaleX(1);
+}
+
+.service-card:hover .sc-icon {
+  transform: translateY(-3px) scale(1.08);
+}
+
+.sc-icon {
+  transition: transform .3s cubic-bezier(.22,1,.36,1);
+}
+
+/* Sector cards */
+.sector-card {
+  overflow: hidden;
+}
+
+.sector-card:hover .sector-icon {
+  transform: translateY(-4px) scale(1.08);
+}
+
+.sector-icon {
+  transition: transform .3s cubic-bezier(.22,1,.36,1);
+}
+
+/* Network boxes */
+.nv-box {
+  transition:
+    transform .3s cubic-bezier(.22,1,.36,1),
+    box-shadow .3s ease,
+    border-color .3s ease;
+}
+
+.nv-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(6,24,40,.10);
+}
+
+.nv-box .nv-icon {
+  transition: transform .3s cubic-bezier(.22,1,.36,1);
+}
+
+.nv-box:hover .nv-icon {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+/* Process circles */
+.process-step .step-num {
+  transition:
+    transform .35s cubic-bezier(.22,1,.36,1),
+    box-shadow .35s ease;
+}
+
+.process-step:hover .step-num,
+.process-step.active .step-num {
+  transform: translateY(-5px) scale(1.06);
+  box-shadow: 0 8px 25px rgba(0,168,232,.22);
+}
+
+/* Hero buttons */
+.hero-actions .btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-actions .btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.16),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left .6s ease;
+}
+
+.hero-actions .btn:hover::after {
+  left: 140%;
+}
+
+/* Hero stats */
+.hero-stat-val {
+  transition:
+    transform .35s cubic-bezier(.22,1,.36,1),
+    color .25s ease;
+}
+
+.hero-stats > div:hover .hero-stat-val {
+  transform: translateY(-3px);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-}
-    .reveal.visible { opacity: 1; transform: none; }
-    @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  .reveal {
+  .reveal,
+  .reveal.from-left,
+  .reveal.from-right,
+  .reveal.from-scale {
     opacity: 1;
     transform: none;
     transition: none;
   }
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: .01ms !important;
+  .problem-card,
+  .service-card,
+  .sector-card,
+  .nv-box,
+  .process-step .step-num,
+  .hero-stat-val {
+    transition: none;
   }
 }
 
@@ -1663,97 +1817,279 @@
 
 <!-- ═══════════════ JAVASCRIPT ═════════════════════════════════════ -->
 <script>
-  // Navbar scroll shadow
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 20);
-  });
+/* ═══════════════════════════════════════════════════════════════
+   ANCHOR POINT — CHAPTER 3 MOTION ENGINE
+   ═══════════════════════════════════════════════════════════════ */
 
-  // Mobile menu
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
+/* ─── NAVBAR SHADOW ─────────────────────────────────────────── */
+
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+
+
+/* ─── MOBILE MENU ───────────────────────────────────────────── */
+
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (hamburger && mobileMenu) {
+
   hamburger.addEventListener('click', () => {
-  const isOpen = mobileMenu.classList.toggle('open');
-  hamburger.classList.toggle('active', isOpen);
-  hamburger.setAttribute('aria-expanded', isOpen);
-  hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-});
-  mobileMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-  mobileMenu.classList.remove('open');
-  hamburger.classList.remove('active');
-});
+
+    const isOpen = mobileMenu.classList.toggle('open');
+
+    hamburger.setAttribute(
+      'aria-expanded',
+      isOpen ? 'true' : 'false'
+    );
+
+    hamburger.setAttribute(
+      'aria-label',
+      isOpen ? 'Close menu' : 'Open menu'
+    );
+
   });
 
-  // Scroll reveal — works when scrolling DOWN and UP
-const reveals = document.querySelectorAll('.reveal');
+  mobileMenu.querySelectorAll('a').forEach(link => {
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    } else {
-      entry.target.classList.remove('visible');
-    }
-  });
-}, {
-  threshold: 0.15,
-  rootMargin: '0px 0px -60px 0px'
-});
+    link.addEventListener('click', () => {
 
-reveals.forEach(el => observer.observe(el));
+      mobileMenu.classList.remove('open');
 
-  // Contact form AJAX
-  const form = document.getElementById('contact-form');
-  const successMsg = document.getElementById('form-success');
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const btn = form.querySelector('button[type="submit"]');
-      btn.textContent = 'Sending…';
-btn.disabled = true;
-btn.setAttribute('aria-busy', 'true');
-      try {
-        const res = await fetch(form.action, {
-          method: 'POST', body: new FormData(form),
-          headers: { Accept: 'application/json' }
-        });
-        if (res.ok) {
-          form.style.display = 'none';
-successMsg.style.display = 'block';
-successMsg.setAttribute('role', 'status');
-        } else {
-          btn.textContent = 'Unable to send — please try again'; btn.disabled = false;
-btn.removeAttribute('aria-busy');
-        }
-      } catch {
-        btn.textContent = 'Unable to send — please try again'; btn.disabled = false;
-btn.removeAttribute('aria-busy');
-      }
+      hamburger.setAttribute(
+        'aria-expanded',
+        'false'
+      );
+
+      hamburger.setAttribute(
+        'aria-label',
+        'Open menu'
+      );
+
     });
-  }
-  // Mobile card animation on scroll
-const problemCards = document.querySelectorAll('.problem-card');
 
-if (window.matchMedia('(max-width: 900px)').matches) {
-  const problemCardObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('mobile-active');
-
-        setTimeout(() => {
-          entry.target.classList.remove('mobile-active');
-        }, 700);
-      }
-    });
-  }, {
-    threshold: 0.55
   });
 
-  problemCards.forEach(card => {
-    problemCardObserver.observe(card);
-  });
 }
+
+
+/* ─── PREMIUM SCROLL REVEAL ─────────────────────────────────── */
+
+const revealElements =
+  document.querySelectorAll('.reveal');
+
+const prefersReducedMotion =
+  window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  ).matches;
+
+if (!prefersReducedMotion && revealElements.length) {
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+          const element = entry.target;
+
+          const siblings = [
+            ...element.parentElement.querySelectorAll(
+              ':scope > .reveal'
+            )
+          ];
+
+          const index = siblings.indexOf(element);
+
+          const delay =
+            Math.min(Math.max(index, 0) * 70, 280);
+
+          clearTimeout(element._revealTimer);
+
+          element._revealTimer = setTimeout(() => {
+
+            element.classList.add('visible');
+
+          }, delay);
+
+        } else {
+
+          /*
+           * Remove the class when leaving the viewport.
+           * This allows the animation to replay when
+           * the user scrolls back in the opposite direction.
+           */
+
+          entry.target.classList.remove('visible');
+
+          clearTimeout(entry.target._revealTimer);
+
+        }
+
+      });
+
+    },
+    {
+      threshold: 0.12,
+      rootMargin: '0px 0px -8% 0px'
+    }
+  );
+
+  revealElements.forEach(element => {
+    revealObserver.observe(element);
+  });
+
+} else {
+
+  revealElements.forEach(element => {
+    element.classList.add('visible');
+  });
+
+}
+
+
+/* ─── PROCESS CIRCLE INTERACTION ────────────────────────────── */
+
+const processSteps =
+  document.querySelectorAll('.process-step');
+
+if (processSteps.length) {
+
+  const processObserver =
+    new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          } else {
+            entry.target.classList.remove('active');
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.55
+      }
+    );
+
+  processSteps.forEach(step => {
+    processObserver.observe(step);
+  });
+
+}
+
+
+/* ─── CONTACT FORM ──────────────────────────────────────────── */
+
+const form =
+  document.getElementById('contact-form');
+
+const successMsg =
+  document.getElementById('form-success');
+
+if (form) {
+
+  form.addEventListener('submit', async (e) => {
+
+    e.preventDefault();
+
+    const btn =
+      form.querySelector(
+        'button[type="submit"]'
+      );
+
+    const originalText =
+      btn.textContent;
+
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    try {
+
+      const response =
+        await fetch(
+          form.action,
+          {
+            method: 'POST',
+            body: new FormData(form),
+            headers: {
+              Accept: 'application/json'
+            }
+          }
+        );
+
+      if (response.ok) {
+
+        form.style.display = 'none';
+
+        if (successMsg) {
+          successMsg.style.display = 'block';
+        }
+
+      } else {
+
+        btn.textContent =
+          'Error — please try again';
+
+        btn.disabled = false;
+
+      }
+
+    } catch (error) {
+
+      btn.textContent =
+        'Error — please try again';
+
+      btn.disabled = false;
+
+    }
+
+  });
+
+}
+
+
+/* ─── ESCAPE KEY — CLOSE MOBILE MENU ───────────────────────── */
+
+document.addEventListener('keydown', event => {
+
+  if (event.key === 'Escape') {
+
+    if (
+      mobileMenu &&
+      mobileMenu.classList.contains('open')
+    ) {
+
+      mobileMenu.classList.remove('open');
+
+      if (hamburger) {
+
+        hamburger.setAttribute(
+          'aria-expanded',
+          'false'
+        );
+
+        hamburger.setAttribute(
+          'aria-label',
+          'Open menu'
+        );
+
+        hamburger.focus();
+
+      }
+
+    }
+
+  }
+
+});
 </script>
 
 </body>
