@@ -465,6 +465,16 @@
   border-color: rgba(0,168,232,0.35);
   box-shadow: 0 8px 30px rgba(0,0,0,0.09);
 }
+    @media (max-width: 900px) {
+  .problem-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .problem-card.mobile-active {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  }
+}
     .pc-icon {
   width: 42px;
   height: 42px;
@@ -549,6 +559,16 @@
   background: rgba(0,168,232,0.075);
   border-color: rgba(0,168,232,0.32);
   transform: translateY(-5px);
+}
+    @media (max-width: 900px) {
+  .problem-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .problem-card.mobile-active {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  }
 }
     .service-card::before {
   content: '';
@@ -1694,6 +1714,28 @@ btn.removeAttribute('aria-busy');
       }
     });
   }
+  // Mobile card animation on scroll
+const problemCards = document.querySelectorAll('.problem-card');
+
+if (window.matchMedia('(max-width: 900px)').matches) {
+  const problemCardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('mobile-active');
+
+        setTimeout(() => {
+          entry.target.classList.remove('mobile-active');
+        }, 700);
+      }
+    });
+  }, {
+    threshold: 0.55
+  });
+
+  problemCards.forEach(card => {
+    problemCardObserver.observe(card);
+  });
+}
 </script>
 
 </body>
