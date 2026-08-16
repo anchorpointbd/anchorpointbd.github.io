@@ -1372,6 +1372,473 @@
   .nv-box.featured {
     grid-column: span 1;
   }}
+    /* ═══════════════════════════════════════════════════════════════
+   CHAPTER 4 — NAVIGATION EXPERIENCE
+   ═══════════════════════════════════════════════════════════════ */
+
+.nav-hamburger {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background .25s ease;
+}
+
+.nav-hamburger:hover {
+  background: rgba(0,168,232,.08);
+}
+
+.nav-hamburger span {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  transition:
+    transform .3s cubic-bezier(.22,1,.36,1),
+    opacity .2s ease;
+}
+
+.nav-hamburger span:nth-child(1) {
+  transform: translateY(-7px);
+}
+
+.nav-hamburger span:nth-child(2) {
+  transform: translateY(0);
+}
+
+.nav-hamburger span:nth-child(3) {
+  transform: translateY(7px);
+}
+
+.nav-hamburger[aria-expanded="true"]
+span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.nav-hamburger[aria-expanded="true"]
+span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.nav-hamburger[aria-expanded="true"]
+span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+
+/* Mobile navigation panel */
+
+.nav-mobile {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition:
+    max-height .35s ease,
+    opacity .25s ease,
+    transform .35s ease;
+}
+
+.nav-mobile.open {
+  max-height: 420px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Mobile links */
+
+.nav-mobile a {
+  opacity: 0;
+  transform: translateX(-12px);
+  transition:
+    opacity .25s ease,
+    transform .25s ease,
+    color .2s ease;
+}
+
+.nav-mobile.open a {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nav-mobile.open a:nth-child(1) {
+  transition-delay: .04s;
+}
+
+.nav-mobile.open a:nth-child(2) {
+  transition-delay: .08s;
+}
+
+.nav-mobile.open a:nth-child(3) {
+  transition-delay: .12s;
+}
+
+.nav-mobile.open a:nth-child(4) {
+  transition-delay: .16s;
+}
+
+.nav-mobile.open a:nth-child(5) {
+  transition-delay: .20s;
+}
+
+
+/* Active navigation item */
+
+.nav-links a.active,
+.nav-mobile a.active {
+  color: var(--blue);
+}
+
+.nav-links a.active::after {
+  transform: scaleX(1);
+}
+
+
+/* Better anchor positioning */
+
+section {
+  scroll-margin-top: 82px;
+}
+
+
+/* Touch-friendly controls */
+
+@media (max-width: 900px) {
+
+  .nav-mobile a {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-hamburger {
+    display: flex;
+  }
+
+  .btn,
+  .nav-cta,
+  .cf-submit {
+    min-height: 46px;
+  }
+
+}
+
+
+/* Reduce motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .nav-hamburger span,
+  .nav-mobile,
+  .nav-mobile a {
+    transition: none;
+  }
+
+}
+    /* ═══════════════════════════════════════════════════════════════
+   CHAPTER 5 — PROFESSIONAL VISUAL POLISH
+   ═══════════════════════════════════════════════════════════════ */
+
+
+/* ─── PROBLEM CARDS ─────────────────────────────────────────── */
+
+.problem-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.problem-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--blue);
+  transform: scaleY(.25);
+  transform-origin: center;
+  transition:
+    transform .4s cubic-bezier(.22,1,.36,1);
+}
+
+.problem-card:hover::before,
+.problem-card.visible::before {
+  transform: scaleY(1);
+}
+
+.pc-icon {
+  transition:
+    transform .35s cubic-bezier(.22,1,.36,1);
+}
+
+.problem-card:hover .pc-icon {
+  transform: translateY(-3px) scale(1.08);
+}
+
+
+/* ─── PROCESS ───────────────────────────────────────────────── */
+
+.process-step {
+  transition:
+    transform .3s cubic-bezier(.22,1,.36,1);
+}
+
+.process-step:hover {
+  transform: translateY(-3px);
+}
+
+.step-num {
+  position: relative;
+}
+
+.step-num::after {
+  content: '';
+  position: absolute;
+  inset: -7px;
+  border: 1px solid rgba(0,168,232,.18);
+  border-radius: 50%;
+  transform: scale(.7);
+  opacity: 0;
+  transition:
+    transform .4s ease,
+    opacity .4s ease;
+}
+
+.process-step:hover .step-num::after,
+.process-step.active .step-num::after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+/* ─── SERVICE CARDS ─────────────────────────────────────────── */
+
+.service-card {
+  min-height: 250px;
+}
+
+.service-card .sc-title {
+  transition: color .25s ease;
+}
+
+.service-card:hover .sc-title {
+  color: var(--blue);
+}
+
+.service-card .sc-tag {
+  transition:
+    color .25s ease,
+    letter-spacing .25s ease;
+}
+
+.service-card:hover .sc-tag {
+  color: #49c8f2;
+  letter-spacing: 2.4px;
+}
+
+
+/* ─── SECTOR CARDS ──────────────────────────────────────────── */
+
+.sector-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.sector-card::after {
+  content: '';
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  bottom: 0;
+  height: 2px;
+  background: var(--blue);
+  transform: scaleX(0);
+  transition:
+    transform .35s cubic-bezier(.22,1,.36,1);
+}
+
+.sector-card:hover::after {
+  transform: scaleX(1);
+}
+
+.sector-name {
+  transition: color .25s ease;
+}
+
+.sector-card:hover .sector-name {
+  color: var(--blue2);
+}
+
+
+/* ─── NETWORK VISUAL ────────────────────────────────────────── */
+
+.network-visual {
+  perspective: 1000px;
+}
+
+.nv-box {
+  transform-style: preserve-3d;
+}
+
+.nv-box.featured {
+  position: relative;
+  overflow: hidden;
+}
+
+.nv-box.featured::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(0,168,232,.16),
+      transparent 70%
+    );
+  pointer-events: none;
+}
+
+.nv-box.featured .nv-icon {
+  font-size: 32px;
+}
+
+
+/* ─── VISION ────────────────────────────────────────────────── */
+
+.vision-divider {
+  transition:
+    width .7s cubic-bezier(.22,1,.36,1);
+}
+
+.vision-divider.visible {
+  width: 90px;
+}
+
+
+/* ─── CONTACT FORM ──────────────────────────────────────────── */
+
+.contact-form-wrap {
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.contact-form-wrap:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 40px rgba(0,0,0,.10);
+}
+
+.cf-group input,
+.cf-group select,
+.cf-group textarea {
+  transition:
+    border-color .2s ease,
+    box-shadow .2s ease,
+    background .2s ease;
+}
+
+.cf-group input:focus,
+.cf-group select:focus,
+.cf-group textarea:focus {
+  box-shadow:
+    0 0 0 3px rgba(0,168,232,.09);
+}
+
+
+/* ─── WHATSAPP ──────────────────────────────────────────────── */
+
+#wa-float {
+  animation:
+    waFloat 4s ease-in-out infinite;
+}
+
+@keyframes waFloat {
+
+  0%,100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+
+}
+
+#wa-float:hover {
+  animation: none;
+}
+
+
+/* ─── FOOTER ───────────────────────────────────────────────── */
+
+.footer-logo {
+  transition: transform .25s ease;
+}
+
+.footer-logo:hover {
+  transform: translateY(-2px);
+}
+
+
+/* ─── MOBILE POLISH ─────────────────────────────────────────── */
+
+@media (max-width: 560px) {
+
+  .problem-card,
+  .service-card,
+  .sector-card,
+  .nv-box {
+    transition-duration: .4s;
+  }
+
+  .problem-card:hover,
+  .service-card:hover,
+  .sector-card:hover,
+  .nv-box:hover {
+    transform: translateY(-4px);
+  }
+
+  .contact-form-wrap:hover {
+    transform: none;
+  }
+
+  #wa-float {
+    width: 50px;
+    height: 50px;
+    right: 18px;
+    bottom: 18px;
+  }
+
+}
+
+
+/* ─── REDUCED MOTION ────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+
+  #wa-float {
+    animation: none;
+  }
+
+  .problem-card,
+  .service-card,
+  .sector-card,
+  .nv-box,
+  .contact-form-wrap,
+  .footer-logo,
+  .process-step {
+    transition: none;
+  }
+
+}
   </style>
 </head>
 <body>
@@ -2090,6 +2557,66 @@ document.addEventListener('keydown', event => {
   }
 
 });
+  /* ─── ACTIVE NAVIGATION SECTION ─────────────────────────────── */
+
+const sections =
+  document.querySelectorAll(
+    '#about, #services, #sectors, #network, #contact'
+  );
+
+const desktopNavLinks =
+  document.querySelectorAll('.nav-links a');
+
+const mobileNavLinks =
+  document.querySelectorAll('.nav-mobile a');
+
+const updateActiveNav = (id) => {
+
+  [...desktopNavLinks, ...mobileNavLinks]
+    .forEach(link => {
+
+      link.classList.toggle(
+        'active',
+        link.getAttribute('href') === `#${id}`
+      );
+
+    });
+
+};
+
+if (sections.length) {
+
+  const sectionObserver =
+    new IntersectionObserver(
+      entries => {
+
+        const visible =
+          entries
+            .filter(entry => entry.isIntersecting)
+            .sort(
+              (a,b) =>
+                b.intersectionRatio -
+                a.intersectionRatio
+            );
+
+        if (visible.length) {
+          updateActiveNav(
+            visible[0].target.id
+          );
+        }
+
+      },
+      {
+        rootMargin: '-30% 0px -55% 0px',
+        threshold: [0.05, 0.2, 0.4]
+      }
+    );
+
+  sections.forEach(section => {
+    sectionObserver.observe(section);
+  });
+
+}
 </script>
 
 </body>
