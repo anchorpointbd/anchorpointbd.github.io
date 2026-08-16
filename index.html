@@ -145,9 +145,23 @@
 
     /* ─── SCROLL REVEAL ──────────────────────────────────────────── */
     .reveal {
-      opacity: 0; transform: translateY(26px);
-      transition: opacity .6s ease, transform .6s ease;
-    }
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .45s ease, transform .45s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
     .reveal.visible { opacity: 1; transform: none; }
     @media (prefers-reduced-motion: reduce) {
   html {
@@ -1671,19 +1685,23 @@
 });
   });
 
-  // Scroll reveal with stagger
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const siblings = [...entry.target.parentElement.querySelectorAll('.reveal:not(.visible)')];
-        const idx = siblings.indexOf(entry.target);
-        setTimeout(() => entry.target.classList.add('visible'), Math.min(idx * 90, 350));
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  reveals.forEach(el => observer.observe(el));
+  // Scroll reveal — works when scrolling DOWN and UP
+const reveals = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+}, {
+  threshold: 0.15,
+  rootMargin: '0px 0px -60px 0px'
+});
+
+reveals.forEach(el => observer.observe(el));
 
   // Contact form AJAX
   const form = document.getElementById('contact-form');
