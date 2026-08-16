@@ -16,6 +16,7 @@
 <meta name="language" content="English" />
   <link rel="canonical" href="https://anchorpoint.com.bd/" />
   <link rel="icon" href="Logo_test.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="Logo_test.svg" />
   <meta name="theme-color" content="#061828" />
   <meta property="og:title" content="Anchor Point | Technical Consultancy & Engineering Solutions" />
 <meta property="og:description" content="Technical consultancy, engineering support, marine and naval services, project advisory and international vendor bridging across Bangladesh." />
@@ -2048,12 +2049,52 @@ textarea:focus-visible {
   }
 
 }
+    /* ─── FORM SUBMISSION STATE ─────────────────────────────────── */
+
+#contact-form[aria-busy="true"] {
+  cursor: wait;
+}
+
+#contact-form[aria-busy="true"] .cf-submit {
+  cursor: wait;
+}
+
+#contact-form[aria-busy="true"] input,
+#contact-form[aria-busy="true"] select,
+#contact-form[aria-busy="true"] textarea {
+  opacity: .72;
+}
   </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Anchor Point",
+  "url": "https://anchorpoint.com.bd/",
+  "logo": "https://anchorpoint.com.bd/Logo_test.svg",
+  "description": "Technical consultancy and engineering solutions in Bangladesh, including project feasibility, marine and naval support, vendor bridging, technical advisory and site inspection.",
+  "email": "info@anchorpoint.com.bd",
+  "telephone": "+8801796115231",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "House-9/A, Road-2, Chan Miah Housing",
+    "addressLocality": "Mohammadpur",
+    "addressRegion": "Dhaka",
+    "postalCode": "1207",
+    "addressCountry": "BD"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Bangladesh"
+  },
+  "sameAs": []
+}
+</script>
 </head>
 <body>
 
 <!-- ═══════════════ NAVBAR ═══════════════════════════════════════ -->
-<nav id="navbar">
+<nav id="navbar" aria-label="Primary navigation">
   <div class="container">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">
@@ -2691,6 +2732,10 @@ if (form) {
 
     btn.textContent = 'Sending…';
     btn.disabled = true;
+    form.setAttribute(
+  'aria-busy',
+  'true'
+);
 
     try {
 
@@ -2707,7 +2752,10 @@ if (form) {
         );
 
       if (response.ok) {
-
+form.setAttribute(
+  'aria-busy',
+  'false'
+);
         form.style.display = 'none';
 
         if (successMsg) {
@@ -2715,18 +2763,24 @@ if (form) {
         }
 
       } else {
-
+form.setAttribute(
+  'aria-busy',
+  'false'
+);
         btn.textContent =
-          'Error — please try again';
+  'Unable to send — please try again';
 
         btn.disabled = false;
 
       }
 
     } catch (error) {
-
+form.setAttribute(
+  'aria-busy',
+  'false'
+);
       btn.textContent =
-        'Error — please try again';
+  'Unable to send — please try again';
 
       btn.disabled = false;
 
@@ -2789,10 +2843,24 @@ const updateActiveNav = (id) => {
   [...desktopNavLinks, ...mobileNavLinks]
     .forEach(link => {
 
+      const isActive =
+        link.getAttribute('href') === `#${id}`;
+
       link.classList.toggle(
         'active',
-        link.getAttribute('href') === `#${id}`
+        isActive
       );
+
+      if (isActive) {
+        link.setAttribute(
+          'aria-current',
+          'location'
+        );
+      } else {
+        link.removeAttribute(
+          'aria-current'
+        );
+      }
 
     });
 
