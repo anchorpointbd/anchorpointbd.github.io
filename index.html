@@ -9,6 +9,11 @@
   <meta name="robots" content="index, follow" />
   <meta name="keywords" content="technical consultancy Bangladesh, engineering consultancy Dhaka, marine consultancy Bangladesh, naval engineering, project feasibility, technical advisory, vendor sourcing Bangladesh, site inspection, engineering solutions" />
   <meta name="author" content="Anchor Point" />
+  <meta name="application-name" content="Anchor Point" />
+<meta name="format-detection" content="telephone=yes" />
+<meta name="geo.region" content="BD-DH" />
+<meta name="geo.placename" content="Dhaka, Bangladesh" />
+<meta name="language" content="English" />
   <link rel="canonical" href="https://anchorpoint.com.bd/" />
   <link rel="icon" href="Logo_test.svg" type="image/svg+xml" />
   <meta name="theme-color" content="#061828" />
@@ -17,9 +22,14 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://anchorpoint.com.bd/" />
 <meta property="og:site_name" content="Anchor Point" />
+  <meta property="og:image" content="https://anchorpoint.com.bd/Logo_test.svg" />
+<meta property="og:image:alt" content="Anchor Point — Technical Consultancy & Engineering Solutions" />
+<meta property="og:locale" content="en_BD" />
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Anchor Point | Technical Consultancy & Engineering Solutions" />
 <meta name="twitter:description" content="Technical consultancy and engineering solutions across Bangladesh." />
+  <meta name="twitter:image" content="https://anchorpoint.com.bd/Logo_test.svg" />
+<meta name="twitter:image:alt" content="Anchor Point — Technical Consultancy & Engineering Solutions" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -1839,6 +1849,205 @@ section {
   }
 
 }
+    /* ═══════════════════════════════════════════════════════════════
+   CHAPTER 6 — PERFORMANCE + ACCESSIBILITY
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── PERFORMANCE BASE ───────────────────────────────────────── */
+
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+/* Prevent animated elements from causing accidental layout shifts */
+.problem-card,
+.service-card,
+.sector-card,
+.nv-box,
+.process-step,
+.contact-form-wrap {
+  contain: layout paint;
+}
+
+/* Keep decorative elements out of interaction */
+.hero-anchor,
+.hero-grid-bg,
+#vision::before {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* ─── BETTER FOCUS VISIBILITY ───────────────────────────────── */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+/* ─── TOUCH INTERACTION ─────────────────────────────────────── */
+
+@media (hover: none) and (pointer: coarse) {
+
+  .problem-card,
+  .service-card,
+  .sector-card,
+  .nv-box,
+  .process-step {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .problem-card:hover,
+  .service-card:hover,
+  .sector-card:hover,
+  .nv-box:hover,
+  .process-step:hover {
+    transform: none;
+  }
+
+}
+
+/* ─── MOBILE PERFORMANCE ────────────────────────────────────── */
+
+@media (max-width: 900px) {
+
+  .hero-anchor {
+    opacity: 0.035;
+  }
+
+  .hero-grid-bg {
+    background-size: 52px 52px;
+  }
+
+  .contact-form-wrap {
+    contain: layout paint;
+  }
+
+}
+
+/* ─── VERY SMALL DEVICES ────────────────────────────────────── */
+
+@media (max-width: 380px) {
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero-title {
+    font-size: 2.35rem;
+  }
+
+  .hero-body {
+    font-size: .92rem;
+  }
+
+  .hero-stat-label {
+    font-size: 9px;
+  }
+
+}
+
+/* ─── PRINT ─────────────────────────────────────────────────── */
+
+@media print {
+
+  #navbar,
+  #wa-float,
+  .hero-actions,
+  .contact-form-wrap {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+
+}
+    /* ─── BACK TO TOP ────────────────────────────────────────────── */
+
+#back-to-top {
+  position: fixed;
+  right: 28px;
+  bottom: 98px;
+  z-index: 9998;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(0,168,232,.35);
+  border-radius: 50%;
+
+  background: rgba(6,24,40,.94);
+  color: var(--blue);
+
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition:
+    opacity .25s ease,
+    visibility .25s ease,
+    transform .25s ease,
+    background .25s ease,
+    color .25s ease;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#back-to-top:hover {
+  background: var(--blue);
+  color: white;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 560px) {
+
+  #back-to-top {
+    width: 42px;
+    height: 42px;
+    right: 18px;
+    bottom: 82px;
+    font-size: 18px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  #back-to-top {
+    transition: none;
+  }
+
+}
   </style>
 </head>
 <body>
@@ -2273,7 +2482,12 @@ section {
   </div>
 </footer>
 
-
+<!-- ═══════════════ BACK TO TOP ═══════════════════════════════════ -->
+<button id="back-to-top"
+        type="button"
+        aria-label="Back to top">
+  ↑
+</button>
 <!-- ═══════════════ WHATSAPP FLOAT ════════════════════════════════ -->
 <a id="wa-float" href="https://wa.me/8801796115231" target="_blank" rel="noopener" aria-label="Contact Anchor Point on WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -2615,6 +2829,42 @@ if (sections.length) {
   sections.forEach(section => {
     sectionObserver.observe(section);
   });
+
+}
+  /* ═══════════════════════════════════════════════════════════════
+   CHAPTER 6 — BACK TO TOP
+   ═══════════════════════════════════════════════════════════════ */
+
+const backToTop = document.getElementById('back-to-top');
+
+if (backToTop) {
+
+  const updateBackToTop = () => {
+
+    if (window.scrollY > 600) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+
+  };
+
+  window.addEventListener(
+    'scroll',
+    updateBackToTop,
+    { passive: true }
+  );
+
+  backToTop.addEventListener('click', () => {
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+
+  });
+
+  updateBackToTop();
 
 }
 </script>
