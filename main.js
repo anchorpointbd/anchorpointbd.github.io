@@ -185,6 +185,10 @@ if (form) {
     }
   });
 }
+// Track successful form submissions for future analytics
+if (typeof gtag === 'function') {
+  gtag('event', 'form_submit', { event_category: 'contact', event_label: 'consultation_request' });
+}
 
 /* ─── ESCAPE KEY — CLOSE MOBILE MENU ───────────────────────── */
 
