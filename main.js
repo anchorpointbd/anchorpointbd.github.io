@@ -106,86 +106,85 @@ if (processSteps.length) {
 
 /* ─── CONTACT FORM ──────────────────────────────────────────── */
 
-const form =
-  document.getElementById('contact-form');
+const form = document.getElementById('contact-form');
+const successMsg = document.getElementById('form-success');
 
-const successMsg =
-  document.getElementById('form-success');
-
-if (form) {
-
-  form.addEventListener('submit', async (e) => {
-
-    e.preventDefault();
-
-    const btn =
-      form.querySelector(
-        'button[type="submit"]'
-      );
-
-    const originalText =
-      btn.textContent;
-
-    btn.textContent = 'Sending…';
-    btn.disabled = true;
-    form.setAttribute(
-  'aria-busy',
-  'true'
-);
-
-    try {
-
-      const response =
-        await fetch(
-          form.action,
-          {
-            method: 'POST',
-            body: new FormData(form),
-            headers: {
-              Accept: 'application/json'
-            }
-          }
-        );
-
-      if (response.ok) {
-form.setAttribute(
-  'aria-busy',
-  'false'
-);
-        form.style.display = 'none';
-
-        if (successMsg) {
-          successMsg.style.display = 'block';
-        }
-
-      } else {
-form.setAttribute(
-  'aria-busy',
-  'false'
-);
-        btn.textContent =
-  'Unable to send — please try again';
-
-        btn.disabled = false;
-
-      }
-
-    } catch (error) {
-form.setAttribute(
-  'aria-busy',
-  'false'
-);
-      btn.textContent =
-  'Unable to send — please try again';
-
-      btn.disabled = false;
-
-    }
-
-  });
-
+function showFieldError(inputId, message) {
+  const input = document.getElementById(inputId);
+  let err = document.getElementById(inputId + '-err');
+  if (!err) {
+    err = document.createElement('span');
+    err.id = inputId + '-err';
+    err.style.cssText = 'display:block;color:#c0392b;font-size:.78rem;margin-top:4px;font-family:Inter,sans-serif';
+    input.parentNode.appendChild(err);
+  }
+  err.textContent = message;
+  input.style.borderColor = '#c0392b';
 }
 
+function clearFieldError(inputId) {
+  const err = document.getElementById(inputId + '-err');
+  if (err) err.textContent = '';
+  const input = document.getElementById(inputId);
+  if (input) input.style.borderColor = '';
+}
+
+if (form) {
+  ['contact-name','contact-email','contact-message'].forEach(id => {
+    document.getElementById(id).addEventListener('input', () => clearFieldError(id));
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    let valid = true;
+
+    const name = document.getElementById('contact-name');
+    const email = document.getElementById('contact-email');
+    const message = document.getElementById('contact-message');
+
+    if (!name.value.trim()) {
+      showFieldError('contact-name', 'Please enter your full name.');
+      valid = false;
+    }
+    if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+      showFieldError('contact-email', 'Please enter a valid email address.');
+      valid = false;
+    }
+    if (!message.value.trim() || message.value.trim().length < 10) {
+      showFieldError('contact-message', 'Please describe your project (at least 10 characters).');
+      valid = false;
+    }
+    if (!valid) return;
+
+    const btn = form.querySelector('button[type="submit"]');
+    const originalText = btn.textContent;
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    form.setAttribute('aria-busy', 'true');
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+
+      form.setAttribute('aria-busy', 'false');
+
+      if (response.ok) {
+        form.style.display = 'none';
+        if (successMsg) successMsg.style.display = 'block';
+      } else {
+        btn.textContent = 'Unable to send — please try again';
+        btn.disabled = false;
+      }
+    } catch (error) {
+      form.setAttribute('aria-busy', 'false');
+      btn.textContent = 'Unable to send — please try again';
+      btn.disabled = false;
+    }
+  });
+}
 
 /* ─── ESCAPE KEY — CLOSE MOBILE MENU ───────────────────────── */
 
