@@ -105,37 +105,13 @@
   transition: all .2s ease;
   border: none;
 }
-    .btn:focus-visible,
-.nav-cta:focus-visible,
-.cf-submit:focus-visible,
-.nav-hamburger:focus-visible {
-  outline: 2px solid var(--blue);
-  outline-offset: 3px;
-.cd-value a:focus-visible,
-.footer-email a:focus-visible {
-  outline: 2px solid var(--blue);
-  outline-offset: 3px;
-}
-}
+    
     .btn-primary {
   background: var(--blue);
   color: var(--white);
   box-shadow: 0 5px 18px rgba(0,168,232,0.18);
 }
 
-.btn:focus-visible,
-.nav-links a:focus-visible,
-.nav-cta:focus-visible,
-.nav-mobile a:focus-visible,
-#wa-float:focus-visible {
-  outline: 2px solid var(--blue);
-  outline-offset: 4px;
-  .cd-value a:focus-visible,
-.footer-email a:focus-visible {
-  outline: 2px solid var(--blue);
-  outline-offset: 3px;
-}
-}
     .btn-primary:hover {
   background: var(--blue2);
   transform: translateY(-2px);
@@ -760,16 +736,6 @@
 
 .service-card:hover::before {
   transform: scaleX(1);
-}
-    .service-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 36px;
-  height: 2px;
-  background: var(--blue);
-  opacity: .75;
 }
     .sc-icon {
   width: 44px;
@@ -2273,6 +2239,18 @@ textarea:focus-visible {
     animation: none;
   }
 }
+    .btn:focus-visible,
+.nav-cta:focus-visible,
+.cf-submit:focus-visible,
+.nav-hamburger:focus-visible,
+.nav-links a:focus-visible,
+.nav-mobile a:focus-visible,
+#wa-float:focus-visible,
+.cd-value a:focus-visible,
+.footer-email a:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
   </style>
   <script type="application/ld+json">
 {
@@ -2296,7 +2274,7 @@ textarea:focus-visible {
     "@type": "Country",
     "name": "Bangladesh"
   },
-  "sameAs": []
+  "sameAs": ["https://www.linkedin.com/company/anchor-point-bd"]
 }
 </script>
 </head>
@@ -2696,14 +2674,14 @@ textarea:focus-visible {
             <label for="contact-project-type">Project Type</label>
 <select id="contact-project-type" name="project_type">
               <option value="">Select a category</option>
-              <option>Marine / Naval</option>
-              <option>Industrial / Manufacturing</option>
-              <option>Construction / Infrastructure</option>
-              <option>IT / Security Systems</option>
-              <option>Water / Sanitation</option>
-              <option>Procurement / Vendor Sourcing</option>
-              <option>Report Interpretation / Advisory</option>
-              <option>Other</option>
+<option value="marine-naval">Marine / Naval</option>
+<option value="industrial">Industrial / Manufacturing</option>
+<option value="construction">Construction / Infrastructure</option>
+<option value="it-security">IT / Security Systems</option>
+<option value="water-sanitation">Water / Sanitation</option>
+<option value="procurement">Procurement / Vendor Sourcing</option>
+<option value="advisory">Report Interpretation / Advisory</option>
+<option value="other">Other</option>
             </select>
           </div>
           <div class="cf-group">
@@ -2830,10 +2808,6 @@ window.addEventListener('scroll', () => {
   });
 
   reveals.forEach(element => revealObserver.observe(element));
-
-  revealElements.forEach(element => {
-    element.classList.add('visible');
-  });
 
 }
 
