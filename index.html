@@ -2727,7 +2727,7 @@ textarea:focus-visible {
         <div class="logo-text">ANCHOR <span>POINT</span></div>
         <div class="tagline">anchored in excellence</div>
       </div>
-      <p class="footer-copy">© 2026 <span>Anchor Point</span> | Trade License: DNCC/031944/2025 | Dhaka, Bangladesh</p>
+      <p class="footer-copy">© <span id="yr"></span> <span>Anchor Point</span> | Trade License: DNCC/031944/2025 | Dhaka, Bangladesh</p>
       <p class="footer-email">
   <a href="mailto:info@anchorpoint.com.bd">
     info@<span>anchorpoint</span>.com.bd
@@ -3086,6 +3086,7 @@ if (backToTop) {
   updateBackToTop();
 
 }
+  document.getElementById('yr').textContent = new Date().getFullYear();
 </script>
 
 </body>
