@@ -30,3 +30,9 @@ No production deployment or merge is authorized yet. Preview this branch first. 
 ## Required owner decisions
 
 Approve the two staff emails/roles, Supabase account/region, data classification and retention periods, backup custodian, legal text, AI provider/data policy, verified company contact details, and the final master logo/social artwork.
+
+## Staff invitation acceptance
+
+The callback page is `/accept-invite.html`. It detects the Supabase invitation session, requires a 12-character password, enrolls TOTP, verifies the first code, and only then links to the Vault. Returning sessions are gated by authenticator assurance level; private database and Storage policies must use the AAL2 migration in `supabase/migrations/20260821_staff_onboarding_mfa.sql`.
+
+Store the OpenRouter replacement key only in Supabase Edge Function secrets as `OPENROUTER_API_KEY`. A key exposed in chat, source code, screenshots, or browser JavaScript must be revoked. The Edge Function requests ZDR routing; lack of a compatible free endpoint is an expected unavailable state, not permission to weaken privacy.
