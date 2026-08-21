@@ -43,3 +43,12 @@
 - Decision: Keep OpenRouter free-endpoint training disabled and require Zero Data Retention in the Edge Function request.
 - Consequence: The assistant may be unavailable when no free ZDR-compatible provider is available.
 - Guardrail: Availability failure is preferable to silently routing a visitor's question through a retaining provider. Confidential and project-specific data remain prohibited.
+
+
+## D-008 — Operational AI privacy boundary (2026-08-21)
+
+- Evidence: the deployed function was reachable, but the free router returned no usable ZDR route and OpenRouter showed no successful activity.
+- Decision: keep OpenRouter account training/input-output use disabled and require `provider.data_collection='deny'` with free fallbacks. Reserve the assistant for public, non-confidential theory questions; Vault/project data never goes to the AI.
+- Consequence: this permits more free endpoints than strict ZDR while excluding providers OpenRouter marks as collecting prompt data. It is not a contractual zero-retention guarantee, so the UI and policy prohibit names, drawings, measurements, client data and other project-specific inputs.
+- Escape route: restore strict `zdr:true` when a compatible free endpoint is available, or move to a paid ZDR-capable provider without changing the public UI.
+- Diagnostics: log only upstream HTTP status and error code in Supabase; never log prompts, responses, keys or visitor identity.
