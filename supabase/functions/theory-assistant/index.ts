@@ -1,10 +1,18 @@
 import {createClient} from 'https://esm.sh/@supabase/supabase-js@2';
-const cors={'Access-Control-Allow-Origin':'https://anchorpoint.com.bd','Access-Control-Allow-Headers':'authorization, apikey, content-type','Access-Control-Allow-Methods':'POST, OPTIONS'};
+const allowedOrigins=new Set(['https://anchorpoint.com.bd','https://anchor-point-launch-25-preview.pages.dev']);
+const corsFor=(origin:string)=>({
+  'Access-Control-Allow-Origin':allowedOrigins.has(origin)||origin.startsWith('http://127.0.0.1:')?origin:'https://anchorpoint.com.bd',
+  'Access-Control-Allow-Headers':'authorization, apikey, content-type',
+  'Access-Control-Allow-Methods':'POST, OPTIONS',
+  'Vary':'Origin'
+});
 const refuse=/\b(approve|certify|select|size|bypass|disable|override|site instruction|method statement|emergency|exact setting|protection setting|weapon|explosive)\b/i;
 Deno.serve(async(req)=>{
+  const origin=req.headers.get('origin')||'';
+  const cors=corsFor(origin);
   if(req.method==='OPTIONS')return new Response('ok',{headers:cors});
-  if(req.method!=='POST')return json({error:'Method not allowed'},405);
-  const origin=req.headers.get('origin')||'';if(origin&&origin!=='https://anchorpoint.com.bd'&&!origin.startsWith('http://127.0.0.1:'))return json({error:'Origin not allowed'},403);
+  if(req.method!=='POST')return json({error:'Method not allowed'},405,cors);
+  if(origin&&!allowedOrigins.has(origin)&&!origin.startsWith('http://127.0.0.1:'))return json({error:'Origin not allowed'},403,cors);
   const {question}=await req.json().catch(()=>({question:''}));if(typeof question!=='string'||question.trim().length<12||question.length>1500)return json({error:'Question must contain 12–1500 characters.'},400);
   if(refuse.test(question))return json({answer:'I can explain the underlying theory and the questions a competent engineer should verify, but I cannot approve, size, select, bypass, or issue a safety-critical method. Reframe this as a conceptual question.'});
   const service=createClient(Deno.env.get('SUPABASE_URL')!,Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!);
@@ -16,4 +24,4 @@ Deno.serve(async(req)=>{
   if(!upstream.ok)return json({error:'The free AI provider is temporarily unavailable.'},503);const data=await upstream.json();const answer=data.choices?.[0]?.message?.content;if(!answer)return json({error:'No answer was returned.'},503);
   await service.from('ai_usage').insert({client_hash:digest,model:data.model||'openrouter/free'});return json({answer,model:data.model||'openrouter/free'});
 });
-function json(body:unknown,status=200){return new Response(JSON.stringify(body),{status,headers:{...cors,'Content-Type':'application/json','Cache-Control':'no-store'}})}
+function json(body:unknown,status=200,cors:Record<string,string>=corsFor('https://anchorpoint.com.bd')){return new Response(JSON.stringify(body),{status,headers:{...cors,'Content-Type':'application/json','Cache-Control':'no-store'}})}
