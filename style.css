@@ -19,3 +19,5 @@
 .auth-card code{display:block;overflow-wrap:anywhere;padding:12px;margin-top:8px;background:#f2ede4;color:var(--ink)}
 .auth-help{margin-top:35px!important;padding-top:20px;border-top:1px solid var(--line);font-size:12px}
 .vault .auth-card{margin-top:25px}
+
+.principles:before{pointer-events:none}.principles>.panel{position:relative;z-index:1}
