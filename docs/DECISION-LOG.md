@@ -24,3 +24,10 @@
 - Cost guardrail: five assistant questions per hashed client per rolling day, no automatic paid fallback, and a clear unavailable state when free capacity is exhausted.
 - Privacy: the Edge Function hashes a coarse client signal for rate limiting; it stores only the hash, timestamp and returned model identifier. Prompts are sent to OpenRouter and the routed model provider, so confidential/project data is prohibited.
 - Escape route: replace the provider call inside the Edge Function without changing the public UI; export standard Postgres and Storage data when leaving Supabase.
+
+## D-005 — Institutional experience direction (2026-08-21)
+
+- Predominant question: How should the public site make visitors feel Anchor Point's ambition before asking them to understand its services?
+- Decision: Lead with a provocative problem-first signal, then permanent principles, an interactive service console, recurring-use tools, the ten-year institutional horizon, and a frictionless conversation invitation.
+- Visual language: royal midnight and sapphire depth, luminous gold actions, ivory editorial space, framed emblem, restrained kinetic movement, and a persistent mobile action dock.
+- Guardrail: ambition must remain accountable. The site may describe the intended horizon, but must not imply existing governmental authority, budget control, project history, or institutional mandates that cannot be evidenced.
