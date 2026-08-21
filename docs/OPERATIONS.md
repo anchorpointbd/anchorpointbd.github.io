@@ -19,6 +19,10 @@ Weekly: export schema/data, export a Storage manifest and files, encrypt the bac
 
 The assistant explains theory, variables, assumptions, standards-discovery steps and verification questions. It refuses final design approval, equipment selection, protection sizing, site methods, bypasses, emergency instructions, fabricated clauses and decisions. Use a server-side Edge Function with an AI key, authentication, per-user rate limits, minimal logging, no confidential prompts by default, and a clear model/provider disclosure. OpenRouter free routing is suitable only for experiments because availability and daily request limits vary.
 
+Selected implementation: `supabase/functions/theory-assistant` calls `openrouter/free`; the provider key is stored only as the Edge Function secret `OPENROUTER_API_KEY`. The site caps use at five questions per hashed client per rolling day and never falls back to a paid model.
+
+Deploy after linking the Supabase CLI: `supabase secrets set OPENROUTER_API_KEY=...`, then `supabase functions deploy theory-assistant`. Add the deployed Supabase URL and anon key to `config.js`. Keep JWT verification enabled. For preview domains, temporarily add the exact preview origin to the function allowlist and remove it before launch.
+
 ## Deployment and recovery
 
 No production deployment or merge is authorized yet. Preview this branch first. Rollback is a Git revert or prior commit; data rollback requires the encrypted backups above. DNS/CNAME stays unchanged unless the owner explicitly approves changes.

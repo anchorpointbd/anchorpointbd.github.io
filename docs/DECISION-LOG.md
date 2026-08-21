@@ -17,3 +17,10 @@
 ## D-003 — Content claims
 
 - Decision: Remove unverifiable project/partner/experience counters. Use institutional, problem-first language and no founder-centric biography.
+
+## D-004 — Free service selection (2026-08-21)
+
+- Decision: Use Supabase Free for Auth, Postgres, Storage and the Edge Function; use OpenRouter Free via `openrouter/free` for theory explanations.
+- Cost guardrail: five assistant questions per hashed client per rolling day, no automatic paid fallback, and a clear unavailable state when free capacity is exhausted.
+- Privacy: the Edge Function hashes a coarse client signal for rate limiting; it stores only the hash, timestamp and returned model identifier. Prompts are sent to OpenRouter and the routed model provider, so confidential/project data is prohibited.
+- Escape route: replace the provider call inside the Edge Function without changing the public UI; export standard Postgres and Storage data when leaving Supabase.
