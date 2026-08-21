@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Accept Vault invitation — Anchor Point</title>
+<link rel="stylesheet" href="style.css"><link rel="icon" href="assets/logo-emblem.svg"></head>
+<body class="auth-page"><header class="topbar scrolled"><a class="brand" href="index.html"><span class="brand-emblem"><img src="assets/logo-emblem.svg" alt="" width="64" height="64"></span><span><b>ANCHOR POINT</b><small>Secure staff onboarding</small></span></a></header>
+<main class="auth-shell"><section class="panel auth-card">
+<p class="eyebrow">Private · invitation only</p><h1>Enter the Vault.</h1>
+<p id="authStatus" class="notice" aria-live="polite">Checking your secure invitation…</p>
+<form id="passwordForm" hidden>
+<h2>Create your password</h2><p>Use at least 12 characters. A long, unique passphrase is easier to remember and safer.</p>
+<label class="field">New password<input id="newPassword" type="password" minlength="12" autocomplete="new-password" required></label>
+<label class="field">Confirm password<input id="confirmPassword" type="password" minlength="12" autocomplete="new-password" required></label>
+<button class="pill gold" type="submit">Save password and continue</button></form>
+<section id="mfaSetup" hidden><h2>Protect this account</h2><p>Scan this QR code with an authenticator app, then enter the current six-digit code.</p>
+<img id="mfaQr" class="mfa-qr" alt="Authenticator setup QR code"><details><summary>Cannot scan?</summary><code id="mfaSecret"></code></details>
+<form id="mfaForm"><label class="field">Six-digit code<input id="mfaCode" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" required></label><button class="pill gold" type="submit">Verify and enter Vault</button></form></section>
+<section id="authComplete" hidden><h2>Account protected.</h2><p>Password and authenticator verification are complete.</p><a class="pill gold" href="vault.html">Open the Vault</a></section>
+<p class="auth-help">If the invitation is expired, close this page and ask the Vault administrator to send one fresh invitation. Only the newest link should be used.</p>
+</section></main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="accept-invite.js"></script></body></html>
