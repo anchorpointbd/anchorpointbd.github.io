@@ -31,3 +31,15 @@
 - Decision: Lead with a provocative problem-first signal, then permanent principles, an interactive service console, recurring-use tools, the ten-year institutional horizon, and a frictionless conversation invitation.
 - Visual language: royal midnight and sapphire depth, luminous gold actions, ivory editorial space, framed emblem, restrained kinetic movement, and a persistent mobile action dock.
 - Guardrail: ambition must remain accountable. The site may describe the intended horizon, but must not imply existing governmental authority, budget control, project history, or institutional mandates that cannot be evidenced.
+
+## D-006 — Final logo and secure onboarding (2026-08-21)
+
+- Logo: Preserve the supplied final SVG as the source artwork; publish cropped master-lockup and emblem variants because the source uses an A4 canvas that makes direct web placement appear undersized.
+- Authentication: Invitation acceptance creates a password, then enrolls and verifies TOTP. Returning staff must reach AAL2 before the Vault interface or private RLS policies permit access.
+- Recovery: The original file remains unchanged outside the repository; each integration change is a reversible candidate-branch commit.
+
+## D-007 — Strict AI privacy routing (2026-08-21)
+
+- Decision: Keep OpenRouter free-endpoint training disabled and require Zero Data Retention in the Edge Function request.
+- Consequence: The assistant may be unavailable when no free ZDR-compatible provider is available.
+- Guardrail: Availability failure is preferable to silently routing a visitor's question through a retaining provider. Confidential and project-specific data remain prohibited.
