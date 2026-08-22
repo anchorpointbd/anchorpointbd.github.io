@@ -68,3 +68,11 @@
 - AI boundary: Present the assistant as an experimental, capacity-dependent beta; require a public-question confirmation and keep calculators, explainers and resources useful when AI is unavailable.
 - Safety: Voltage drop, pump power and welding heat input remain theory estimates and explicitly refuse equipment selection, protection sizing, WPS substitution, certification or site authority.
 
+## D-011 — Durable continuity protocol (2026-08-22)
+
+- Predominant question: How can the project survive chat-history display failures, context compaction and handoffs without repeatedly asking the owner to reconstruct decisions?
+- Decision: Make `docs/CURRENT-STATE.md`, this decision log and root `AGENTS.md` the mandatory restart sequence; store the recovered persona review as a versioned artifact.
+- Operating rule: Reconcile the remote candidate/PR before acting because connector-created commits can leave the local Git pointer behind the deployed files. Update current state after material release-candidate changes.
+- Consequence: Small documentation overhead in exchange for reproducible project context independent of one model session or device UI.
+- Escape route: Every record is plain Markdown under Git history and can be revised or removed through a reversible reviewed commit.
+
