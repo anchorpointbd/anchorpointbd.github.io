@@ -52,3 +52,19 @@
 - Consequence: this permits more free endpoints than strict ZDR while excluding providers OpenRouter marks as collecting prompt data. It is not a contractual zero-retention guarantee, so the UI and policy prohibit names, drawings, measurements, client data and other project-specific inputs.
 - Escape route: restore strict `zdr:true` when a compatible free endpoint is available, or move to a paid ZDR-capable provider without changing the public UI.
 - Diagnostics: log only upstream HTTP status and error code in Supabase; never log prompts, responses, keys or visitor identity.
+
+## D-009 — Public proof layer (2026-08-22)
+
+- Predominant question: How can the public site earn serious institutional trust before Anchor Point has authorized project references and a complete public credential pack?
+- Decision: Build inspectable method evidence, constructed demonstrations, sample output structures, engagement stages, capability boundaries, a provider/data trust centre, and deeper role-based Hub utility.
+- Claim rule: Every strong statement is classified as visible now, verified per engagement, constructed demonstration, future intent, or not claimed.
+- Guardrail: Never fabricate clients, projects, registrations, partnerships, government authority, certifications, outcomes, testimonials, or named experience.
+- Consequence: The site openly states its pre-launch validation stage and missing owner-verification facts. This is less superficially impressive than invented history and materially more credible under due diligence.
+- Escape route: Replace demonstration cases with authorized anonymized or named case evidence as real engagements accumulate; retain labels and provenance in version history.
+
+## D-010 — Role-based Engineering Hub expansion (2026-08-22)
+
+- Decision: Expand from four basic calculators to twelve tools across everyday, field, student, project, commercial and finance lenses; add visible assumptions, four explainers and searchable legitimate resources.
+- AI boundary: Present the assistant as an experimental, capacity-dependent beta; require a public-question confirmation and keep calculators, explainers and resources useful when AI is unavailable.
+- Safety: Voltage drop, pump power and welding heat input remain theory estimates and explicitly refuse equipment selection, protection sizing, WPS substitution, certification or site authority.
+
