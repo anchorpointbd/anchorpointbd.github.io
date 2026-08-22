@@ -84,5 +84,3 @@ drop policy if exists "vault delete" on storage.objects;
 create policy "vault read aal2" on storage.objects for select to authenticated using(bucket_id='vault' and public.is_staff_aal2());
 create policy "vault add aal2" on storage.objects for insert to authenticated with check(bucket_id='vault' and public.is_staff_aal2());
 create policy "vault delete aal2" on storage.objects for delete to authenticated using(bucket_id='vault' and public.is_admin_aal2());
-
-

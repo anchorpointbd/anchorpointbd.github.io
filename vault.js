@@ -56,5 +56,3 @@ document.querySelector('#challengeMfaForm').addEventListener('submit',async even
   await gate();
 });
 document.querySelector('#signout').addEventListener('click',()=>client?.auth.signOut());
-
-
