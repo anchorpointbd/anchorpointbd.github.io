@@ -77,11 +77,45 @@ document.querySelectorAll('.calc-btn').forEach(button=>button.addEventListener('
 
 const roleButtons=document.querySelectorAll('[data-role]');
 const calculatorCards=document.querySelectorAll('.calculator[data-roles]');
+const departmentSelect=q('#toolDepartment');
+let selectedRole='all';
+const filterCalculators=()=>{
+  const department=departmentSelect?.value||'all';
+  calculatorCards.forEach(card=>{
+    const roleMatch=selectedRole==='all'||card.dataset.roles.split(' ').includes(selectedRole);
+    const departmentMatch=department==='all'||(card.dataset.departments||'').split(' ').includes(department);
+    card.hidden=!(roleMatch&&departmentMatch);
+  });
+};
 roleButtons.forEach(button=>button.addEventListener('click',()=>{
   roleButtons.forEach(item=>item.classList.remove('active'));button.classList.add('active');
-  const role=button.dataset.role;
-  calculatorCards.forEach(card=>{const visible=role==='all'||card.dataset.roles.split(' ').includes(role);card.hidden=!visible;});
+  selectedRole=button.dataset.role;filterCalculators();
 }));
+departmentSelect?.addEventListener('change',filterCalculators);
+
+const facultyContent={
+  engineering:{eyebrow:'FACULTY 01 · DEEP FIRST',title:'Engineering',description:'Navigate by discipline, then choose the kind of help you need. The initial desk grows around real engineering work rather than a random list of tools.',departments:[['civil','Civil and Infrastructure','Structures · water · construction · public systems'],['mechanical','Mechanical and Manufacturing','Machines · fluids · production · maintenance'],['marine','Naval and Marine','Ships · ports · propulsion · marine operations'],['electrical','Electrical and Electronics','Power · machines · protection · control'],['energy','Energy and Environment','Efficiency · utilities · emissions · resources'],['computing','Computing and Systems','Data · automation · software · interfaces'],['materials','Materials and Welding','Selection · joining · failure · quality']]},
+  business:{eyebrow:'FACULTY 02 · FOUNDATION',title:'Projects and Business',description:'A small first layer for turning technical work into organized delivery. This faculty will grow only where engineering and business decisions genuinely meet.',departments:[['business','Project Strategy','Scope · stakeholders · outcomes · constraints'],['business','Procurement and Supply','Requirements · offers · interfaces · lifecycle'],['business','Operations','Capacity · reliability · handover · improvement']]},
+  finance:{eyebrow:'FACULTY 03 · FOUNDATION',title:'Finance and Economics',description:'Practical financial reasoning for engineers and project teams—not investment advice. Start with cash flow, lifecycle cost and uncertainty.',departments:[['finance','Engineering Economics','Payback · NPV · lifecycle cost · sensitivity'],['finance','Cost and Budget','Estimate · allowance · contingency · variance'],['finance','Commercial Decisions','Price · value · risk · consequence']]},
+  law:{eyebrow:'FACULTY 04 · FOUNDATION',title:'Law and Governance',description:'Orientation routes for obligations, public rules and decision accountability. Original legal sources remain authoritative and professional advice remains separate.',departments:[['law','Contracts and Obligations','Scope · responsibility · change · records'],['law','Public Governance','Policy · procurement · accountability · evidence'],['law','Standards and Compliance','Jurisdiction · edition · applicability · verification']]},
+  human:{eyebrow:'FACULTY 05 · FOUNDATION',title:'Human Systems and Arts',description:'Engineering is performed by people. This early foundation connects communication, behavior, design, history and the lived experience of work.',departments:[['human','People at Work','Communication · incentives · fatigue · coordination'],['human','Design and Society','Accessibility · culture · public value · consequence'],['human','Ideas and Expression','Observation · unfinished ideas · reflection · creative practice']]}
+};
+const facultyTabs=document.querySelectorAll('[data-faculty]');
+const renderFaculty=key=>{
+  const faculty=facultyContent[key];if(!faculty)return;
+  show('#facultyEyebrow',faculty.eyebrow);show('#facultyTitle',faculty.title);show('#facultyDescription',faculty.description);
+  const grid=q('#departmentGrid');if(grid)grid.innerHTML=faculty.departments.map(([department,title,description])=>'<button data-department-jump="'+department+'"><b>'+title+'</b><span>'+description+'</span></button>').join('');
+};
+facultyTabs.forEach(tab=>tab.addEventListener('click',()=>{
+  facultyTabs.forEach(item=>{item.classList.remove('active');item.setAttribute('aria-selected','false');});
+  tab.classList.add('active');tab.setAttribute('aria-selected','true');renderFaculty(tab.dataset.faculty);
+}));
+q('#departmentGrid')?.addEventListener('click',event=>{
+  const button=event.target.closest('[data-department-jump]');if(!button)return;
+  const department=button.dataset.departmentJump;
+  if(departmentSelect&&Array.from(departmentSelect.options).some(option=>option.value===department))departmentSelect.value=department;
+  filterCalculators();q('#daily')?.scrollIntoView({behavior:'smooth'});
+});
 
 const resourceInput=q('#resourceSearch'),resourceButtons=document.querySelectorAll('[data-resource-tag]'),resources=document.querySelectorAll('.resource[data-tags]');
 let resourceTag='all';
