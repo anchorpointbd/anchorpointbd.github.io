@@ -36,3 +36,5 @@ Approve the two staff emails/roles, Supabase account/region, data classification
 The callback page is `/accept-invite.html`. It detects the Supabase invitation session, requires a 12-character password, enrolls TOTP, verifies the first code, and only then links to the Vault. Returning sessions are gated by authenticator assurance level; private database and Storage policies must use the AAL2 migration in `supabase/migrations/20260821_staff_onboarding_mfa.sql`.
 
 Store the OpenRouter replacement key only in Supabase Edge Function secrets as `OPENROUTER_API_KEY`. A key exposed in chat, source code, screenshots, or browser JavaScript must be revoked. The public theory assistant requests `data_collection: deny`, keeps OpenRouter training and input/output logging disabled, and must never receive confidential or project-specific data. Vault data is never sent to OpenRouter. Supabase logs contain only sanitized upstream status/error codes. Strict ZDR remains the preferred future route when a compatible endpoint is reliably available.
+
+

@@ -86,3 +86,25 @@
 - Evidence: OpenRouter documents free models as low-limit, variable-capacity services suited to experimentation and low-volume use—not guaranteed production availability.
 - Escape route: The previous illustration remains in repository history; the refinement stylesheet and new asset can be reverted independently.
 
+## D-013 — Launch 3.0 ecosystem direction (2026-08-22)
+
+- Predominant question: How can Anchor Point reach engineers through recurring utility while growing beyond a static consulting website?
+- Decision: Preserve Launch 2.5 at remote commit `b03a25448871147863bc4b7544152705747c2e09`; create `launch-3.0-candidate` from that exact state; reshape the Engineering Hub into a faculty–department–pathway ecosystem with engineering deep first and limited foundations for business, finance, law and human systems.
+- Product model: Anchor Point owns the navigation, taxonomy, original tools, explanations and relationship layer. Third-party knowledge remains with the authoritative publisher and is linked rather than copied or re-hosted.
+- Tool model: Separate Scientific Calculator, Unit and Conversion Tools, Engineering Calculators, and Knowledge and Sources. Grow conversion coverage through one verified engine with sector views rather than copied commercial tools.
+- Brand: Establish **Anchored in Excellence** as the institutional tagline while retaining **Engineering at Ease** as the operating philosophy.
+- Privacy: Remove Information Care from primary navigation. Keep compact Privacy and Terms links, contextual notices, truthful purposes and data rights without publicly marketing the infrastructure stack.
+- Mobile: Build web-first toward an installable PWA, then Android and iOS wrappers when store accounts justify them. Core utility remains available without compulsory registration.
+- New concepts: Develop an Idea Graveyard only with ownership, confidentiality, moderation and selection boundaries. Evaluate the frustration concept first as a no-storage local Release Pad; never mix emotional disclosures into lead scoring.
+- Visual guardrail: No image generation without an owner-approved concept, placement and purpose.
+- Escape route: Launch 2.5 remains independently preserved; all Launch 3.0 work stays on its dedicated candidate branch and can be reverted by reviewed commit.
+
+## D-014 — Utility engine and private-first experiments (2026-08-22)
+
+- Decision: Meet broad conversion demand with a tested unit engine and explicit route count, not hundreds of copied or thin pages. Keep every result transparent through reference units, factors and substitution.
+- Scientific safety: Parse a limited mathematical grammar locally; do not use `eval` or send expressions to a service. Treat outputs as aids requiring unit, domain and applicability checks.
+- Idea Graveyard boundary: Prove the sorting and reflection experience locally before accepting public submissions. Submission remains closed until the owner approves intellectual-property language, confidentiality limits, moderation, retention, deletion and contact rules.
+- Release Pad boundary: Keep the initial concept entirely in the browser, with no account, storage, analytics linkage, AI, diagnosis or lead scoring. It is not counselling, crisis support or a monitored channel.
+- Reason: Recurring utility can build trust and habit without collecting sensitive data before Anchor Point has the operational capacity to protect and moderate it.
+- Escape route: Either concept can remain a private browser tool, move behind the Vault, or be removed through a single reversible change if owner review finds the tone or risk unsuitable.
+

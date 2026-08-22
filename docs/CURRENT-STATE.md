@@ -1,4 +1,4 @@
-# Anchor Point Launch 2.5 — current state
+# Anchor Point Launch 3.0 — current state
 
 Last reconciled: 2026-08-22 (Asia/Dhaka)
 
@@ -7,7 +7,8 @@ This file is the restart point when a chat is compacted, hidden, or opened on an
 ## Release candidate
 
 - Repository: `anchorpointbd/anchorpointbd.github.io`
-- Working branch: `launch-2.5-candidate`
+- Frozen predecessor: `launch-2.5-candidate` at remote commit `b03a25448871147863bc4b7544152705747c2e09`
+- Working branch: `launch-3.0-candidate`, created from that exact predecessor commit
 - Deployed proof-layer head verified at reconciliation: `114ae9a4ec08690f0d737762310c95cb09961d10` (later documentation-only continuity commits may advance the branch)
 - Review path: draft pull request #2 into `development`
 - Merge status after the continuity commits: open and draft; not merged. The connector currently reports `mergeable: false`, so the candidate must receive a conflict/base review before any merge approval.
@@ -18,6 +19,10 @@ This file is the restart point when a chat is compacted, hidden, or opened on an
 ## Institutional direction
 
 Anchor Point is presented as a problem-first engineering institution: **Engineering at Ease**. Its operating sequence is **Understand → Diagnose → Explore → Decide → Deliver**. The public promise is disciplined reasoning with alternatives, consequences and escape routes—not a founder biography and not unsupported claims of authority.
+
+Launch 3.0 adds **Anchored in Excellence** as the institutional tagline and turns the Engineering Hub into the entry point for a connected, recurring-use knowledge ecosystem. The information architecture uses a familiar faculty → department → pathway progression without representing Anchor Point as a university. Engineering is deep first; business, finance, law and human systems begin as limited foundations.
+
+Third-party knowledge remains with original publishers. Anchor Point links, classifies and explains; it does not copy or re-host university repositories, standards, papers or proprietary calculators. See `docs/LAUNCH-3-OWNER-BRIEF.md` for the durable product scope, mobile direction, Idea Graveyard boundaries, private-release evaluation and image-approval rule.
 
 The visual and editorial character is premium but approachable: deep navy, sapphire depth, luminous restrained gold, ivory editorial space, Renaissance curiosity, energetic interaction and easy conversation entry. Leonardo da Vinci is used as an intellectual metaphor for observation and connected disciplines, not as borrowed endorsement or copied artwork.
 
@@ -82,6 +87,17 @@ The common gap was evidence, not visual ambition. Students and field staff wante
 ## Verified checks and open gates
 
 Verified during the proof-layer pass: JavaScript syntax, internal page HTTP responses, 12/12 calculator presence, 390 px mobile overflow check, headings/IDs/labels/alt text, and successful Cloudflare deployment of the remote candidate head.
+
+### Launch 3.0 foundation implemented (2026-08-22)
+
+- The Hub now opens as an ecosystem: five growing faculties, seven engineering departments and six task pathways. Engineering is the deep starting faculty; Projects and Business, Finance and Economics, Law and Governance, and Human Systems and Arts are intentionally light foundations.
+- Four desks separate different intentions: Scientific Calculator, Conversion Desk, Engineering Calculators, and Knowledge and Sources.
+- The new conversion engine contains 26 quantities and 816 directed unit-pair routes, sorted by sector. It displays reference units, factors, formula and substitution; impossible temperatures below absolute zero are rejected.
+- The scientific desk uses a local expression parser rather than dynamic code execution. It supports constants, functions, degree/radian/gradian modes, precision control and in-page history.
+- Bangladesh university-library pathways now include BUET, MIST, CUET, KUET, RUET and DUET, linking to their own authoritative systems rather than copying their collections.
+- Idea Graveyard and Release Pad exist as `noindex`, local-only concept workbenches. Neither stores, transmits, scores or turns a disclosure into a lead. Public submission remains closed pending approved ownership, privacy, moderation, deletion and escalation rules.
+- Information Care is out of the ordinary visitor journey. The old page is retained for recoverability but marked `noindex`; the compact Privacy and Terms pages remain in the footer.
+- No image was generated or added during this Launch 3.0 pass.
 
 Still required before public launch:
 

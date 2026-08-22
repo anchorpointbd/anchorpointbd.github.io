@@ -57,3 +57,5 @@ document.querySelector('#mfaForm').addEventListener('submit',async event=>{
 });
 
 detectInvitation();
+
+

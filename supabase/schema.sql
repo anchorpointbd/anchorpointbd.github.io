@@ -13,3 +13,5 @@ create policy "projects staff" on public.projects for all to authenticated using
 alter table public.ai_usage enable row level security;
 create index ai_usage_limit on public.ai_usage(client_hash,created_at);
 insert into storage.buckets(id,name,public,file_size_limit) values('vault','vault',false,26214400) on conflict do nothing;create policy "vault read" on storage.objects for select to authenticated using(bucket_id='vault' and public.is_staff());create policy "vault add" on storage.objects for insert to authenticated with check(bucket_id='vault' and public.is_staff());create policy "vault delete" on storage.objects for delete to authenticated using(bucket_id='vault' and public.is_admin());
+
+

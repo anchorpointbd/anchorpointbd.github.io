@@ -9,3 +9,5 @@
 | Contact form/analytics claims | MOVE/DECIDE | Previous third-party form and analytics need privacy/account review before reactivation. |
 
 Key faults: malformed JavaScript block; duplicated chapter CSS; inconsistent blue/gold system; broken `logo.svg` preload; unsupported marketing counters; SVG-only social card; no legal/privacy boundaries; no Hub/Vault; scrap artifacts deployed publicly.
+
+
