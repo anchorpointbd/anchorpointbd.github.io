@@ -43,6 +43,14 @@ Ambition may be stated as future intent—to help reshape engineering practice a
 - SEO/social metadata, favicon assets, sitemap, robots, privacy, terms, disclaimers and responsive mobile action dock
 - Documentation: audit, operations, proof layer, public-launch readiness, asset provenance and central decision log
 
+### Visitor-language refinement (2026-08-22)
+
+- Evidence is now presented publicly as **How We Work**; Trust is presented as **Information Care**.
+- Unexplained labels such as `ANCHOR SIGNAL / 001`, `DEMO / MARINE 01` and `AP / SERVICE 01` were replaced with meaningful visitor language.
+- The Renaissance painting was replaced with original white/ivory technical linework; the exact master emblem now appears as restrained watermark/action/motion geometry.
+- Motion timings were shortened and mobile overflow rechecked at 390 px.
+- The Theory Assistant retains live OpenRouter Free routing, but capacity failures now fall back to clearly labelled reviewed notes for voltage drop, welding heat input, payback/NPV and NPSH. The fallback is not represented as AI.
+
 ## Service and security map
 
 | Layer | Service | Current boundary |

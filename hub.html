@@ -199,19 +199,19 @@
 
   <section id="assistant" class="section principles assistant-beta">
     <div class="principle-title">
-      <div class="beta-line"><span class="beta-badge">EXPERIMENTAL BETA</span><span>Free capacity · availability varies</span></div>
+      <div class="beta-line"><span class="beta-badge">LIVE WHEN CAPACITY ALLOWS</span><span>Reviewed theory notes remain available</span></div>
       <p class="kicker light"><span></span> Theory, not authority</p>
       <h2>Ask why it works.</h2>
-      <p>Use it to explain concepts, equations, variables, units, assumptions and what to verify. It will not approve a design, prescribe site work, select safety-critical equipment or make the decision.</p>
+      <p>Use it to explain concepts, equations, variables, units, assumptions and what to verify. When the free live model is busy, the desk falls back to a reviewed Anchor Point theory note instead of leaving you at a dead end.</p>
       <p class="notice light"><b>Public theory questions only.</b> Never enter client names, project measurements, drawings, commercial information, personal data, credentials or other confidential material.</p>
       <a href="trust.html#ai-policy" class="assistant-policy-link">Read the full AI and data boundary →</a>
     </div>
     <form class="panel" id="assistantForm">
-      <p>Questions pass through a secured Supabase Edge Function to OpenRouter Free. No provider key is exposed in this page. A privacy-compatible free model may not always be available.</p>
+      <p>Live questions pass through a secured server function to OpenRouter Free. No provider key is exposed here. If the free route is busy, clearly-labelled local guidance appears instead.</p>
       <label class="field" for="assistantQuestion">Your public theory question<textarea id="assistantQuestion" rows="5" maxlength="1800" placeholder="Why does NPSH margin matter in a pump system?"></textarea></label>
       <div class="assistant-examples"><span>Try:</span><button type="button" data-question="Why does voltage drop increase with cable length and current?">Voltage drop</button><button type="button" data-question="Why is welding heat input not enough to define a complete procedure?">Welding heat</button><button type="button" data-question="What is the difference between simple payback and NPV?">Payback vs NPV</button></div>
       <label class="assistant-consent"><input id="assistantConsent" type="checkbox"> I confirm this is a generic public theory question with no confidential or project-specific information.</label>
-      <button class="pill gold" id="assistantAsk" type="submit" disabled>Confirm the public-question boundary</button>
+      <button class="pill gold" id="assistantAsk" type="submit" disabled>Confirm and ask</button>
     </form>
   </section>
 </main>
@@ -220,7 +220,7 @@
 <script src="main.js" defer></script>
 <script src="config.js" defer></script>
 <script src="hub.js?v=20260822-2" defer></script>
-<script src="assistant.js?v=20260822-2" defer></script>
+<script src="assistant.js?v=20260822-3" defer></script>
 </body>
 </html>
 

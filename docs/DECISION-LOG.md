@@ -76,3 +76,13 @@
 - Consequence: Small documentation overhead in exchange for reproducible project context independent of one model session or device UI.
 - Escape route: Every record is plain Markdown under Git history and can be revised or removed through a reversible reviewed commit.
 
+## D-012 — Public clarity and meaningful visual language (2026-08-22)
+
+- Predominant question: How can the proof layer earn confidence without making an ordinary visitor feel they have opened an internal compliance file?
+- Decision: Rename and rewrite Evidence as “How We Work” and Trust as “Information Care”; lead with visitor outcomes, familiar decision examples and plain sharing guidance. Keep the detailed governance facts, but remove unexplained codes and internal-sounding labels from the primary journey.
+- Visual decision: Replace the painterly Renaissance scene with original light-background technical linework connecting marine, structural, mechanical, electrical, water and flight systems. Use the exact Anchor Point emblem as a watermark, a restrained action-button signature and the moving object on a measured hero orbit.
+- Motion decision: Shorten reveal, console, hover and ticker timing while preserving the reduced-motion mode.
+- AI decision: Retain `openrouter/free`, the no-paid-fallback rule and `data_collection: deny`. When live capacity is unavailable, show a clearly labelled reviewed local theory note for supported topics instead of a dead error message. Never present the fallback as an AI answer.
+- Evidence: OpenRouter documents free models as low-limit, variable-capacity services suited to experimentation and low-volume use—not guaranteed production availability.
+- Escape route: The previous illustration remains in repository history; the refinement stylesheet and new asset can be reverted independently.
+
