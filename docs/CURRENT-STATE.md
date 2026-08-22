@@ -10,7 +10,7 @@ This file is the restart point when a chat is compacted, hidden, or opened on an
 - Working branch: `launch-2.5-candidate`
 - Deployed proof-layer head verified at reconciliation: `114ae9a4ec08690f0d737762310c95cb09961d10` (later documentation-only continuity commits may advance the branch)
 - Review path: draft pull request #2 into `development`
-- Merge status at reconciliation: open, draft, mergeable; not merged
+- Merge status after the continuity commits: open and draft; not merged. The connector currently reports `mergeable: false`, so the candidate must receive a conflict/base review before any merge approval.
 - Cloudflare Pages preview: `https://anchor-point-launch-25-preview.pages.dev/`
 - Production and `main`: intentionally untouched pending explicit owner approval
 - Important local-state note: GitHub connector commits advanced the remote candidate without advancing the local `.git` pointer. The candidate files in this workspace match the newer work; do not reset or discard them merely because local Git reports modifications/untracked files.
