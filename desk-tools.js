@@ -117,7 +117,6 @@ const convertValue=()=>{
 };
 if(sectorSelect){
   const quantities=Object.values(quantityData),routes=quantities.reduce((total,item)=>{const count=Object.keys(item.units).length;return total+count*(count-1);},0);
-  byId('routeCount').textContent=routes.toLocaleString('en-US')+' directed unit-pair routes across '+quantities.length+' quantities · no registration';
+  byId('routeCount').textContent=routes.toLocaleString('en-US')+' available conversions across '+quantities.length+' quantities · no registration';
   fillSelect(sectorSelect,Object.entries(sectorData));refreshQuantities();sectorSelect.addEventListener('change',refreshQuantities);quantitySelect.addEventListener('change',refreshUnits);byId('convertButton').addEventListener('click',convertValue);byId('conversionValue').addEventListener('input',convertValue);fromSelect.addEventListener('change',convertValue);toSelect.addEventListener('change',convertValue);byId('swapUnits').addEventListener('click',()=>{const old=fromSelect.value;fromSelect.value=toSelect.value;toSelect.value=old;convertValue();});
 }
-

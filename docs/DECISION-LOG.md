@@ -108,3 +108,15 @@
 - Reason: Recurring utility can build trust and habit without collecting sensitive data before Anchor Point has the operational capacity to protect and moderate it.
 - Escape route: Either concept can remain a private browser tool, move behind the Vault, or be removed through a single reversible change if owner review finds the tone or risk unsuitable.
 
+## D-015 — Owner-review clarity and visual authority (2026-08-23)
+
+- Predominant question: Which Launch 3.0 elements still looked like an intelligent prototype explaining itself rather than a confident institution inviting a useful first conversation?
+- Decision: Retain the full Launch 3.0 ecosystem while rewriting the first impression, method, principles, services and horizon in immediately understandable language.
+- Identity: Free the emblem from its secondary diamond container; reserve luminous gold for important actions; use a navy emblem on gold buttons; keep watermarks large, quiet and purposeful.
+- Journey: Replace duplicate decorative motion with a project-lifecycle map, use smoother navy–blue–ivory transitions and make every animation or diagram support meaning.
+- Commercial clarity: Define four engagement paths—Decision Framing, Project and Procurement Strategy, Technical–Commercial Review, and Institutional Planning and Knowledge Systems—with triggers, outputs and typical first steps.
+- Technical honesty: Replace “reversible decisions” with “decisions built to adapt.” Anchor Point can identify room to modify, reuse or change course but must never suggest every physical or contractual decision can be reversed.
+- Cultural signature: Keep curiosity, connected technical drawing and the napkin-sketch invitation. Remove overt Leonardo explanation so the Renaissance influence is discoverable rather than performed.
+- Mobile rule: Preserve access to all content while reducing compulsory vertical reading through visible filters and expandable secondary examples.
+- Visual guardrail: No image generation was authorized or used. The existing owner-approved technical asset and exact emblem remain the only visual sources in this pass.
+- Escape route: The refinement is isolated in `launch3-polish.css` plus reversible content/behavior edits and can be reviewed or reverted independently.

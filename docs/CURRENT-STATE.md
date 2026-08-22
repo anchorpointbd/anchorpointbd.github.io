@@ -99,6 +99,20 @@ Verified during the proof-layer pass: JavaScript syntax, internal page HTTP resp
 - Information Care is out of the ordinary visitor journey. The old page is retained for recoverability but marked `noindex`; the compact Privacy and Terms pages remain in the footer.
 - No image was generated or added during this Launch 3.0 pass.
 
+### Owner-review polish implemented (2026-08-23)
+
+- The homepage now answers the commercial question in the first screen: Anchor Point supports engineering, project, procurement and institutional decisions from early ideas through troubled operations.
+- The opening promise is now “See the real problem. Choose the next move.” It replaces the narrow pre-project framing, Bangladesh-first hero label and technically inaccurate “reversible decisions” language.
+- The emblem is freed from the decorative diamond and given greater scale. Gold actions now use a high-contrast navy emblem and clear arrow endpoint; large section watermarks remain restrained.
+- The duplicated moving process ticker is replaced by a useful project-lifecycle strip. The five-step method uses direct questions, and the main warning is elevated as an editorial pull-quote.
+- Permanent principles use plain language and explain the practical benefit to future teams.
+- The service console now presents four concrete engagement paths with a trigger situation, what Anchor Point does, what the client receives and a typical first step.
+- Renaissance influence remains through technical linework, connection and curiosity, while the prominent quotation, repeated name and joke are removed.
+- How We Work retains all three demonstrations but presents one full flagship walkthrough and two optional expandable examples.
+- Hub language introduces faculties as familiar knowledge areas, mobile filters wrap visibly, and AI is labelled as an experimental theory companion rather than a headline capability.
+- The vision now states a credible sequence: now, next and ten-year horizon. Bangladesh remains the operating root without limiting the opening impression.
+- No image was generated, replaced or commissioned during this refinement.
+
 Still required before public launch:
 
 1. Owner confirmation of legal name, registration/status, address, contact recipients, privacy controller details and any capability/credential facts.
@@ -114,4 +128,3 @@ Still required before public launch:
 Open the Cloudflare candidate on desktop and a physical phone, review the proof layer and Hub, then run the Supabase/OpenRouter end-to-end test. Record every objection as an evidence, usability, policy or factual-content issue rather than silently changing the institutional promise.
 
 Sixty questions established discovery. The six hundred questions that follow can give Anchor Point institutional depth—provided each answer becomes evidence, policy, or a reversible decision rather than disappearing inside chat history.
-
