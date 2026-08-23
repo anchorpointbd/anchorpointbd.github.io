@@ -113,6 +113,16 @@ Verified during the proof-layer pass: JavaScript syntax, internal page HTTP resp
 - The vision now states a credible sequence: now, next and ten-year horizon. Bangladesh remains the operating root without limiting the opening impression.
 - No image was generated, replaced or commissioned during this refinement.
 
+### Startup accountability correction (2026-08-23)
+
+- The homepage now states the current stage directly instead of implying a mature anonymous team: early-stage, founder-led and Dhaka-based, with assignment-specific people, competence, registrations, conflicts and delivery responsibility to be verified before commitment.
+- The brand hierarchy is explicit: **Anchored in Excellence** is the standard; **Engineering at Ease** is the experience being built; the homepage proposition remains “See the real problem. Choose the next move.”
+- Existing product proof is surfaced as four working desks, 26 conversion quantities, 816 directed unit routes and six Bangladesh library paths. These are inspectable product facts, not client or adoption claims.
+- The four service tabs now expose ARIA tab/tabpanel roles, selected state and keyboard navigation. Mobile footer/contact clearance is reserved beneath the fixed action dock.
+- Homepage title, description, Open Graph and Twitter metadata now describe the actual engineering/project/procurement proposition consistently.
+- No contact form was added because the archived Formspree destination, recipient, retention, spam controls and deletion process are not approved launch facts.
+- No image was generated, edited or added in this correction.
+
 Still required before public launch:
 
 1. Owner confirmation of legal name, registration/status, address, contact recipients, privacy controller details and any capability/credential facts.
@@ -128,3 +138,4 @@ Still required before public launch:
 Open the Cloudflare candidate on desktop and a physical phone, review the proof layer and Hub, then run the Supabase/OpenRouter end-to-end test. Record every objection as an evidence, usability, policy or factual-content issue rather than silently changing the institutional promise.
 
 Sixty questions established discovery. The six hundred questions that follow can give Anchor Point institutional depth—provided each answer becomes evidence, policy, or a reversible decision rather than disappearing inside chat history.
+

@@ -120,3 +120,15 @@
 - Mobile rule: Preserve access to all content while reducing compulsory vertical reading through visible filters and expandable secondary examples.
 - Visual guardrail: No image generation was authorized or used. The existing owner-approved technical asset and exact emblem remain the only visual sources in this pass.
 - Escape route: The refinement is isolated in `launch3-polish.css` plus reversible content/behavior edits and can be reviewed or reverted independently.
+
+## D-016 — Startup accountability and launch trust (2026-08-23)
+
+- Predominant question: How can an early-stage Anchor Point answer the valid “who is accountable?” objection without inventing a mature team, project history, credentials or social proof?
+- Decision: State the current stage directly. Present Anchor Point as an early-stage, founder-led engineering institution in Dhaka; distinguish inspectable method/product proof from people, competence and scope evidence that must be verified for the actual assignment.
+- Brand hierarchy: **Anchored in Excellence** is the institutional standard; **Engineering at Ease** is the experience being built; “See the real problem. Choose the next move.” remains the homepage proposition.
+- Proof: Surface the implemented Ecosystem scale—four desks, 26 conversion quantities, 816 directed routes and six Bangladesh library paths—without presenting usage, adoption or project outcomes that do not exist.
+- Accessibility: Treat the four services as a real keyboard-operable tab interface with selected-state announcements. Preserve mobile footer clearance beneath the fixed action dock.
+- Contact boundary: Do not restore the archived Formspree endpoint or add a collection form until its owner, recipient, retention, spam controls, deletion process and privacy notice are approved and tested.
+- Visual guardrail: No image was generated, edited or added. Image concepts remain subject to separate owner approval.
+- Escape route: The accountability section, brand bridge, Ecosystem proof strip and metadata/accessibility changes are isolated and can be revised independently when verified owner/legal facts become publishable.
+
