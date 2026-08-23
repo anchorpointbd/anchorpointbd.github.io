@@ -132,3 +132,10 @@
 - Visual guardrail: No image was generated, edited or added. Image concepts remain subject to separate owner approval.
 - Escape route: The accountability section, brand bridge, Ecosystem proof strip and metadata/accessibility changes are isolated and can be revised independently when verified owner/legal facts become publishable.
 
+## D-017 — Ecosystem proof composition (2026-08-23)
+
+- Decision: Replace abstract claims of recurring utility with three real captures from the working candidate: the Scientific Desk resolving `sin(45)^2 + cos(45)^2 = 1`, the Conversion Desk resolving `1 bar = 14.503773773 psi`, and the Hydraulic Pump Power calculator showing its default-input estimate and verification boundary.
+- Provenance: Captures come from the local Launch 3.0 candidate at a controlled desktop viewport. They are not generated interfaces, concept mockups, adoption evidence or third-party products.
+- Treatment: Present the captures as one restrained proof composition inside the Ecosystem section, with accurate alternative text, lazy loading, explicit result boundaries and reduced-motion support.
+- Visual guardrail: No generative image model was used. The composition may be regenerated only from verified live interfaces when those interfaces materially change.
+

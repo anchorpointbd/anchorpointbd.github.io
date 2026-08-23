@@ -123,6 +123,12 @@ Verified during the proof-layer pass: JavaScript syntax, internal page HTTP resp
 - No contact form was added because the archived Formspree destination, recipient, retention, spam controls and deletion process are not approved launch facts.
 - No image was generated, edited or added in this correction.
 
+### Ecosystem proof composition (2026-08-23)
+
+- The homepage Ecosystem section now shows three real candidate captures rather than an imagined product: Scientific Desk, Conversion Desk and Hydraulic Pump Power calculator.
+- The shown outputs are reproducible from the working candidate and remain accompanied by verification boundaries. The composition is product proof, not evidence of clients, adoption or professional approval.
+- No generative image model was used; the captures were taken from the actual local interfaces after exercising their real controls.
+
 Still required before public launch:
 
 1. Owner confirmation of legal name, registration/status, address, contact recipients, privacy controller details and any capability/credential facts.
