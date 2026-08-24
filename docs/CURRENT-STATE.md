@@ -145,3 +145,10 @@ Open the Cloudflare candidate on desktop and a physical phone, review the proof 
 
 Sixty questions established discovery. The six hundred questions that follow can give Anchor Point institutional depth—provided each answer becomes evidence, policy, or a reversible decision rather than disappearing inside chat history.
 
+### Constructed Decision Anatomy (2026-08-24)
+
+- The generic flagship vessel example on How We Work was replaced by an anonymized constructed demonstration: **When the calculation began defending the decision**.
+- The sequence shows an early equipment choice, developed-load pressure, a first correction, a phase-compatibility conflict, system reframing and the controls required to make assumptions inspectable.
+- The public story does not identify the owner, employer, client, vessel, suppliers, classification society, dates, values or outcome. It does not claim the underlying historical project as an Anchor Point credential.
+- The story explicitly warns that a mathematically correct calculation can mislead when assumptions are selected to protect a committed decision.
+- Founder-page work remains separate and was not started or inferred from an unfinished owner script.
