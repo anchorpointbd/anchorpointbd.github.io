@@ -29,9 +29,9 @@ const tokens=s=>(s.toLowerCase().match(/[a-z0-9]+/g)||[]).filter(x=>x.length>2);
 function render(){
  const query=(q?.value||'').trim(),qt=tokens(query),dept=filter?.value||'all';
  let ranked=topics.filter(t=>dept==='all'||t.discipline===dept).map((t,i)=>{const hay=tokens(t.title+' '+t.discipline+' '+t.guidance);return{t,i,score:qt.reduce((n,x)=>n+(hay.some(y=>y.includes(x)||x.includes(y))?3:0),0)+(t.name.toLowerCase().includes(query.toLowerCase())&&query?8:0)}}).sort((a,b)=>b.score-a.score||a.i-b.i);
- if(query&&ranked[0]?.score===0)ranked=ranked.slice(0,0);
+ if(query)ranked=ranked.filter(x=>x.score>0);
  const shown=ranked.slice(0,6);if(count)count.textContent=`${topics.length} topic routes · ${ranked.length} matching`;
  results.innerHTML=shown.length?shown.map(({t})=>`<article><p class="tag">${esc(t.discipline)} · ${esc(t.lens)}</p><h3>${esc(t.name)}</h3><p>${esc(t.guidance)} For this topic, establish inputs, units, operating state, uncertainty and the decision that the evidence must support.</p><div class="knowledge-actions"><a href="${t.source}" rel="noopener">Open authoritative route ↗</a><a href="https://www.google.com/search?q=site%3A${new URL(t.source).hostname}+${encodeURIComponent(t.name+' '+t.lens)}" rel="noopener">Search this source ↗</a></div></article>`).join(''):`<div class="library-empty"><h3>No close topic match.</h3><p>Try the equipment, physical quantity or failure mode—not a full project description. Examples: motor starting, pump cavitation, weld fatigue, drainage flow.</p></div>`;
 }
-q?.addEventListener('input',render);filter?.addEventListener('change',render);render();window.anchorPointKnowledgeTopicCount=topics.length;
+window.anchorPointKnowledgeTopicCount=topics.length;q?.addEventListener('input',render);filter?.addEventListener('change',render);render();
 })();
