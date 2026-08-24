@@ -139,3 +139,11 @@
 - Treatment: Present the captures as one restrained proof composition inside the Ecosystem section, with accurate alternative text, lazy loading, explicit result boundaries and reduced-motion support.
 - Visual guardrail: No generative image model was used. The composition may be regenerated only from verified live interfaces when those interfaces materially change.
 
+## D-018 — Anonymized Decision Anatomy (2026-08-24)
+
+- Predominant question: How can Anchor Point demonstrate its problem-first philosophy through lived engineering tension without exposing confidential history or presenting unverified experience as a client credential?
+- Decision: Publish a constructed, anonymized flagship walkthrough titled **When the calculation began defending the decision**. Show the movement from provisional confidence through system conflict to explicit assumptions, operating cases and verification controls.
+- Claim boundary: Remove all client, employer, vessel, supplier, classification, date, value, outcome and personal identifiers. State that details and sequence are simplified and that the demonstration is not a verified project credential or client case study.
+- Integrity lesson: A calculation must be permitted to disprove a committed design. Exclusions, concurrency, continuous versus maximum capability, source-consumer compatibility, redundancy and test evidence must remain visible.
+- Founder boundary: Do not create or imply founder-page claims until the owner supplies and approves the separate script and publishable facts.
+- Escape route: The walkthrough is isolated in one flagship HTML block and dedicated CSS classes; it can be revised or replaced without affecting the remaining proof layer.
