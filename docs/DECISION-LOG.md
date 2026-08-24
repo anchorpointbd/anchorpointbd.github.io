@@ -86,3 +86,73 @@
 - Evidence: OpenRouter documents free models as low-limit, variable-capacity services suited to experimentation and low-volume use—not guaranteed production availability.
 - Escape route: The previous illustration remains in repository history; the refinement stylesheet and new asset can be reverted independently.
 
+## D-013 — Launch 3.0 ecosystem direction (2026-08-22)
+
+- Predominant question: How can Anchor Point reach engineers through recurring utility while growing beyond a static consulting website?
+- Decision: Preserve Launch 2.5 at remote commit `b03a25448871147863bc4b7544152705747c2e09`; create `launch-3.0-candidate` from that exact state; reshape the Engineering Hub into a faculty–department–pathway ecosystem with engineering deep first and limited foundations for business, finance, law and human systems.
+- Product model: Anchor Point owns the navigation, taxonomy, original tools, explanations and relationship layer. Third-party knowledge remains with the authoritative publisher and is linked rather than copied or re-hosted.
+- Tool model: Separate Scientific Calculator, Unit and Conversion Tools, Engineering Calculators, and Knowledge and Sources. Grow conversion coverage through one verified engine with sector views rather than copied commercial tools.
+- Brand: Establish **Anchored in Excellence** as the institutional tagline while retaining **Engineering at Ease** as the operating philosophy.
+- Privacy: Remove Information Care from primary navigation. Keep compact Privacy and Terms links, contextual notices, truthful purposes and data rights without publicly marketing the infrastructure stack.
+- Mobile: Build web-first toward an installable PWA, then Android and iOS wrappers when store accounts justify them. Core utility remains available without compulsory registration.
+- New concepts: Develop an Idea Graveyard only with ownership, confidentiality, moderation and selection boundaries. Evaluate the frustration concept first as a no-storage local Release Pad; never mix emotional disclosures into lead scoring.
+- Visual guardrail: No image generation without an owner-approved concept, placement and purpose.
+- Escape route: Launch 2.5 remains independently preserved; all Launch 3.0 work stays on its dedicated candidate branch and can be reverted by reviewed commit.
+
+## D-014 — Utility engine and private-first experiments (2026-08-22)
+
+- Decision: Meet broad conversion demand with a tested unit engine and explicit route count, not hundreds of copied or thin pages. Keep every result transparent through reference units, factors and substitution.
+- Scientific safety: Parse a limited mathematical grammar locally; do not use `eval` or send expressions to a service. Treat outputs as aids requiring unit, domain and applicability checks.
+- Idea Graveyard boundary: Prove the sorting and reflection experience locally before accepting public submissions. Submission remains closed until the owner approves intellectual-property language, confidentiality limits, moderation, retention, deletion and contact rules.
+- Release Pad boundary: Keep the initial concept entirely in the browser, with no account, storage, analytics linkage, AI, diagnosis or lead scoring. It is not counselling, crisis support or a monitored channel.
+- Reason: Recurring utility can build trust and habit without collecting sensitive data before Anchor Point has the operational capacity to protect and moderate it.
+- Escape route: Either concept can remain a private browser tool, move behind the Vault, or be removed through a single reversible change if owner review finds the tone or risk unsuitable.
+
+## D-015 — Owner-review clarity and visual authority (2026-08-23)
+
+- Predominant question: Which Launch 3.0 elements still looked like an intelligent prototype explaining itself rather than a confident institution inviting a useful first conversation?
+- Decision: Retain the full Launch 3.0 ecosystem while rewriting the first impression, method, principles, services and horizon in immediately understandable language.
+- Identity: Free the emblem from its secondary diamond container; reserve luminous gold for important actions; use a navy emblem on gold buttons; keep watermarks large, quiet and purposeful.
+- Journey: Replace duplicate decorative motion with a project-lifecycle map, use smoother navy–blue–ivory transitions and make every animation or diagram support meaning.
+- Commercial clarity: Define four engagement paths—Decision Framing, Project and Procurement Strategy, Technical–Commercial Review, and Institutional Planning and Knowledge Systems—with triggers, outputs and typical first steps.
+- Technical honesty: Replace “reversible decisions” with “decisions built to adapt.” Anchor Point can identify room to modify, reuse or change course but must never suggest every physical or contractual decision can be reversed.
+- Cultural signature: Keep curiosity, connected technical drawing and the napkin-sketch invitation. Remove overt Leonardo explanation so the Renaissance influence is discoverable rather than performed.
+- Mobile rule: Preserve access to all content while reducing compulsory vertical reading through visible filters and expandable secondary examples.
+- Visual guardrail: No image generation was authorized or used. The existing owner-approved technical asset and exact emblem remain the only visual sources in this pass.
+- Escape route: The refinement is isolated in `launch3-polish.css` plus reversible content/behavior edits and can be reviewed or reverted independently.
+
+## D-016 — Startup accountability and launch trust (2026-08-23)
+
+- Predominant question: How can an early-stage Anchor Point answer the valid “who is accountable?” objection without inventing a mature team, project history, credentials or social proof?
+- Decision: State the current stage directly. Present Anchor Point as an early-stage, founder-led engineering institution in Dhaka; distinguish inspectable method/product proof from people, competence and scope evidence that must be verified for the actual assignment.
+- Brand hierarchy: **Anchored in Excellence** is the institutional standard; **Engineering at Ease** is the experience being built; “See the real problem. Choose the next move.” remains the homepage proposition.
+- Proof: Surface the implemented Ecosystem scale—four desks, 26 conversion quantities, 816 directed routes and six Bangladesh library paths—without presenting usage, adoption or project outcomes that do not exist.
+- Accessibility: Treat the four services as a real keyboard-operable tab interface with selected-state announcements. Preserve mobile footer clearance beneath the fixed action dock.
+- Contact boundary: Do not restore the archived Formspree endpoint or add a collection form until its owner, recipient, retention, spam controls, deletion process and privacy notice are approved and tested.
+- Visual guardrail: No image was generated, edited or added. Image concepts remain subject to separate owner approval.
+- Escape route: The accountability section, brand bridge, Ecosystem proof strip and metadata/accessibility changes are isolated and can be revised independently when verified owner/legal facts become publishable.
+
+## D-017 — Ecosystem proof composition (2026-08-23)
+
+- Decision: Replace abstract claims of recurring utility with three real captures from the working candidate: the Scientific Desk resolving `sin(45)^2 + cos(45)^2 = 1`, the Conversion Desk resolving `1 bar = 14.503773773 psi`, and the Hydraulic Pump Power calculator showing its default-input estimate and verification boundary.
+- Provenance: Captures come from the local Launch 3.0 candidate at a controlled desktop viewport. They are not generated interfaces, concept mockups, adoption evidence or third-party products.
+- Treatment: Present the captures as one restrained proof composition inside the Ecosystem section, with accurate alternative text, lazy loading, explicit result boundaries and reduced-motion support.
+- Visual guardrail: No generative image model was used. The composition may be regenerated only from verified live interfaces when those interfaces materially change.
+
+## D-018 — Anonymized Decision Anatomy (2026-08-24)
+
+- Predominant question: How can Anchor Point demonstrate its problem-first philosophy through lived engineering tension without exposing confidential history or presenting unverified experience as a client credential?
+- Decision: Publish a constructed, anonymized flagship walkthrough titled **When the calculation began defending the decision**. Show the movement from provisional confidence through system conflict to explicit assumptions, operating cases and verification controls.
+- Claim boundary: Remove all client, employer, vessel, supplier, classification, date, value, outcome and personal identifiers. State that details and sequence are simplified and that the demonstration is not a verified project credential or client case study.
+- Integrity lesson: A calculation must be permitted to disprove a committed design. Exclusions, concurrency, continuous versus maximum capability, source-consumer compatibility, redundancy and test evidence must remain visible.
+- Founder boundary: Do not create or imply founder-page claims until the owner supplies and approves the separate script and publishable facts.
+- Escape route: The walkthrough is isolated in one flagship HTML block and dedicated CSS classes; it can be revised or replaced without affecting the remaining proof layer.
+
+## D-019 — Founder story, enquiry intake and calculator scale (2026-08-24)
+
+- Founder narrative: Present the origin as a response to disconnected capability and limited room for contribution. Use **From a napkin sketch to a future worth building** as the emotional opening. Remove intimate family detail, employer grievance and any implication that informal contacts form an appointed delivery team.
+- Enquiry route: Use the owner’s existing Formspree endpoint with delivery to `info@anchorpoint.com.bd`. Remove public WhatsApp and reject visiting-card upload at launch because file collection adds disproportionate privacy, security and deletion obligations.
+- Data responsibility: Anchor Point controls its Formspree and mailbox copies and deletes routine enquiries within 90 days after final response unless the exchange becomes a necessary contractual, dispute or legal record.
+- Utility scale: Publish 50 transparent screening calculators across the seven engineering departments through one data-driven engine. Formula visibility and verification boundaries take precedence over raw page count.
+- Visual decision: Replace homepage interface screenshots with a code-native discipline map. Use navy, mineral blue and ivory transitions to create progression without continuous decorative motion or generated imagery.
+- Escape route: Founder, form, calculator library and map are isolated files/sections and can be revised independently.

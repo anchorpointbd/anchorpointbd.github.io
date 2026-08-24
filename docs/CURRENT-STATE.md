@@ -1,4 +1,4 @@
-# Anchor Point Launch 2.5 — current state
+# Anchor Point Launch 3.0 — current state
 
 Last reconciled: 2026-08-22 (Asia/Dhaka)
 
@@ -7,7 +7,8 @@ This file is the restart point when a chat is compacted, hidden, or opened on an
 ## Release candidate
 
 - Repository: `anchorpointbd/anchorpointbd.github.io`
-- Working branch: `launch-2.5-candidate`
+- Frozen predecessor: `launch-2.5-candidate` at remote commit `b03a25448871147863bc4b7544152705747c2e09`
+- Working branch: `launch-3.0-candidate`, created from that exact predecessor commit
 - Deployed proof-layer head verified at reconciliation: `114ae9a4ec08690f0d737762310c95cb09961d10` (later documentation-only continuity commits may advance the branch)
 - Review path: draft pull request #2 into `development`
 - Merge status after the continuity commits: open and draft; not merged. The connector currently reports `mergeable: false`, so the candidate must receive a conflict/base review before any merge approval.
@@ -18,6 +19,10 @@ This file is the restart point when a chat is compacted, hidden, or opened on an
 ## Institutional direction
 
 Anchor Point is presented as a problem-first engineering institution: **Engineering at Ease**. Its operating sequence is **Understand → Diagnose → Explore → Decide → Deliver**. The public promise is disciplined reasoning with alternatives, consequences and escape routes—not a founder biography and not unsupported claims of authority.
+
+Launch 3.0 adds **Anchored in Excellence** as the institutional tagline and turns the Engineering Hub into the entry point for a connected, recurring-use knowledge ecosystem. The information architecture uses a familiar faculty → department → pathway progression without representing Anchor Point as a university. Engineering is deep first; business, finance, law and human systems begin as limited foundations.
+
+Third-party knowledge remains with original publishers. Anchor Point links, classifies and explains; it does not copy or re-host university repositories, standards, papers or proprietary calculators. See `docs/LAUNCH-3-OWNER-BRIEF.md` for the durable product scope, mobile direction, Idea Graveyard boundaries, private-release evaluation and image-approval rule.
 
 The visual and editorial character is premium but approachable: deep navy, sapphire depth, luminous restrained gold, ivory editorial space, Renaissance curiosity, energetic interaction and easy conversation entry. Leonardo da Vinci is used as an intellectual metaphor for observation and connected disciplines, not as borrowed endorsement or copied artwork.
 
@@ -83,6 +88,47 @@ The common gap was evidence, not visual ambition. Students and field staff wante
 
 Verified during the proof-layer pass: JavaScript syntax, internal page HTTP responses, 12/12 calculator presence, 390 px mobile overflow check, headings/IDs/labels/alt text, and successful Cloudflare deployment of the remote candidate head.
 
+### Launch 3.0 foundation implemented (2026-08-22)
+
+- The Hub now opens as an ecosystem: five growing faculties, seven engineering departments and six task pathways. Engineering is the deep starting faculty; Projects and Business, Finance and Economics, Law and Governance, and Human Systems and Arts are intentionally light foundations.
+- Four desks separate different intentions: Scientific Calculator, Conversion Desk, Engineering Calculators, and Knowledge and Sources.
+- The new conversion engine contains 26 quantities and 816 directed unit-pair routes, sorted by sector. It displays reference units, factors, formula and substitution; impossible temperatures below absolute zero are rejected.
+- The scientific desk uses a local expression parser rather than dynamic code execution. It supports constants, functions, degree/radian/gradian modes, precision control and in-page history.
+- Bangladesh university-library pathways now include BUET, MIST, CUET, KUET, RUET and DUET, linking to their own authoritative systems rather than copying their collections.
+- Idea Graveyard and Release Pad exist as `noindex`, local-only concept workbenches. Neither stores, transmits, scores or turns a disclosure into a lead. Public submission remains closed pending approved ownership, privacy, moderation, deletion and escalation rules.
+- Information Care is out of the ordinary visitor journey. The old page is retained for recoverability but marked `noindex`; the compact Privacy and Terms pages remain in the footer.
+- No image was generated or added during this Launch 3.0 pass.
+
+### Owner-review polish implemented (2026-08-23)
+
+- The homepage now answers the commercial question in the first screen: Anchor Point supports engineering, project, procurement and institutional decisions from early ideas through troubled operations.
+- The opening promise is now “See the real problem. Choose the next move.” It replaces the narrow pre-project framing, Bangladesh-first hero label and technically inaccurate “reversible decisions” language.
+- The emblem is freed from the decorative diamond and given greater scale. Gold actions now use a high-contrast navy emblem and clear arrow endpoint; large section watermarks remain restrained.
+- The duplicated moving process ticker is replaced by a useful project-lifecycle strip. The five-step method uses direct questions, and the main warning is elevated as an editorial pull-quote.
+- Permanent principles use plain language and explain the practical benefit to future teams.
+- The service console now presents four concrete engagement paths with a trigger situation, what Anchor Point does, what the client receives and a typical first step.
+- Renaissance influence remains through technical linework, connection and curiosity, while the prominent quotation, repeated name and joke are removed.
+- How We Work retains all three demonstrations but presents one full flagship walkthrough and two optional expandable examples.
+- Hub language introduces faculties as familiar knowledge areas, mobile filters wrap visibly, and AI is labelled as an experimental theory companion rather than a headline capability.
+- The vision now states a credible sequence: now, next and ten-year horizon. Bangladesh remains the operating root without limiting the opening impression.
+- No image was generated, replaced or commissioned during this refinement.
+
+### Startup accountability correction (2026-08-23)
+
+- The homepage now states the current stage directly instead of implying a mature anonymous team: early-stage, founder-led and Dhaka-based, with assignment-specific people, competence, registrations, conflicts and delivery responsibility to be verified before commitment.
+- The brand hierarchy is explicit: **Anchored in Excellence** is the standard; **Engineering at Ease** is the experience being built; the homepage proposition remains “See the real problem. Choose the next move.”
+- Existing product proof is surfaced as four working desks, 26 conversion quantities, 816 directed unit routes and six Bangladesh library paths. These are inspectable product facts, not client or adoption claims.
+- The four service tabs now expose ARIA tab/tabpanel roles, selected state and keyboard navigation. Mobile footer/contact clearance is reserved beneath the fixed action dock.
+- Homepage title, description, Open Graph and Twitter metadata now describe the actual engineering/project/procurement proposition consistently.
+- No contact form was added because the archived Formspree destination, recipient, retention, spam controls and deletion process are not approved launch facts.
+- No image was generated, edited or added in this correction.
+
+### Ecosystem proof composition (2026-08-23)
+
+- The homepage Ecosystem section now shows three real candidate captures rather than an imagined product: Scientific Desk, Conversion Desk and Hydraulic Pump Power calculator.
+- The shown outputs are reproducible from the working candidate and remain accompanied by verification boundaries. The composition is product proof, not evidence of clients, adoption or professional approval.
+- No generative image model was used; the captures were taken from the actual local interfaces after exercising their real controls.
+
 Still required before public launch:
 
 1. Owner confirmation of legal name, registration/status, address, contact recipients, privacy controller details and any capability/credential facts.
@@ -99,3 +145,19 @@ Open the Cloudflare candidate on desktop and a physical phone, review the proof 
 
 Sixty questions established discovery. The six hundred questions that follow can give Anchor Point institutional depth—provided each answer becomes evidence, policy, or a reversible decision rather than disappearing inside chat history.
 
+### Constructed Decision Anatomy (2026-08-24)
+
+- The generic flagship vessel example on How We Work was replaced by an anonymized constructed demonstration: **When the calculation began defending the decision**.
+- The sequence shows an early equipment choice, developed-load pressure, a first correction, a phase-compatibility conflict, system reframing and the controls required to make assumptions inspectable.
+- The public story does not identify the owner, employer, client, vessel, suppliers, classification society, dates, values or outcome. It does not claim the underlying historical project as an Anchor Point credential.
+- The story explicitly warns that a mathematically correct calculation can mislead when assumptions are selected to protect a committed decision.
+- Founder-page work remains separate and was not started or inferred from an unfinished owner script.
+
+### Founder origin, contact intake and 50-calculator expansion (2026-08-24)
+
+- Added `founder.html` with the opening line **From a napkin sketch to a future worth building**. The page converts the owner’s early-career frustration into an institution-building purpose without publishing family details or presenting an informal professional network as an appointed team.
+- Restored the owner’s existing Formspree endpoint `meajewyn` for a minimal callback form delivered to `info@anchorpoint.com.bd`. Removed the public WhatsApp route and did not add visiting-card upload.
+- Contact collection is limited to name, required email, optional organization/role/telephone, preferred contact method and a short non-confidential message. Anchor Point owns deletion from Formspree and the institutional mailbox; routine non-engagement enquiries have a documented 90-day post-response deletion period.
+- Added a data-driven library of 50 screening calculators across Civil, Mechanical, Marine, Electrical, Energy, Computing and Materials. Every card exposes its formula and the same verification boundary.
+- Removed the homepage screenshot composition. The Ecosystem is now represented by a code-native seven-discipline map with restrained motion and no generated imagery.
+- Production remains untouched. Founder identity, credentials and biography remain pending separately approved facts.
