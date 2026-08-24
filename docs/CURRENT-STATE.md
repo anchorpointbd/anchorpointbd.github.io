@@ -152,3 +152,12 @@ Sixty questions established discovery. The six hundred questions that follow can
 - The public story does not identify the owner, employer, client, vessel, suppliers, classification society, dates, values or outcome. It does not claim the underlying historical project as an Anchor Point credential.
 - The story explicitly warns that a mathematically correct calculation can mislead when assumptions are selected to protect a committed decision.
 - Founder-page work remains separate and was not started or inferred from an unfinished owner script.
+
+### Founder origin, contact intake and 50-calculator expansion (2026-08-24)
+
+- Added `founder.html` with the opening line **From a napkin sketch to a future worth building**. The page converts the owner’s early-career frustration into an institution-building purpose without publishing family details or presenting an informal professional network as an appointed team.
+- Restored the owner’s existing Formspree endpoint `meajewyn` for a minimal callback form delivered to `info@anchorpoint.com.bd`. Removed the public WhatsApp route and did not add visiting-card upload.
+- Contact collection is limited to name, required email, optional organization/role/telephone, preferred contact method and a short non-confidential message. Anchor Point owns deletion from Formspree and the institutional mailbox; routine non-engagement enquiries have a documented 90-day post-response deletion period.
+- Added a data-driven library of 50 screening calculators across Civil, Mechanical, Marine, Electrical, Energy, Computing and Materials. Every card exposes its formula and the same verification boundary.
+- Removed the homepage screenshot composition. The Ecosystem is now represented by a code-native seven-discipline map with restrained motion and no generated imagery.
+- Production remains untouched. Founder identity, credentials and biography remain pending separately approved facts.
