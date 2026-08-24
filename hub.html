@@ -65,6 +65,13 @@
     </div>
   </section>
 
+  <section id="library" class="section calculator-library-section">
+    <div class="library-heading"><div><p class="kicker"><span></span> 50 transparent engineering calculators</p><h2>Seven disciplines.<br>One visible method.</h2><p>Choose a discipline, inspect the formula, enter the operating values and keep the result inside its stated boundary.</p></div><label for="libraryDepartment"><span>FILTER THE LIBRARY</span><select id="libraryDepartment"><option value="all">All seven disciplines</option><option value="civil">Civil and Infrastructure</option><option value="mechanical">Mechanical and Manufacturing</option><option value="marine">Naval and Marine</option><option value="electrical">Electrical and Electronics</option><option value="energy">Energy and Environment</option><option value="computing">Computing and Systems</option><option value="materials">Materials and Welding</option></select></label></div>
+    <div class="library-counts" aria-label="Calculator coverage"><span><b>8</b> Civil</span><span><b>8</b> Mechanical</span><span><b>7</b> Marine</span><span><b>8</b> Electrical</span><span><b>7</b> Energy</span><span><b>6</b> Computing</span><span><b>6</b> Materials</span></div>
+    <div id="calculatorLibrary" class="calculator-library"></div>
+    <p class="notice"><b>Screening boundary:</b> these calculators expose arithmetic; they do not establish design adequacy, equipment selection, protection, compliance, safety factors or approval. Verify the operating case and applicable authority before consequential use.</p>
+  </section>
+
   <section id="daily" class="section tools-section">
     <div class="tools-heading">
       <div><p class="kicker"><span></span> The first working desk</p><h2>Start where you stand.</h2></div>
@@ -273,6 +280,7 @@
 <script src="main.js" defer></script>
 <script src="config.js" defer></script>
 <script src="hub.js?v=20260822-2" defer></script>
+<script src="calculator-library.js?v=20260824-1" defer></script>
 <script src="assistant.js?v=20260822-3" defer></script>
 </body>
 </html>
