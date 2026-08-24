@@ -147,3 +147,12 @@
 - Integrity lesson: A calculation must be permitted to disprove a committed design. Exclusions, concurrency, continuous versus maximum capability, source-consumer compatibility, redundancy and test evidence must remain visible.
 - Founder boundary: Do not create or imply founder-page claims until the owner supplies and approves the separate script and publishable facts.
 - Escape route: The walkthrough is isolated in one flagship HTML block and dedicated CSS classes; it can be revised or replaced without affecting the remaining proof layer.
+
+## D-019 — Founder story, enquiry intake and calculator scale (2026-08-24)
+
+- Founder narrative: Present the origin as a response to disconnected capability and limited room for contribution. Use **From a napkin sketch to a future worth building** as the emotional opening. Remove intimate family detail, employer grievance and any implication that informal contacts form an appointed delivery team.
+- Enquiry route: Use the owner’s existing Formspree endpoint with delivery to `info@anchorpoint.com.bd`. Remove public WhatsApp and reject visiting-card upload at launch because file collection adds disproportionate privacy, security and deletion obligations.
+- Data responsibility: Anchor Point controls its Formspree and mailbox copies and deletes routine enquiries within 90 days after final response unless the exchange becomes a necessary contractual, dispute or legal record.
+- Utility scale: Publish 50 transparent screening calculators across the seven engineering departments through one data-driven engine. Formula visibility and verification boundaries take precedence over raw page count.
+- Visual decision: Replace homepage interface screenshots with a code-native discipline map. Use navy, mineral blue and ivory transitions to create progression without continuous decorative motion or generated imagery.
+- Escape route: Founder, form, calculator library and map are isolated files/sections and can be revised independently.
