@@ -66,24 +66,167 @@
   </section>
 
   <section id="library" class="section calculator-library-section">
-    <div class="library-heading"><div><p class="kicker"><span></span> 50 transparent engineering calculators</p><h2>Find the equation.<br>Work one problem.</h2><p>Search by quantity, equipment, formula, unit or discipline. One active workspace keeps the method visible without turning the page into a wall.</p></div></div>
-    <div class="calculator-finder"><label for="calculatorSearch"><span>QUICK SEARCH</span><input id="calculatorSearch" type="search" placeholder="Try: voltage, pump, stress, solar, storage…"></label><label for="libraryDepartment"><span>DISCIPLINE</span><select id="libraryDepartment"><option value="all">All seven disciplines</option><option value="civil">Civil and Infrastructure</option><option value="mechanical">Mechanical and Manufacturing</option><option value="marine">Naval and Marine</option><option value="electrical">Electrical and Electronics</option><option value="energy">Energy and Environment</option><option value="computing">Computing and Systems</option><option value="materials">Materials and Welding</option></select></label></div>
-    <p id="calculatorResultCount" class="finder-count">50 calculators found</p><div class="calculator-browser"><nav id="calculatorResults" class="calculator-results" aria-label="Matching calculators"></nav><div id="calculatorLibrary" class="calculator-library"></div></div>
+    <div class="library-heading"><div><p class="kicker"><span></span> 50 transparent engineering calculators</p><h2>Seven disciplines.<br>One visible method.</h2><p>Choose a discipline, inspect the formula, enter the operating values and keep the result inside its stated boundary.</p></div><label for="libraryDepartment"><span>FILTER THE LIBRARY</span><select id="libraryDepartment"><option value="all">All seven disciplines</option><option value="civil">Civil and Infrastructure</option><option value="mechanical">Mechanical and Manufacturing</option><option value="marine">Naval and Marine</option><option value="electrical">Electrical and Electronics</option><option value="energy">Energy and Environment</option><option value="computing">Computing and Systems</option><option value="materials">Materials and Welding</option></select></label></div>
+    <div class="library-counts" aria-label="Calculator coverage"><span><b>8</b> Civil</span><span><b>8</b> Mechanical</span><span><b>7</b> Marine</span><span><b>8</b> Electrical</span><span><b>7</b> Energy</span><span><b>6</b> Computing</span><span><b>6</b> Materials</span></div>
+    <div id="calculatorLibrary" class="calculator-library"></div>
     <p class="notice"><b>Screening boundary:</b> these calculators expose arithmetic; they do not establish design adequacy, equipment selection, protection, compliance, safety factors or approval. Verify the operating case and applicable authority before consequential use.</p>
   </section>
 
-  <section id="daily" class="section command-desk">
-    <div class="tools-heading"><div><p class="kicker"><span></span> The first working desk</p><h2>Choose the next useful move.</h2></div><p>Begin with the job in front of you: frame the question, calculate a screening case, trace a concept or locate a source.</p></div>
-    <div class="command-grid"><a href="ask.html"><span>01</span><h3>Frame a difficult question</h3><p>Turn an unclear situation into a bounded decision and a useful first conversation.</p><b>Open question desk →</b></a><a href="#library"><span>02</span><h3>Run a transparent calculation</h3><p>Search fifty visible-formula calculators across seven engineering disciplines.</p><b>Find a calculator ↓</b></a><a href="#knowledge"><span>03</span><h3>Trace the engineering</h3><p>Explore five hundred structured topic routes without relying on a live AI service.</p><b>Search the index ↓</b></a><a href="#resources"><span>04</span><h3>Go to the source</h3><p>Move from orientation to standards bodies, public datasets and open technical learning.</p><b>Browse source gateways ↓</b></a></div>
+  <section id="daily" class="section tools-section">
+    <div class="tools-heading">
+      <div><p class="kicker"><span></span> The first working desk</p><h2>Start where you stand.</h2></div>
+      <p>Filters organize the desk; they do not change the equations. Every result remains an educational estimate requiring verification against actual conditions, codes, competent judgment and approved data.</p>
+    </div>
+    <label class="department-select" for="toolDepartment"><span>CHOOSE ENGINEERING DEPARTMENT</span><select id="toolDepartment"><option value="all">All engineering</option><option value="civil">Civil and Infrastructure</option><option value="mechanical">Mechanical and Manufacturing</option><option value="marine">Naval and Marine</option><option value="electrical">Electrical and Electronics</option><option value="energy">Energy and Environment</option><option value="computing">Computing and Systems</option><option value="materials">Materials and Welding</option><option value="business">Projects and Business</option><option value="finance">Finance and Economics</option></select></label>
+    <div class="role-filter" role="group" aria-label="Filter calculators by audience">
+      <button class="active" data-role="all">All tools <span>12</span></button>
+      <button data-role="daily">Everyday <span>4</span></button>
+      <button data-role="field">Field <span>9</span></button>
+      <button data-role="student">Student <span>10</span></button>
+      <button data-role="project">Project <span>6</span></button>
+      <button data-role="commercial">Commercial <span>3</span></button>
+      <button data-role="finance">Finance <span>4</span></button>
+    </div>
+
+    <div class="calc-grid expanded-grid">
+      <article class="calculator" data-roles="daily field student finance" data-departments="electrical energy finance">
+        <p class="tag">01 · Energy / cost</p><h3>Electricity cost</h3>
+        <div class="field"><label for="ecPower">Appliance or load power (W)</label><input id="ecPower" type="number" value="1000" min="0"></div>
+        <div class="field"><label for="ecHours">Hours used per day</label><input id="ecHours" type="number" value="4" min="0" step=".1"></div>
+        <div class="field"><label for="ecRate">Tariff (BDT/kWh)</label><input id="ecRate" type="number" value="12" min="0" step=".01"></div>
+        <button class="pill ink calc-btn" data-calc="energy">Calculate cost</button>
+        <details><summary>Formula & assumptions</summary><p class="formula">Cost = (W ÷ 1000) × hours × tariff</p><p>Assumes constant stated power and one flat tariff. Taxes, demand charges, duty cycle and tiered tariffs are excluded.</p></details>
+        <p class="result" id="ecResult" aria-live="polite">Daily and 30-day estimates appear here.</p>
+      </article>
+
+      <article class="calculator" data-roles="daily field student project" data-departments="civil mechanical marine">
+        <p class="tag">02 · Water planning</p><h3>Tank fill time</h3>
+        <div class="field"><label for="tankVolume">Tank volume (litres)</label><input id="tankVolume" type="number" value="1000" min="0"></div>
+        <div class="field"><label for="tankFlow">Inlet flow (litres/minute)</label><input id="tankFlow" type="number" value="20" min=".01"></div>
+        <div class="field"><label for="tankLevel">Current fill level (%)</label><input id="tankLevel" type="number" value="10" min="0" max="100"></div>
+        <button class="pill ink calc-btn" data-calc="tank">Calculate time</button>
+        <details><summary>Formula & assumptions</summary><p class="formula">Time = remaining volume ÷ flow rate</p><p>Assumes constant inlet flow, known usable tank volume and no simultaneous outlet or leakage.</p></details>
+        <p class="result" id="tankResult" aria-live="polite">Estimated fill time appears here.</p>
+      </article>
+
+      <article class="calculator" data-roles="field student project" data-departments="electrical energy">
+        <p class="tag">03 · Electrical fundamentals</p><h3>Real electrical power</h3>
+        <div class="field"><label for="phase">System</label><select id="phase"><option value="1">Single-phase</option><option value="1.732">Balanced three-phase</option></select></div>
+        <div class="field"><label for="voltage">Voltage (V)</label><input id="voltage" type="number" value="400" min="0"></div>
+        <div class="field"><label for="current">Current (A)</label><input id="current" type="number" value="10" min="0"></div>
+        <div class="field"><label for="pf">Power factor</label><input id="pf" type="number" value=".85" min="0" max="1" step=".01"></div>
+        <button class="pill ink calc-btn" data-calc="power">Calculate power</button>
+        <details><summary>Formula & assumptions</summary><p class="formula">P = k × V × I × PF</p><p>Uses RMS values. Three-phase result assumes a balanced system and line-to-line voltage.</p></details>
+        <p class="result" id="powerResult" aria-live="polite">Real power appears here.</p>
+      </article>
+
+      <article class="calculator" data-roles="daily field student" data-departments="civil mechanical marine energy materials">
+        <p class="tag">04 · Units</p><h3>Pressure converter</h3>
+        <div class="field"><label for="pressureValue">Value</label><input id="pressureValue" type="number" value="1"></div>
+        <div class="field"><label for="pressureUnit">From</label><select id="pressureUnit"><option value="bar">bar</option><option value="psi">psi</option><option value="kpa">kPa</option><option value="mpa">MPa</option></select></div>
+        <button class="pill ink calc-btn" data-calc="pressure">Convert</button>
+        <details><summary>Formula & assumptions</summary><p class="formula">1 bar = 100 kPa ≈ 14.5038 psi</p><p>Unit conversion only. It does not determine allowable working or test pressure.</p></details>
+        <p class="result" id="pressureResult" aria-live="polite">Converted values appear here.</p>
+      </article>
+
+      <article class="calculator" data-roles="field student project" data-departments="electrical energy">
+        <p class="tag">05 · Electrical loading</p><h3>Three-phase current</h3>
+        <div class="field"><label for="tpPower">Real power (kW)</label><input id="tpPower" type="number" value="15" min="0"></div>
+        <div class="field"><label for="tpVoltage">Line voltage (V)</label><input id="tpVoltage" type="number" value="400" min=".01"></div>
+        <div class="field"><label for="tpPf">Power factor</label><input id="tpPf" type="number" value=".85" min=".01" max="1" step=".01"></div>
+        <div class="field"><label for="tpEfficiency">Efficiency (%)</label><input id="tpEfficiency" type="number" value="90" min=".01" max="100" step=".1"></div>
+        <button class="pill ink calc-btn" data-calc="threeCurrent">Estimate current</button>
+        <details><summary>Formula & assumptions</summary><p class="formula">I = P ÷ (√3 × V × PF × η)</p><p>Balanced steady operation only. Not for cable, breaker, motor-starting or protection selection.</p></details>
+        <p class="result" id="tpResult" aria-live="polite">Estimated line current appears here.</p>
+      </article>
+
+      <article class="calculator" data-roles="field student" data-departments="electrical energy">
+        <p class="tag">06 · Electrical concept</p><h3>Simple voltage drop</h3>
+        <div class="field"><label for="vdLength">One-way length (m)</label><input id="vdLength" type="number" value="30" min="0"></div>
+        <div class="field"><label for="vdCurrent">Current (A)</label><input id="vdCurrent" type="number" value="10" min="0"></div>
+        <div class="field"><label for="vdArea">Copper conductor area (mm²)</label><input id="vdArea" type="number" value="4" min=".01"></div>
+        <div class="field"><label for="vdVoltage">Nominal voltage (V)</label><input id="vdVoltage" type="number" value="230" min=".01"></div>
+        <button class="pill ink calc-btn" data-calc="voltageDrop">Estimate drop</button>
+        <details><summary>Formula & assumptions</summary><p class="formula">ΔV = 2 × L × I × ρ ÷ A</p><p>Uses copper resistivity ρ = 0.0175 Ω·mm²/m at about 20°C and a simple single-phase/DC loop. Reactance, temperature, grouping and harmonics are excluded.</p></details>
+        <p class="result" id="vdResult" aria-live="polite">Estimated resistive drop appears here.</p>
+      </article>
+
+      <article class="calculator" data-roles="field student project" data-departments="civil mechanical marine energy">
+        <p class="tag">07 · Pumps / water</p><h3>Hydraulic pump power</h3>
+        <div class="field"><label for="pumpFlow">Flow (m³/h)</label><input id="pumpFlow" type="number" value="25" min="0"></div>
+        <div class="field"><label for="pumpHead">Total head (m)</label><input id="pumpHead" type="number" value="30" min="0"></div>
+        <div class="field"><label for="pumpEff">Pump efficiency (%)</label><input id="pumpEff" type="number" value="70" min=".01" max="100"></div>
+        <button class="pill ink calc-btn" data-calc="pumpPower">Estimate power</button>
+        <details><summary>Formula & assumptions</summary><p class="formula">P = ρ × g × Q × H ÷ η</p><p>Uses water density 1000 kg/m³. Motor efficiency, service factor, NPSH, transient and duty-point verification are excluded.</p></details>
+        <p class="result" id="pumpResult" aria-live="polite">Hydraulic and shaft-power estimates appear here.</p>
+      </article>
+
+      <article class="calculator" data-roles="field student" data-departments="materials mechanical marine">
+        <p class="tag">08 · Welding theory</p><h3>Welding heat input</h3>
+        <div class="field"><label for="whVoltage">Arc voltage (V)</label><input id="whVoltage" type="number" value="24" min="0"></div>
+        <div class="field"><label for="whCurrent">Current (A)</label><input id="whCurrent" type="number" value="180" min="0"></div>
+        <div class="field"><label for="whSpeed">Travel speed (mm/min)</label><input id="whSpeed" type="number" value="300" min=".01"></div>
+        <div class="field"><label for="whEfficiency">Thermal efficiency</label><input id="whEfficiency" type="number" value=".8" min=".01" max="1" step=".01"></div>
+        <button class="pill ink calc-btn" data-calc="weldHeat">Estimate heat input</button>
+        <details><summary>Formula & assumptions</summary><p class="formula">H = V × I × 60 × η ÷ (1000 × speed)</p><p>Educational process estimate in kJ/mm. Never substitutes for an approved WPS, procedure qualification, essential-variable control or welding-engineer review.</p></details>
+        <p class="result" id="weldResult" aria-live="polite">Estimated heat input appears here.</p>
+      </article>
+
+      <article class="calculator" data-roles="commercial finance project" data-departments="business finance">
+        <p class="tag">09 · Investment screen</p><h3>Simple payback</h3>
+        <div class="field"><label for="pbCost">Initial investment (BDT)</label><input id="pbCost" type="number" value="500000" min="0"></div>
+        <div class="field"><label for="pbSaving">Annual net saving (BDT)</label><input id="pbSaving" type="number" value="150000" min=".01"></div>
+        <button class="pill ink calc-btn" data-calc="payback">Calculate payback</button>
+        <details><summary>Formula & assumptions</summary><p class="formula">Payback = investment ÷ annual net saving</p><p>Ignores discounting, inflation, tax, residual value and changing cash flow. Use NPV for a time-value screen.</p></details>
+        <p class="result" id="pbResult" aria-live="polite">Simple payback appears here.</p>
+      </article>
+
+      <article class="calculator" data-roles="commercial finance project student" data-departments="business finance">
+        <p class="tag">10 · Lifecycle finance</p><h3>Level annual-cash-flow NPV</h3>
+        <div class="field"><label for="npvCost">Initial investment (BDT)</label><input id="npvCost" type="number" value="500000" min="0"></div>
+        <div class="field"><label for="npvCash">Annual net cash benefit (BDT)</label><input id="npvCash" type="number" value="150000"></div>
+        <div class="field"><label for="npvRate">Discount rate (%)</label><input id="npvRate" type="number" value="10" min="0" step=".1"></div>
+        <div class="field"><label for="npvYears">Years</label><input id="npvYears" type="number" value="5" min="1" max="50" step="1"></div>
+        <button class="pill ink calc-btn" data-calc="npv">Calculate NPV</button>
+        <details><summary>Formula & assumptions</summary><p class="formula">NPV = −C₀ + Σ CF ÷ (1+r)ᵗ</p><p>Uses one constant end-of-year cash benefit. Tax, escalation, terminal value, risk-adjusted scenarios and financing are excluded.</p></details>
+        <p class="result" id="npvResult" aria-live="polite">Net present value appears here.</p>
+      </article>
+
+      <article class="calculator" data-roles="commercial finance daily" data-departments="business finance">
+        <p class="tag">11 · Operations finance</p><h3>Break-even quantity</h3>
+        <div class="field"><label for="beFixed">Fixed cost (BDT)</label><input id="beFixed" type="number" value="200000" min="0"></div>
+        <div class="field"><label for="bePrice">Selling price per unit (BDT)</label><input id="bePrice" type="number" value="500" min="0"></div>
+        <div class="field"><label for="beVariable">Variable cost per unit (BDT)</label><input id="beVariable" type="number" value="300" min="0"></div>
+        <button class="pill ink calc-btn" data-calc="breakEven">Calculate quantity</button>
+        <details><summary>Formula & assumptions</summary><p class="formula">Q = fixed cost ÷ (price − variable cost)</p><p>Assumes constant price, constant unit variable cost and all production sold. Capacity and product-mix constraints are excluded.</p></details>
+        <p class="result" id="beResult" aria-live="polite">Break-even quantity appears here.</p>
+      </article>
+
+      <article class="calculator" data-roles="student field" data-departments="mechanical marine materials">
+        <p class="tag">12 · Motion / operations</p><h3>Rotational tip speed</h3>
+        <div class="field"><label for="tsDiameter">Diameter (m)</label><input id="tsDiameter" type="number" value=".5" min="0"></div>
+        <div class="field"><label for="tsRpm">Speed (rpm)</label><input id="tsRpm" type="number" value="1450" min="0"></div>
+        <button class="pill ink calc-btn" data-calc="tipSpeed">Calculate speed</button>
+        <details><summary>Formula & assumptions</summary><p class="formula">v = π × D × rpm ÷ 60</p><p>Kinematic conversion only. It does not establish safe speed, balance, guarding, stress or manufacturer limits.</p></details>
+        <p class="result" id="tsResult" aria-live="polite">Peripheral speed appears here.</p>
+      </article>
+    </div>
+    <p class="notice hub-notice"><b>Educational boundary:</b> these tools expose arithmetic and assumptions. They do not select equipment, size protection, approve welding, certify compliance or replace verification by a competent professional using applicable codes and actual conditions.</p>
   </section>
 
-  <section id="knowledge" class="section knowledge-section">
-    <div class="knowledge-head"><div><p class="kicker"><span></span> Engineering knowledge navigator</p><h2>Five hundred routes.<br>Answers that lead to evidence.</h2><p>This local index connects fifty engineering topics with ten practical lenses—from fundamentals and measurement to failure, safety and standards. It works without a live AI model and sends deeper reading back to named technical sources.</p></div><div class="knowledge-controls"><label for="knowledgeSearch"><span>SEARCH TOPICS</span><input id="knowledgeSearch" type="search" placeholder="Try: motor starting, pump systems, fatigue…"></label><label for="knowledgeDiscipline"><span>DISCIPLINE</span><select id="knowledgeDiscipline"><option value="all">All disciplines</option><option>Civil and Infrastructure</option><option>Mechanical and Manufacturing</option><option>Naval and Marine</option><option>Electrical and Electronics</option><option>Energy and Environment</option><option>Computing and Systems</option><option>Materials and Welding</option></select></label></div></div>
-    <p id="knowledgeCount" class="finder-count">500 topic routes</p><div id="knowledgeResults" class="knowledge-results"></div><p class="notice"><b>Use boundary:</b> this is an orientation layer, not a standard, design approval or substitute for competent discipline review. Confirm editions, jurisdiction and project conditions at the linked source.</p>
+  <section id="explainers" class="section explainer-section">
+    <p class="kicker"><span></span> Engineering explainers</p>
+    <h2>Short enough to use.<br>Serious enough to question.</h2>
+    <div class="explainer-grid">
+      <article><span>ELECTRICAL / 4 MIN</span><h3>Power factor is not “lost power.”</h3><p>Real power performs work; reactive power supports electric and magnetic fields; apparent power describes the combined burden on the supply. Improving power factor can reduce current for the same real power—but correction must consider harmonics, switching and operating variation.</p><details><summary>Questions before action</summary><ul><li>Is the measurement at the relevant operating state?</li><li>Are harmonics present?</li><li>Who verifies capacitor or filter selection?</li></ul></details></article>
+      <article><span>WELDING / 5 MIN</span><h3>Heat input is a clue, not a complete procedure.</h3><p>Voltage, current, travel speed and process efficiency affect estimated heat delivered per unit length. The same nominal heat input can still produce different thermal cycles because joint geometry, thickness, preheat, interpass temperature and technique matter.</p><details><summary>Questions before action</summary><ul><li>Which WPS and essential variables apply?</li><li>How is travel speed measured?</li><li>What material and toughness constraints govern?</li></ul></details></article>
+      <article><span>PUMPS / 5 MIN</span><h3>A pump does not choose its operating point alone.</h3><p>The pump curve and system curve meet at the operating point. Static head, friction, valve position, fluid properties and speed move that intersection. Nameplate power alone cannot confirm duty, efficiency, cavitation margin or control stability.</p><details><summary>Questions before action</summary><ul><li>Is the flow requirement measured or assumed?</li><li>What creates total dynamic head?</li><li>Has NPSH margin been verified?</li></ul></details></article>
+      <article><span>DECISIONS / 6 MIN</span><h3>Lowest price and lowest lifecycle cost are different questions.</h3><p>Acquisition price is one cash event. Availability, energy, spares, maintenance skill, downtime, interfaces, warranty, residual value and escape cost shape the consequence of ownership.</p><details><summary>Questions before action</summary><ul><li>Which costs change between options?</li><li>Whose budget carries downtime?</li><li>Which assumptions could reverse the ranking?</li></ul></details></article>
+    </div>
   </section>
 
   <section id="resources" class="section resource-section">
-    <div class="resource-head"><div><p class="kicker"><span></span> Anchor Point organizes the route</p><h2>Open the authoritative shelf.</h2></div><label class="resource-search" for="resourceSearch"><span>SEARCH SOURCE GATEWAYS</span><input id="resourceSearch" type="search" placeholder="Try: BUET, welding, systems, Bangladesh, energy…"></label></div>
+    <div class="resource-head"><div><p class="kicker"><span></span> Anchor Point organizes the route</p><h2>Knowledge stays at the source.</h2></div><label class="resource-search" for="resourceSearch"><span>SEARCH THE CONNECTED DESK</span><input id="resourceSearch" type="search" placeholder="Try: BUET, welding, systems, Bangladesh, energy…"></label></div>
     <div class="resource-tags" role="group" aria-label="Filter resources"><button class="active" data-resource-tag="all">All</button><button data-resource-tag="learning">Learning</button><button data-resource-tag="systems">Systems</button><button data-resource-tag="data">Data</button><button data-resource-tag="safety">Safety</button><button data-resource-tag="bangladesh">Bangladesh</button></div>
     <div class="grid resource-grid">
       <a class="resource" data-tags="learning mechanical electrical civil chemical" href="https://eng.libretexts.org/" rel="noopener"><p class="tag">Open textbooks</p><h3>Engineering LibreTexts</h3><p>Peer-developed modules across core engineering subjects.</p><b>Visit source ↗</b></a>
@@ -114,14 +257,30 @@
     </div>
   </section>
 
-  
+  <section id="assistant" class="section principles assistant-beta">
+    <div class="principle-title">
+      <div class="beta-line"><span class="beta-badge">EXPERIMENTAL · LIVE WHEN CAPACITY ALLOWS</span><span>Reviewed Anchor Point notes remain available</span></div>
+      <p class="kicker light"><span></span> Theory, not authority</p>
+      <h2>Experimental theory companion.</h2>
+      <p>Use it to explain concepts, equations, variables, units, assumptions and what to verify. When the free live model is busy, the desk falls back to a reviewed Anchor Point theory note instead of leaving you at a dead end.</p>
+      <p class="notice light"><b>Public theory questions only.</b> Never enter client names, project measurements, drawings, commercial information, personal data, credentials or other confidential material.</p>
+      <a href="privacy.html#interactive" class="assistant-policy-link">Read the privacy boundary →</a>
+    </div>
+    <form class="panel" id="assistantForm">
+      <p>Live capacity may be unavailable. When it is busy, clearly-labelled reviewed guidance appears instead. Do not enter anything that identifies a person, organization or project.</p>
+      <label class="field" for="assistantQuestion">Your public theory question<textarea id="assistantQuestion" rows="5" maxlength="1800" placeholder="Why does NPSH margin matter in a pump system?"></textarea></label>
+      <div class="assistant-examples"><span>Try:</span><button type="button" data-question="Why does voltage drop increase with cable length and current?">Voltage drop</button><button type="button" data-question="Why is welding heat input not enough to define a complete procedure?">Welding heat</button><button type="button" data-question="What is the difference between simple payback and NPV?">Payback vs NPV</button></div>
+      <label class="assistant-consent"><input id="assistantConsent" type="checkbox"> I confirm this is a generic public theory question with no confidential or project-specific information.</label>
+      <button class="pill gold" id="assistantAsk" type="submit" disabled>Confirm and ask</button>
+    </form>
+  </section>
 </main>
-<div class="mobile-dock"><a href="index.html"><i>⌂</i><span>Home</span></a><a class="dock-main" href="#library"><i>⌁</i><span>Calculate</span></a><a href="index.html#contact"><i>↗</i><span>Ask us</span></a></div>
+<div class="mobile-dock"><a href="index.html"><i>⌂</i><span>Home</span></a><a class="dock-main" href="#daily"><i>⌁</i><span>Use tools</span></a><a href="index.html#contact"><i>↗</i><span>Ask us</span></a></div>
 <footer><div class="brand footer-brand"><span class="brand-emblem"><img src="assets/logo-emblem.svg" alt="" width="64"></span><span><b>ANCHOR POINT</b><small>Anchored in Excellence</small></span></div><p>Find the tool. Reach the source. See the reasoning.</p><nav><a href="evidence.html">How we work</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav><small>© <span id="year"></span> Anchor Point</small></footer>
 <script src="main.js" defer></script>
-
+<script src="config.js" defer></script>
 <script src="hub.js?v=20260822-2" defer></script>
-<script src="calculator-library.js?v=20260824-2" defer></script>\n<script src="knowledge-library.js?v=20260824-1" defer></script>
-
+<script src="calculator-library.js?v=20260824-1" defer></script>
+<script src="assistant.js?v=20260822-3" defer></script>
 </body>
 </html>
