@@ -138,3 +138,15 @@ resourceButtons.forEach(button=>button.addEventListener('click',()=>{
 document.querySelectorAll('.assistant-examples button').forEach(button=>button.addEventListener('click',()=>{
   const input=q('#assistantQuestion');if(input){input.value=button.dataset.question;input.focus();}
 }));
+
+const dictionaryEntries=[
+  {term:'Net positive suction head (NPSH)',keys:'npsh pump cavitation',meaning:'A pressure-energy margin used to assess whether a pump inlet condition is sufficiently above the liquid vapour-pressure condition. Available and required NPSH must be distinguished.',source:'Engineering LibreTexts',url:'https://eng.libretexts.org/'},
+  {term:'Power factor',keys:'power factor reactive apparent real electrical',meaning:'The ratio of real power to apparent power under the stated waveform and operating conditions. It affects current and system loading but is not simply “lost power.”',source:'All About Circuits',url:'https://www.allaboutcircuits.com/textbook/'},
+  {term:'Welding heat input',keys:'welding heat input wps voltage current travel speed',meaning:'An estimate of energy delivered per unit weld length. It does not by itself define thermal history, mechanical properties or an approved welding procedure.',source:'TWI Knowledge',url:'https://www.twi-global.com/technical-knowledge'},
+  {term:'Lifecycle cost',keys:'lifecycle life cycle cost procurement finance decision',meaning:'The relevant costs and consequences across acquisition, operation, maintenance, downtime, change and disposal—not acquisition price alone.',source:'NASA Systems Engineering Handbook',url:'https://www.nasa.gov/reference/systems-engineering-handbook/'},
+  {term:'Voltage drop',keys:'voltage drop electrical cable resistance current',meaning:'The reduction in voltage between two points caused by current flowing through impedance. Applicable limits and calculation methods depend on system, conductors, load and governing requirements.',source:'All About Circuits',url:'https://www.allaboutcircuits.com/textbook/'}
+];
+const dictionaryInput=q('#dictionarySearch'),dictionaryResults=q('#dictionaryResults');
+const renderDictionary=()=>{if(!dictionaryResults)return;const term=(dictionaryInput?.value||'').trim().toLowerCase();const matches=term?dictionaryEntries.filter(entry=>(entry.term+' '+entry.keys+' '+entry.meaning).toLowerCase().includes(term)):dictionaryEntries.slice(0,3);dictionaryResults.innerHTML=matches.length?matches.map(entry=>`<article><p class="tag">${entry.term}</p><p>${entry.meaning}</p><a href="${entry.url}" rel="noopener">Continue at ${entry.source} ↗</a></article>`).join(''):'<p class="notice">No indexed term yet. Search the connected sources below or try a broader engineering word.</p>'};
+dictionaryInput?.addEventListener('input',renderDictionary);renderDictionary();
+
