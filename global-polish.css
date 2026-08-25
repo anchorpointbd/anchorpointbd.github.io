@@ -1,0 +1,16 @@
+:root{--ap-gold:#c49e5d;--ap-deep:#03101c;--ap-slate:#173248;--ap-ivory:#f7f1e5}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{overflow-x:hidden}
+.topbar .brand{filter:drop-shadow(0 0 16px #c49e5d22)}
+.topbar .brand-emblem img,.footer-brand .brand-emblem img{filter:drop-shadow(0 0 18px #c49e5d55)}
+main>section:first-child,.hero:first-of-type{position:relative;isolation:isolate;overflow:hidden}
+main>section:first-child:after,.hero:first-of-type:after{content:'';position:absolute;z-index:-1;right:5vw;top:12%;width:min(36vw,460px);aspect-ratio:1;border:1px solid #c49e5d2b;border-radius:50%;background:url('assets/logo-emblem.svg') center/32% no-repeat;opacity:.075;animation:apOrbit 18s ease-in-out infinite alternate}
+.section,.hero{background-image:radial-gradient(circle at 90% 5%,#c49e5d12,transparent 32%)}
+.pill,.button,button,a{transition:color .18s,background .18s,border-color .18s,transform .18s,opacity .18s}
+.pill:hover,.button:hover,button:hover{transform:translateY(-2px)}
+.dictionary-section .lead{max-width:760px}.dictionary-section .resource-search{display:block;max-width:780px;margin:42px 0 28px}.dictionary-results{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.dictionary-results article{padding:28px;border-top:1px solid #0b1f3a35;background:#ffffff55}.dictionary-results article p{margin:10px 0}.dictionary-results article a{color:#89652f;text-underline-offset:4px}
+.scientific-first{display:grid;grid-template-columns:.7fr 1.3fr;gap:5vw;align-items:start;background:linear-gradient(#061827,#173248 55%,#f7f1e5);color:#f7f1e5}.scientific-first iframe{width:100%;height:760px;border:1px solid #ffffff24;border-radius:28px;background:#071b2d;box-shadow:none}.scientific-first>div{position:sticky;top:120px}.scientific-first>div p{max-width:480px;color:#c6d2d9}
+@keyframes apOrbit{to{transform:translate(2vw,3vh) rotate(6deg)}}
+@media(max-width:900px){html{scroll-padding-top:78px}.dictionary-results,.scientific-first{grid-template-columns:1fr}.scientific-first>div{position:static}.scientific-first iframe{height:780px}.topbar .brand{transform:scale(1.08);transform-origin:left center}main>section:first-child:after,.hero:first-of-type:after{width:70vw;right:-20vw;opacity:.055}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}main>section:first-child:after,.hero:first-of-type:after{animation:none}.pill,.button,button,a{transition:none}}
+
