@@ -47,6 +47,9 @@ class ExpressionParser{
 }
 
 const scienceInput=byId('scienceExpression'),scienceResult=byId('scienceResult'),scienceProcess=byId('scienceProcess'),scienceHistory=byId('scienceHistory');
+let scienceMemory=0;
+const scienceKeys=document.querySelector('.scientific-keys');
+if(scienceKeys){scienceKeys.insertAdjacentHTML('afterbegin','<button type="button" data-token="asin(">sin⁻¹</button><button type="button" data-token="acos(">cos⁻¹</button><button type="button" data-token="atan(">tan⁻¹</button><button type="button" data-science-action="sign">±</button><button type="button" data-science-action="memory-clear">MC</button><button type="button" data-science-action="memory-recall">MR</button><button type="button" data-science-action="memory-add">M+</button><button type="button" data-token="e">EXP</button>')}
 const scienceRecords=[];
 const evaluateScience=()=>{
   try{
@@ -57,6 +60,11 @@ const evaluateScience=()=>{
   }catch(error){scienceResult.textContent='Check input';scienceProcess.textContent=error.message;}
 };
 document.querySelectorAll('.scientific-keys button').forEach(button=>button.addEventListener('click',()=>{
+  const scienceAction=button.dataset.scienceAction;
+  if(scienceAction==='sign'){scienceInput.value=scienceInput.value.startsWith('-')?scienceInput.value.slice(1):'-('+scienceInput.value+')';scienceInput.focus();return;}
+  if(scienceAction==='memory-clear'){scienceMemory=0;scienceProcess.textContent='Memory cleared.';return;}
+  if(scienceAction==='memory-recall'){scienceInput.value+=String(scienceMemory);scienceInput.focus();return;}
+  if(scienceAction==='memory-add'){const n=Number(String(scienceResult.textContent).replace(/,/g,''));if(Number.isFinite(n)){scienceMemory+=n;scienceProcess.textContent='Added to memory · M = '+displayNumber(scienceMemory)}return;}
   const action=button.dataset.action;
   if(action==='evaluate'){evaluateScience();return;}if(action==='clear'){scienceInput.value='';scienceResult.textContent='—';scienceProcess.textContent='Expression cleared.';scienceInput.focus();return;}if(action==='back'){scienceInput.value=scienceInput.value.slice(0,-1);scienceInput.focus();return;}
   scienceInput.value+=button.dataset.token||'';scienceInput.focus();
@@ -120,3 +128,4 @@ if(sectorSelect){
   byId('routeCount').textContent=routes.toLocaleString('en-US')+' available conversions across '+quantities.length+' quantities · no registration';
   fillSelect(sectorSelect,Object.entries(sectorData));refreshQuantities();sectorSelect.addEventListener('change',refreshQuantities);quantitySelect.addEventListener('change',refreshUnits);byId('convertButton').addEventListener('click',convertValue);byId('conversionValue').addEventListener('input',convertValue);fromSelect.addEventListener('change',convertValue);toSelect.addEventListener('change',convertValue);byId('swapUnits').addEventListener('click',()=>{const old=fromSelect.value;fromSelect.value=toSelect.value;toSelect.value=old;convertValue();});
 }
+

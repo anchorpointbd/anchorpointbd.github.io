@@ -1,5 +1,12 @@
 # Central decision log
 
+## 2026-08-26 — Final owner review implementation branch
+
+- **Decision:** Preserve the paused Launch 3.0 candidate at `f6cbb406c8846947803792570bcf783354d3e8d2` in `backup/pre-final-owner-review-2026-08-26`, and implement only on `final-launch/owner-review-2026-08-26`.
+- **Reason:** Owner required an immutable reference point and a reversible final-launch review path with no merge or deployment.
+- **Implementation:** System-wide visual/interaction refinements, restored decision/origin routes, same-page Formspree contact overlays, one-at-a-time 50-tool workspace, enhanced scientific desk, attributed source search and transparently bounded Theory Companion.
+- **Open gates:** final legal entity/controller/address language, production contact routing test, owner ecosystem review, end-to-end live AI capacity test, and explicit merge/deployment approval.
+
 ## D-001 — Launch 2.5 architecture (2026-08-21)
 
 - Predominant question: How can two staff operate a useful private Vault at near-zero cost without weakening the public site?
@@ -156,3 +163,4 @@
 - Utility scale: Publish 50 transparent screening calculators across the seven engineering departments through one data-driven engine. Formula visibility and verification boundaries take precedence over raw page count.
 - Visual decision: Replace homepage interface screenshots with a code-native discipline map. Use navy, mineral blue and ivory transitions to create progression without continuous decorative motion or generated imagery.
 - Escape route: Founder, form, calculator library and map are isolated files/sections and can be revised independently.
+

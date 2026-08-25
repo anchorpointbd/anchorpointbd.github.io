@@ -1,5 +1,16 @@
 # Anchor Point Launch 3.0 — current state
 
+## Final owner review implementation (2026-08-26)
+
+- Preserved `launch-3.0-candidate` commit `f6cbb406c8846947803792570bcf783354d3e8d2` as `backup/pre-final-owner-review-2026-08-26` before editing.
+- Created `final-launch/owner-review-2026-08-26` from that exact commit. No merge or deployment was performed.
+- Added the final shared visual/interaction layer: legible lockups, visible eyebrows, sfumato transitions, reduced generic shadows, horizontal editorial compositions, responsive contact overlay, focus states and reduced-motion handling.
+- Restored the homepage `Start where the difficulty is` experience, clarified and visually distinguished the three situations, strengthened `Useful across the work`, and made the five-step method keyboard/touch interactive.
+- Kept the existing Formspree endpoint `meajewyn`; added urgency, privacy-first wording and a secondary explicit email route. Secondary-page conversation CTAs now open an in-page dialog.
+- Preserved the 50 recovered transparent engineering calculators and changed discovery to one focused calculator at a time. The generic explainer section is retired from the public UI. Sources are presented as an attributed Engineering Dictionary / Encyclopedia route.
+- Extended the scientific calculator with inverse trig, memory, sign toggle and scientific-entry controls while preserving the local parser and degree/radian/gradian modes.
+- The Theory Companion remains transparently labelled: existing live capacity when available, reviewed fallback notes, and no claim of professional authority.
+
 Last reconciled: 2026-08-22 (Asia/Dhaka)
 
 This file is the restart point when a chat is compacted, hidden, or opened on another device. It records the project state; it does not replace Git history or the decision log.
@@ -161,3 +172,4 @@ Sixty questions established discovery. The six hundred questions that follow can
 - Added a data-driven library of 50 screening calculators across Civil, Mechanical, Marine, Electrical, Energy, Computing and Materials. Every card exposes its formula and the same verification boundary.
 - Removed the homepage screenshot composition. The Ecosystem is now represented by a code-native seven-discipline map with restrained motion and no generated imagery.
 - Production remains untouched. Founder identity, credentials and biography remain pending separately approved facts.
+
