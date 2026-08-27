@@ -1,5 +1,12 @@
 # Central decision log
 
+## D-021 — Homepage acceptance correction (2026-08-28)
+
+- Decision: reopen only items 8, 10, 11, 19, 23, 25, 26, 29 and 32; preserve every newly passed shared component and full-site CTA/progress rule.
+- Visual source: reuse the earlier `homepage-v30-pdf43-refine-20260828` hero base and contact treatment, while preserving the focused branch's longer hero-to-light transition.
+- Implementation: tighten only obvious upper/middle dead gaps; correct transitional text contrast; remove the Curiosity copy surface; soften the artwork's top/bottom disappearance; stop the Horizon gold line before the NOW block; move six real destinations along the two accepted orbit paths; and raise the center emblem without altering its circle geometry.
+- Release boundary: review branch and Cloudflare preview only. Do not merge production, change `main`, or alter DNS.
+
 ## D-018 — Focused homepage owner-review closeout (2026-08-28)
 
 - Decision: preserve every accepted element from the 43-point pass and reopen only items 2, 3, 8, 9, 10, 11, 13, 14, 15, 17, 18, 19, 20, 22, 23, 24, 25, 26, 29, 32, 34 and 43.

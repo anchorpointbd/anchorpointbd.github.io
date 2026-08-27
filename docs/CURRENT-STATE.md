@@ -1,5 +1,13 @@
 # Anchor Point Launch 3.0 — current state
 
+## Homepage acceptance correction (2026-08-28)
+
+- Review branch: `review/homepage-acceptance-20260828`, based on the latest focused correction branch at `4181a6d`.
+- Scope is restricted to reopened items 8, 10, 11, 19, 23, 25, 26, 29 and 32. All newly accepted navigation, CTA, progress, cards, method, artwork direction, ecosystem CTA and footer decisions remain locked.
+- The earlier `homepage-v30-pdf43-refine-20260828` version is the exact donor for the lighter hero base and contact-surface treatment; the focused branch's extended hero blend is retained.
+- Six real ecosystem destinations now travel physically around the two accepted orbit paths, with a stable reduced-motion arrangement.
+- Production, `main`, DNS and prior preview branches remain untouched.
+
 ## Focused homepage acceptance pass (2026-08-28)
 
 - Review branch: `homepage-focus-20260828`, based on `homepage-v30-pdf43-refine-20260828` at `e4a5617`.

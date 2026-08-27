@@ -15,3 +15,34 @@
 @media(max-width:850px){.v30-review .hero:after{height:44vh;bottom:-36vh}.v30-review .recognition{padding-top:125px;background:linear-gradient(180deg,#afbec0,#e1e7e4 34%,#f2f3ef 72%)}.v30-review .principle-cards{grid-template-columns:1fr}.v30-review .principle-cards article{min-height:190px}.v30-review .manifesto article{grid-template-columns:38px 1fr}.v30-review .method-copy{grid-column:2;padding:0}.v30-review .renaissance{min-height:640px}.v30-review .renaissance-image{opacity:.34;mask-image:linear-gradient(180deg,#000,transparent 82%)}.v30-review .renaissance:after{background:linear-gradient(180deg,transparent,#f1f3ef 80%)}.v30-review .renaissance-copy{width:100%;padding-top:250px!important}.v30-review .ecosystem-map{min-height:700px;overflow:hidden!important}.v30-review footer{grid-template-columns:1fr;text-align:center;padding:16px 22px 88px}.v30-review footer .brand{justify-content:center}.v30-review footer nav{justify-content:center}}
 @media(max-width:600px){.v30-review .pill.gold:before{width:25px;height:25px;flex-basis:25px}.v30-review .recognition{padding-top:105px}.v30-review .method-copy small{font-size:.8rem}.v30-review .vision:after{width:150vw}.v30-review .ecosystem-heading{padding:16px 8px;background:linear-gradient(180deg,#214f5eb8,transparent)}.v30-review .ecosystem-map{min-height:650px}.v30-review .orbit-one{width:72%}.v30-review .orbit-two{width:96%}}
 @media(prefers-reduced-motion:reduce){.v30-review .principle-cards article:nth-child(2){transform:none}}
+
+/* Authoritative acceptance pass: reopened items 8, 10, 11, 19, 23, 25, 26, 29 and 32 only. */
+.v30-review .hero{background:radial-gradient(circle at 85% 27%,#4f91a43f,transparent 30%),radial-gradient(circle at 16% 7%,#58789c2e,transparent 38%),linear-gradient(145deg,#123d54,#174960 58%,#123b52)}
+.v30-review .recognition{padding-top:clamp(66px,7vw,98px)}
+.v30-review .recognition .section-intro{padding-top:12px}
+.v30-review .recognition .kicker{color:#244554}.v30-review .recognition .kicker span{background:#8b6a2b}
+.v30-review .recognition .section-intro h2{color:#0d2938;text-shadow:0 1px #ffffff20}.v30-review .recognition .section-intro>p:last-child{color:#2f4a56}
+.v30-review .demo-intro .kicker.light{color:#765c29}.v30-review .demo-intro .kicker.light span{background:#9b7938}.v30-review .demo-intro h2,.v30-review .demonstration blockquote{color:#102c3b}.v30-review .reframe-question span,.v30-review .reframe-result span{color:#806124}
+.v30-review .demonstration{padding-top:clamp(72px,6.5vw,94px);padding-bottom:clamp(76px,7vw,100px)}
+.v30-review .difference{padding-top:clamp(72px,6.5vw,94px);padding-bottom:clamp(72px,6.5vw,96px)}
+.v30-review .renaissance{padding-top:clamp(76px,7vw,98px)!important;padding-bottom:clamp(76px,7vw,98px)!important}
+.v30-review .renaissance-image{mask-image:linear-gradient(90deg,#000 0 42%,#0008 62%,transparent 88%);-webkit-mask-image:linear-gradient(90deg,#000 0 42%,#0008 62%,transparent 88%)}
+.v30-review .renaissance:after{background:linear-gradient(90deg,transparent 0 38%,#f1f3ef80 62%,#f1f3ef 88%),linear-gradient(180deg,#f1f3ef 0,transparent 12% 88%,#f1f3ef 100%)}
+.v30-review .renaissance-copy{background:transparent!important;box-shadow:none!important;border:0!important}
+.v30-review .vision{padding-top:clamp(82px,7.5vw,106px);padding-bottom:clamp(82px,7.5vw,108px)}
+.v30-review .vision:before{right:58%}
+.v30-review .contact{color:#eef3f3;background:linear-gradient(180deg,#0d344b,#0a2b3f 58%,#082437)}
+.v30-review .contact-form-card{color:#eef3f3;background:linear-gradient(145deg,#ffffff0b,#061e2d50);border:1px solid #ffffff20;box-shadow:inset 0 1px #ffffff0e}
+.v30-review .contact-form-card>span{color:#e7c16c}.v30-review .contact-form-card label,.v30-review .contact-form-card h3{color:#f1f4f3}
+.v30-review .contact-form-card input,.v30-review .contact-form-card select,.v30-review .contact-form-card textarea{display:block;color:#f5f7f6;background:#eaf0ee0d;border-color:#ffffff24}
+.v30-review .contact-form-card option{color:#0a1722}.v30-review .contact-form-card input:focus,.v30-review .contact-form-card select:focus,.v30-review .contact-form-card textarea:focus{border-color:#e6bd62;background:#ffffff11;outline:none}
+.v30-review .contact-form-note{color:#aebec5}.v30-review .contact-form-note a{color:#e7c16c}
+.v30-review .ecosystem-tools{position:absolute;inset:0;pointer-events:none}
+.v30-review .ecosystem-tool{left:0!important;right:auto!important;top:0!important;bottom:auto!important;pointer-events:auto;offset-rotate:0deg;offset-distance:var(--orbit-start);will-change:offset-distance;animation:ecosystemOrbit 54s linear infinite}
+.v30-review .ecosystem-tool:nth-child(odd){offset-path:ellipse(27% 42% at 50% 50%)}
+.v30-review .ecosystem-tool:nth-child(even){offset-path:ellipse(39% 48% at 50% 50%);animation-duration:72s;animation-direction:reverse}
+.v30-review .map-anchor{z-index:3}.v30-review .map-anchor img{display:block;width:52px;height:52px;margin:-8px auto -5px;object-fit:contain;transform:translateY(-4px)}.v30-review .map-anchor b{font-size:2.7rem;line-height:.92}
+@keyframes ecosystemOrbit{to{offset-distance:calc(var(--orbit-start) + 100%)}}
+@media(max-width:850px){.v30-review .recognition{padding-top:72px}.v30-review .renaissance-copy{background:transparent!important}.v30-review .vision:before{right:64%}.v30-review .ecosystem-tool:nth-child(n){display:grid;min-width:0;width:94px;padding:.55rem .45rem;font-size:.49rem}.v30-review .ecosystem-tool small{font-size:.46rem}.v30-review .ecosystem-tool:nth-child(odd){offset-path:ellipse(34% 39% at 50% 50%)}.v30-review .ecosystem-tool:nth-child(even){offset-path:ellipse(38% 46% at 50% 50%)}.v30-review .map-anchor img{width:46px;height:46px;margin-top:-7px}}
+@media(max-width:600px){.v30-review .recognition{padding-top:62px}.v30-review .renaissance{padding-top:64px!important;padding-bottom:64px!important}.v30-review .renaissance-copy{padding-top:238px!important}.v30-review .vision:before{right:70%}.v30-review .contact{padding-top:96px}}
+@media(prefers-reduced-motion:reduce){.v30-review .ecosystem-tool{animation:none!important;will-change:auto}}
