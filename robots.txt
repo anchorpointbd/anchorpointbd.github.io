@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
-
+Disallow: /vault.html
+Disallow: /accept-invite.html
+Disallow: /ideas.html
+Disallow: /release.html
+Disallow: /trust.html
 Sitemap: https://anchorpoint.com.bd/sitemap.xml
+

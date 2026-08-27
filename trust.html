@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Information Care — Anchor Point</title>
+  <meta name="description" content="A practical guide to sharing information safely with Anchor Point through email, the Engineering Hub, and the private Vault.">
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://anchorpoint.com.bd/trust.html">
+  <meta name="theme-color" content="#020914">
+  <link rel="icon" href="assets/logo-emblem.svg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="proof.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar scrolled">
+  <a class="brand" href="index.html"><span class="brand-emblem"><img src="assets/logo-emblem.svg" alt="" width="64" height="64"></span><span><b>ANCHOR POINT</b><small>Information care</small></span></a>
+  <button class="menu" aria-expanded="false" aria-controls="nav"><i></i><i></i><span>Menu</span></button>
+  <nav id="nav"><a href="index.html">Home</a><a href="evidence.html">How we work</a><a href="#classification">What to share</a><a href="#providers">Our systems</a><a href="#ai-policy">Theory assistant</a><a href="#vault-boundary">Private Vault</a><a class="pill gold" href="mailto:info@anchorpoint.com.bd?subject=Information%20care%20question">Ask before sharing ↗</a></nav>
+</header>
+<main id="main">
+  <section class="pagehero trust-hero">
+    <p class="kicker light"><span></span> Share carefully. Work confidently.</p>
+    <h1>Put the right information<br><em>in the right place.</em></h1>
+    <p class="hero-sub">Start with a non-confidential question. We will agree the correct channel before sensitive project information moves anywhere.</p>
+    <div class="trust-signal"><span class="signal-dot"></span><p><b>The simple rule:</b> do not send drawings, credentials, defence material, safety-critical instructions or private project data through the public website, WhatsApp or the Theory Assistant.</p></div>
+  </section>
+
+  <section id="classification" class="section">
+    <p class="kicker"><span></span> A practical sharing guide</p>
+    <h2>Match the information to the channel.</h2>
+    <div class="classification-grid">
+      <article class="class-public"><span>OPEN</span><h3>Safe to share publicly</h3><p>Published information, generic engineering questions and resources already approved for unrestricted use.</p><b>Website, Hub or ordinary email</b></article>
+      <article class="class-internal"><span>TEAM</span><h3>Routine staff material</h3><p>Non-sensitive templates, planning notes and ordinary administration with no client or controlled information.</p><b>Private Vault or staff email</b></article>
+      <article class="class-confidential"><span>PROJECT</span><h3>Needs an agreed channel</h3><p>Client identity, offers, drawings, measurements, contracts and non-public decisions.</p><b>Share only after access and retention are agreed</b></article>
+      <article class="class-restricted"><span>CONTROLLED</span><h3>Stop and ask first</h3><p>Passwords, recovery codes, defence material, export-controlled information and safety-critical operating instructions.</p><b>Not accepted in the current public system</b></article>
+    </div>
+  </section>
+
+  <section class="section channel-section">
+    <p class="kicker"><span></span> Choose the channel</p>
+    <h2>Where should I send it?</h2>
+    <div class="channel-table" role="table" aria-label="Approved information channels">
+      <div class="channel-row channel-head" role="row"><b role="columnheader">Channel</b><b role="columnheader">Use it for</b><b role="columnheader">Never use it for</b></div>
+      <div class="channel-row" role="row"><span role="cell">Public Hub / Theory Assistant</span><span role="cell">Generic theory questions with no project identifiers</span><span role="cell">Client names, measurements, drawings, decisions or personal data</span></div>
+      <div class="channel-row" role="row"><span role="cell">WhatsApp</span><span role="cell">Introductions and arranging a conversation</span><span role="cell">Credentials, controlled files, commercial offers or sensitive instructions</span></div>
+      <div class="channel-row" role="row"><span role="cell">Business email</span><span role="cell">Non-restricted scoping and ordinary correspondence</span><span role="cell">Passwords, API keys, recovery codes or restricted material</span></div>
+      <div class="channel-row" role="row"><span role="cell">Private Vault</span><span role="cell">Authorized internal/project records within agreed classification</span><span role="cell">Restricted data before written approval, or secrets stored as documents</span></div>
+      <div class="channel-row" role="row"><span role="cell">Supabase Secrets</span><span role="cell">Server-side service credentials such as the OpenRouter key</span><span role="cell">Human passwords or general project documents</span></div>
+    </div>
+  </section>
+
+  <section id="providers" class="section provider-section">
+    <p class="kicker"><span></span> The systems behind the service</p>
+    <h2>Each system has one clear job.</h2>
+    <p class="section-lead">The public website, staff identity, private records, email and AI routing remain separated. No single provider is trusted with every layer.</p>
+    <div class="provider-grid">
+      <article><span>PUBLIC DELIVERY</span><h3>Cloudflare Pages</h3><p>Serves public HTML, CSS, JavaScript and images. Network and security logs may include IP address, device and request metadata.</p><small>Does not hold private Vault documents by design.</small></article>
+      <article><span>IDENTITY · DATABASE · STORAGE</span><h3>Supabase</h3><p>Provides staff authentication, Postgres records, private object storage and the Edge Function. Row-level security and TOTP/AAL2 gates protect configured private data.</p><small>Service-role and OpenRouter secrets never belong in browser code.</small></article>
+      <article><span>AI ROUTING</span><h3>OpenRouter Free</h3><p>Receives public theory prompts through the Supabase Edge Function and routes them to an eligible model provider under the configured privacy constraints.</p><small>Availability is variable. Confidential/project prompts are prohibited.</small></article>
+      <article><span>BUSINESS EMAIL</span><h3>Zoho Mail</h3><p>Handles messages sent to the Anchor Point domain and the associated email metadata and attachments.</p><small>Email is not a password vault or restricted-file transfer system.</small></article>
+      <article><span>SOURCE CONTROL</span><h3>GitHub</h3><p>Stores website source and change history. Public-deployed source must be treated as readable by visitors even when repository visibility changes.</p><small>No secret, service-role key or credential belongs in commits.</small></article>
+    </div>
+  </section>
+
+  <section id="ai-policy" class="section ai-boundary">
+    <div>
+      <p class="kicker light"><span></span> Theory Assistant · experimental</p>
+      <h2>Explain a concept.<br>Leave decisions to people.</h2>
+      <p>The assistant helps with public engineering theory. Free live capacity can be busy, so reviewed local explainers remain available. Neither route provides design approval, equipment selection, a site method or an emergency instruction.</p>
+      <a class="pill gold" href="hub.html#assistant">Try the Theory Assistant ↗</a>
+    </div>
+    <div class="ai-rules">
+      <article><b>ASK</b><p>Concepts, equations, variable meanings, assumptions, unit checks, study pathways and questions to verify with a competent professional.</p></article>
+      <article><b>DO NOT ASK</b><p>“Approve this design,” “select this protection setting,” “tell workers what to do,” or any question containing confidential project information.</p></article>
+      <article><b>HUMAN DECISION</b><p>A named, competent and authorized person remains responsible for verification, applicability, safety and every consequential engineering decision.</p></article>
+    </div>
+  </section>
+
+  <section id="vault-boundary" class="section vault-trust">
+    <p class="kicker"><span></span> The private Vault</p>
+    <h2>Private access with deliberate limits.</h2>
+    <div class="vault-controls">
+      <article><b>01</b><h3>Invitation only</h3><p>No public sign-up. Initial access is limited to explicitly invited staff accounts.</p></article>
+      <article><b>02</b><h3>Password + verified TOTP</h3><p>Private data policies require authenticator assurance after successful enrollment and verification.</p></article>
+      <article><b>03</b><h3>Role-aware access</h3><p>Row-level policies restrict records and storage paths by authenticated identity and staff role.</p></article>
+      <article><b>04</b><h3>Least necessary data</h3><p>Do not upload data merely because storage exists. Classification, purpose, owner and retention must be known.</p></article>
+      <article><b>05</b><h3>Recovery is designed</h3><p>Exportable Postgres and object manifests provide an exit route; free-tier backups still require disciplined manual operation.</p></article>
+      <article><b>06</b><h3>Secrets stay server-side</h3><p>Provider credentials use protected function secrets. Browser-visible publishable keys are constrained by policies, not treated as secret.</p></article>
+    </div>
+  </section>
+
+  <section class="section verification-section">
+    <p class="kicker"><span></span> Before a formal engagement</p>
+    <h2>Ask for the evidence relevant to your scope.</h2>
+    <div class="verification-box">
+      <p>Legal identity, appointed specialists, registrations, references, conflicts, standards experience and insurance must match the actual assignment. Relevant evidence should be confirmed during scoping rather than implied by a general website.</p>
+      <p>This launch candidate will publish only facts that are accurate, authorized and useful for due diligence.</p>
+      <a href="mailto:info@anchorpoint.com.bd?subject=Institutional%20verification%20request">Request engagement-specific verification →</a>
+    </div>
+  </section>
+</main>
+<div class="mobile-dock"><a href="evidence.html"><i>◎</i><span>How we work</span></a><a class="dock-main" href="mailto:info@anchorpoint.com.bd?subject=Information%20care%20question"><i>↗</i><span>Ask before sharing</span></a><a href="hub.html"><i>⌁</i><span>Hub</span></a></div>
+<footer><div class="brand footer-brand"><span class="brand-emblem"><img src="assets/logo-emblem.svg" alt="" width="64"></span><span><b>ANCHOR POINT</b><small>Information care</small></span></div><p>Ask before sensitive information moves.</p><nav><a href="evidence.html">How we work</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="vault.html">Staff Vault</a></nav><small>© <span id="year"></span> Anchor Point</small></footer>
+<script src="main.js" defer></script>
+</body>
+</html>
+

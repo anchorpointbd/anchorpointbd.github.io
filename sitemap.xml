@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://anchorpoint.com.bd/</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://anchorpoint.com.bd/</loc></url>
+  <url><loc>https://anchorpoint.com.bd/evidence.html</loc></url>
+  <url><loc>https://anchorpoint.com.bd/founder.html</loc></url>
+  <url><loc>https://anchorpoint.com.bd/hub.html</loc></url>
+  <url><loc>https://anchorpoint.com.bd/scientific.html</loc></url>
+  <url><loc>https://anchorpoint.com.bd/convert.html</loc></url>
+  <url><loc>https://anchorpoint.com.bd/privacy.html</loc></url>
+  <url><loc>https://anchorpoint.com.bd/terms.html</loc></url>
 </urlset>
+
