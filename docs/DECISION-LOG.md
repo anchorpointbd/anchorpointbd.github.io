@@ -156,3 +156,10 @@
 - Utility scale: Publish 50 transparent screening calculators across the seven engineering departments through one data-driven engine. Formula visibility and verification boundaries take precedence over raw page count.
 - Visual decision: Replace homepage interface screenshots with a code-native discipline map. Use navy, mineral blue and ivory transitions to create progression without continuous decorative motion or generated imagery.
 - Escape route: Founder, form, calculator library and map are isolated files/sections and can be revised independently.
+
+## D-020 — Correct v3.5 architectural base (2026-08-27)
+
+- Correction: The earlier homepage review used the six-month/v3.2 branch as its implementation base. That direction is rejected.
+- Decision: Create `review/homepage-v3.0-corrected-2026-08-27` directly from remote `launch-3.0-candidate` at `f6cbb406c8846947803792570bcf783354d3e8d2` and preserve its logo, hero, typography, ivory engineering field, Curiosity section, Ecosystem and form architecture.
+- Donor boundary: Use v3.2 only for explicitly requested comprehension and interaction gains; do not import its page architecture or visual system.
+- Release boundary: Review preview only. Do not merge production, alter `main`, DNS, or the v3.2 preview.

@@ -1,5 +1,12 @@
 # Anchor Point Launch 3.0 — current state
 
+## Corrected homepage v3.5 review (2026-08-27)
+
+- Active branch: `review/homepage-v3.0-corrected-2026-08-27`, created directly from remote `launch-3.0-candidate` at `f6cbb406c8846947803792570bcf783354d3e8d2`.
+- Launch 3.0 is the architectural and visual source. The six-month/v3.2 branch is a donor only for the requested small demonstration, clearer invitation language and active gold navigation cue.
+- Homepage journey is `YOU → PROBLEM → AP THINKING → OUTCOME`; deeper principles, engagement detail, process exposition and accountability material are removed from the homepage.
+- Production, `main`, DNS and the existing v3.2 preview remain untouched.
+
 Last reconciled: 2026-08-22 (Asia/Dhaka)
 
 This file is the restart point when a chat is compacted, hidden, or opened on another device. It records the project state; it does not replace Git history or the decision log.
