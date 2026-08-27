@@ -1,0 +1,15 @@
+/* Final homepage-only acceptance layer from Presentation2.pdf. Loaded last on purpose. */
+.v30-review .principle-cards article{background:#f5f4efb8;color:#0a1722;border:1px solid #15344518;box-shadow:0 8px 22px #17303d08}
+.v30-review .principle-cards article:hover,.v30-review .principle-cards article:focus-visible,.v30-review .principle-cards article[aria-expanded="true"]{background:#faf8f2ed;border-color:#b8945150;box-shadow:0 16px 34px #17303d12}
+.v30-review .hub-tease{background:linear-gradient(180deg,#edf1ef 0,#cddbd8 10%,#1d5062 27%,#103a51 58%,#0d344b 100%)}
+.v30-review .ecosystem-map{border:0;border-radius:0;background:radial-gradient(circle at center,#f6f3eb 0 11%,#d7e2df 12%,#91afb24a 25%,#2b6f7840 43%,transparent 68%)}
+.v30-review .contact{background:linear-gradient(180deg,#0d344b,#0a2b3f 58%,#082437)}
+.v30-review .contact-form-card{color:#eef3f3;background:linear-gradient(145deg,#ffffff0b,#061e2d50);border:1px solid #ffffff20;box-shadow:inset 0 1px #ffffff0e}
+.v30-review .contact-form-card>span{color:#e7c16c}.v30-review .contact-form-card label,.v30-review .contact-form-card h3{color:#f1f4f3}
+.v30-review .recognition .section-intro h2,.v30-review .demo-intro h2,.v30-review .difference .section-intro h2,.v30-review .renaissance-copy h2,.v30-review .vision-copy h2,.v30-review .hub-tease h2,.v30-review .contact-copy h2{font-size:clamp(3rem,5.2vw,5.1rem);line-height:1.01;max-width:760px;text-wrap:balance}
+.v30-review .contact-form-card input,.v30-review .contact-form-card select,.v30-review .contact-form-card textarea{display:block;color:#f5f7f6;background:#eaf0ee0d;border-color:#ffffff24}
+.v30-review .contact-form-card option{color:#0a1722}.v30-review .contact-form-card input:focus,.v30-review .contact-form-card select:focus,.v30-review .contact-form-card textarea:focus{border-color:#e6bd62;background:#ffffff11;outline:none}
+.v30-review .contact-form-note{color:#aebec5}.v30-review .contact-form-note a{color:#e7c16c}.v30-review footer{background:#061b2a;padding-top:34px;padding-bottom:104px}
+.v30-review .tool-chips a{color:#d9e3e6}.v30-review .map-anchor{color:#0a1722;background:#f4f0e7;text-decoration:none;box-shadow:0 0 80px #9dd1d744}.v30-review .map-anchor b{color:#0a1722}.v30-review .map-anchor span,.v30-review .map-anchor small{color:#5f7077}
+@media(max-width:900px){.v30-review .contact-form-card{padding:27px 20px}}
+@media(max-width:600px){.v30-review .recognition .section-intro h2,.v30-review .demo-intro h2,.v30-review .difference .section-intro h2,.v30-review .renaissance-copy h2,.v30-review .vision-copy h2,.v30-review .hub-tease h2,.v30-review .contact-copy h2{font-size:clamp(2.75rem,12vw,3.8rem)}}
