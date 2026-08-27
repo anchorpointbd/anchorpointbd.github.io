@@ -1,5 +1,12 @@
 # Anchor Point Launch 3.0 — current state
 
+## Focused homepage acceptance pass (2026-08-28)
+
+- Review branch: `homepage-focus-20260828`, based on `homepage-v30-pdf43-refine-20260828` at `e4a5617`.
+- Scope is limited to the reopened owner-review items; previously accepted logo, header, heading, navigation, contact and ecosystem behavior remains locked.
+- Homepage now uses one shared gold CTA treatment, one segmented progress control, a longer hero-to-light bridge, one continuous light middle field, full-canvas Curiosity artwork, restored Horizon construction, and a controlled return to deep at the ecosystem.
+- Production, `main`, DNS and the existing preview branches remain untouched.
+
 ## Corrected homepage v3.5 review (2026-08-27)
 
 - Active branch: `review/homepage-v3.0-corrected-2026-08-27`, created directly from remote `launch-3.0-candidate` at `f6cbb406c8846947803792570bcf783354d3e8d2`.

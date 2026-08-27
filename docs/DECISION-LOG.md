@@ -1,5 +1,11 @@
 # Central decision log
 
+## D-018 — Focused homepage owner-review closeout (2026-08-28)
+
+- Decision: preserve every accepted element from the 43-point pass and reopen only items 2, 3, 8, 9, 10, 11, 13, 14, 15, 17, 18, 19, 20, 22, 23, 24, 25, 26, 29, 32, 34 and 43.
+- Implementation: normalize shared gold CTAs to one CSS-rendered emblem with no arrow disc; delete the legacy square-track progress DOM; extend the hero blend into Your Situation; rebalance principle cards; keep Demonstration through Horizon on one light field; complete and realign the five-step copy; embed the Curiosity drawing; restore Horizon construction; protect ecosystem text zones; and reduce the footer to a restrained strip.
+- Verification boundary: desktop and 390 px mobile layout, interactive method expansion, button mark counts, progress-control counts, tonal section sequence and browser errors were checked locally before branch publication. Production remains unmerged.
+
 ## D-001 — Launch 2.5 architecture (2026-08-21)
 
 - Predominant question: How can two staff operate a useful private Vault at near-zero cost without weakening the public site?
