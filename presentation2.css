@@ -19,6 +19,7 @@
 /* Authoritative acceptance pass: reopened items 8, 10, 11, 19, 23, 25, 26, 29 and 32 only. */
 .v30-review .hero{background:radial-gradient(circle at 85% 27%,#4f91a43f,transparent 30%),radial-gradient(circle at 16% 7%,#58789c2e,transparent 38%),linear-gradient(145deg,#123d54,#174960 58%,#123b52)}
 .v30-review .recognition{padding-top:clamp(66px,7vw,98px)}
+.v30-review .recognition{z-index:auto}.v30-review .recognition:before{z-index:0}.v30-review .recognition>*{position:relative;z-index:3}
 .v30-review .recognition .section-intro{padding-top:12px}
 .v30-review .recognition .kicker{color:#244554}.v30-review .recognition .kicker span{background:#8b6a2b}
 .v30-review .recognition .section-intro h2{color:#0d2938;text-shadow:0 1px #ffffff20}.v30-review .recognition .section-intro>p:last-child{color:#2f4a56}
