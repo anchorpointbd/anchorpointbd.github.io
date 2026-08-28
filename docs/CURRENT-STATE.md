@@ -1,5 +1,14 @@
 # Anchor Point Launch 3.0 — current state
 
+## Milestone 1 archive and freeze (2026-08-28)
+
+- **Milestone 1 — Homepage Locked is complete.** Forward branch: `milestone-1-homepage-locked` from `b37d552`; accepted homepage record: `2d1235d`; final visual commit: `1497c84`.
+- Homepage status: **LOCKED / LAUNCH-READY / IMMUTABLE WITHOUT EXPLICIT OWNER CONFIRMATION**.
+- Cloudflare prioritized previews were mapped and preserved. Old previews do not consume a finite active-preview allowance, so none were deleted for appearance.
+- Historical founder-origin source was recovered at `dffb135:founder.html` and is private recovery material, not approved public copy.
+- Canonical closeout records: `docs/MILESTONES.md`, `docs/HOMEPAGE_LOCKED_SPEC.md`, `docs/REFERENCE_PREVIEWS.md`, `docs/RECOVERY_GUIDE.md`, and `docs/internal/ANCHOR_POINT_RECOVERY_STONE.md`.
+- Next scope only: About + Services + Method review leading to **Milestone 2 — Website Locked**. No redesign begins in this pass.
+
 ## Full-site visual-system propagation (2026-08-28)
 
 - Homepage master visual contract: **FINAL / LOCKED / LAUNCH-READY**. This pass changes no homepage file or visual treatment.
@@ -222,3 +231,4 @@ Sixty questions established discovery. The six hundred questions that follow can
 - Added a data-driven library of 50 screening calculators across Civil, Mechanical, Marine, Electrical, Energy, Computing and Materials. Every card exposes its formula and the same verification boundary.
 - Removed the homepage screenshot composition. The Ecosystem is now represented by a code-native seven-discipline map with restrained motion and no generated imagery.
 - Production remains untouched. Founder identity, credentials and biography remain pending separately approved facts.
+
