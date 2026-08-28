@@ -1,5 +1,17 @@
 # Central decision log
 
+## D-023 — Homepage acceptance freeze and shared page contract (2026-08-28)
+
+- Source: Freeze the homepage at accepted commit `1497c84` after replacing only the Curiosity lower-right copy with the approved concise text and equalizing Examples utility activation with the other two controls.
+- Visual backbone: Preserve the v3.0-derived deep/light/deep journey; accepted Hero and Your Situation treatment; original-logo Barlow/Barlow Condensed wordmark, tagline and divider lockup; dominant hero and smaller two-line non-hero hierarchy; one segmented right-side progress indicator; scroll-responsive dark/light/dark header; light-card and deep-navy surface families; and soft transitions without hard boxed-slide edges.
+- Action system: Use one consistent gold CTA with one AP emblem, no arrow-circle, consistent ratios and accessible hover/focus/press behavior. Preserve the bottom utility labels Ecosystem, Ask Anchor Point and Examples with one identical active effect.
+- Accepted middle journey: Keep the widened readable three-card Your Situation composition; transparent A Small Demonstration decision-flow surface, gold plus control and accepted “THE CLEARER QUESTION” color; complete Understand → Diagnose → Explore → Decide → Deliver interaction/copy; full-canvas Curiosity artwork with locked upper-left block and concise lower-right copy on the local veil, never a card; and the accepted Built in stages · aimed far / Horizon construction.
+- Accepted closing journey: Keep the full-canvas Engineering Ecosystem with six live destinations, orbit and reduced-motion behavior, and accepted center AP treatment; preserve Return tomorrow with another question; preserve Prefer us to contact you? and its form/email behavior; and preserve the thin footer plus public email treatment.
+- Truth boundary: Never invent clients, certifications, team scale, offices, maturity, tools, routes, authority or outcomes. Trade, do not accumulate: an accepted component replaces alternatives instead of layering new decoration over them.
+- Propagation boundary: Secondary pages receive shared header, CTA, progress, type, palette, transition, surface, spacing, utility, back-to-top, footer, responsive and accessibility primitives only. Page-specific content, order and meaning are not rewritten to imitate homepage copy.
+- Milestones: Homepage visual acceptance **COMPLETE / FROZEN**; shared global component standard **READY FOR PROPAGATION**; next phase **page-by-page refinement of secondary pages**.
+- Release boundary: Review branch and Cloudflare preview only. Do not merge production, alter `main` or change DNS.
+
 ## D-022 — Strict accepted-section rollback (2026-08-28)
 
 - Decision: Use accepted reference-A commit `b05933f` as the source implementation for Hero + Your Situation and the full lower homepage sequence rather than recreating those surfaces manually.

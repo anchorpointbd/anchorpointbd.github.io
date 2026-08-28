@@ -1,5 +1,15 @@
 # Anchor Point Launch 3.0 — current state
 
+## Homepage freeze and shared-pattern propagation (2026-08-28)
+
+- Review branch: `homepage-freeze-global-pattern-20260828`, based exactly on accepted homepage commit `1497c84`.
+- Homepage visual acceptance: **COMPLETE / FROZEN**. The only homepage changes in this pass are the approved concise Curiosity lower-right copy and identical pointer/focus/click activation for the existing Examples utility control.
+- Shared global component standard: **READY FOR PROPAGATION**. `docs/SHARED-PAGE-PATTERN.md`, `shared-page.css` and `shared-page.js` define the reusable secondary-page presentation contract.
+- Shared presentation was applied without content redesign to How We Work, Founder, Ecosystem, Conversion Desk, Scientific Calculator, Idea Graveyard, Release Pad, Privacy, Terms, Information Care and Staff Vault.
+- Browser QA at 1440 × 1000 and 390 × 844 confirmed the Curiosity copy renders in three desktop lines, its CTA geometry is unchanged, the three utility states share one interaction path, all propagated pages load without console errors, and no shared layer changes page-specific headings or content order.
+- Next phase: **page-by-page refinement of secondary pages**. Their content architecture and meaning remain unchanged until individually reviewed.
+- Production, `main` and DNS remain untouched.
+
 ## Final locked homepage micro-correction pass (2026-08-28)
 
 - Review branch: `homepage-final-locked-micro-20260828`, based on Reference B at `fa4dd1a`.

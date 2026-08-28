@@ -1,0 +1,14 @@
+if(!document.body.classList.contains('v30-review')){
+  document.body.classList.add('shared-page');
+  const style=document.createElement('link');style.rel='stylesheet';style.href='shared-page.css?v=20260828-1';document.head.appendChild(style);
+  const primarySections=[...document.querySelectorAll('main>section[id],main>section')].slice(0,8);
+  primarySections.forEach((section,index)=>{if(!section.id)section.id=`page-section-${index+1}`});
+  if(primarySections.length>1&&!document.querySelector('.global-progress')){
+    const progress=document.createElement('nav');progress.className='global-progress';progress.setAttribute('aria-label','Page progress');progress.innerHTML=primarySections.map((section,index)=>`<a href="#${section.id}" aria-label="Section ${index+1}"></a>`).join('');document.body.appendChild(progress);
+    const links=[...progress.querySelectorAll('a')];links[0]?.classList.add('active');
+    const observer=new IntersectionObserver(entries=>{const current=entries.filter(entry=>entry.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];if(current)links.forEach(link=>link.classList.toggle('active',link.hash===`#${current.target.id}`))},{rootMargin:'-30% 0px -55%',threshold:[0,.15,.4]});primarySections.forEach(section=>observer.observe(section));
+  }
+  if(!document.querySelector('.utility-bar'))document.body.insertAdjacentHTML('beforeend','<nav class="utility-bar" aria-label="Quick actions"><a href="hub.html" data-utility="ecosystem">Ecosystem</a><a href="index.html#contact" data-utility="contact">Ask Anchor Point</a><a href="evidence.html#demonstrations" data-utility="examples">Examples</a></nav>');
+  const page=location.pathname.split('/').pop()||'index.html';const activeKey=page==='hub.html'||['convert.html','scientific.html'].includes(page)?'ecosystem':page==='evidence.html'?'examples':'contact';document.querySelectorAll('.utility-bar [data-utility]').forEach(link=>{const active=link.dataset.utility===activeKey;link.classList.toggle('active',active);if(active)link.setAttribute('aria-current','page');['pointerdown','focus','click'].forEach(type=>link.addEventListener(type,()=>document.querySelectorAll('.utility-bar [data-utility]').forEach(item=>item.classList.toggle('active',item===link))))});
+  const zones=[...document.querySelectorAll('main>section')];const tone=()=>{const y=scrollY+84;const zone=zones.find(section=>section.offsetTop<=y&&section.offsetTop+section.offsetHeight>y);const color=zone?getComputedStyle(zone).backgroundColor:'';const rgb=color.match(/\d+/g)?.slice(0,3).map(Number);const light=rgb&&(.2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2]>150);document.querySelector('.topbar')?.setAttribute('data-zone',light?'light':'deep')};addEventListener('scroll',tone,{passive:true});addEventListener('resize',tone,{passive:true});tone();
+}
