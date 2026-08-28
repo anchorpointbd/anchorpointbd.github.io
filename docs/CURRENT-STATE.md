@@ -1,5 +1,13 @@
 # Anchor Point Launch 3.0 — current state
 
+## Annotated About correction pass (2026-08-28)
+
+- Review branch: `review/about-pdf-correction-20260828`, based on the prior About review branch.
+- `Presentation3.pdf` was inspected visually and used as the authoritative 11-point acceptance reference.
+- About now consumes the homepage's final accepted chrome layer directly, adds Home while preserving About active state, uses the homepage logo/CTA/progress/utility/footer treatments, and keeps page-specific content unchanged.
+- The About hero is two lines at 1440 px, uses the homepage deep field and watermark scale logic, and transitions continuously into the light field without a white stripe or hard horizontal onset.
+- Homepage files and every other secondary page remain unchanged. Production and `main` remain untouched.
+
 ## About-page review pass (2026-08-28)
 
 - Review branch: `review/about-homepage-lock-20260828`, based on the global-page-system review branch.

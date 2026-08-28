@@ -1,5 +1,12 @@
 # Central decision log
 
+## D-026 — Annotated About visual-parity correction (2026-08-28)
+
+- Source: The owner-annotated `Presentation3.pdf`, including all 11 red-marked comparisons between Homepage and About.
+- Decision: Load the accepted homepage presentation layer on About rather than restating global chrome in an About-only variant. Keep only the scroll tone mapping and About content composition page-specific.
+- Result: Home is added, About remains active, hero typography resolves to two desktop lines, the watermark follows homepage scale/offset logic, and the upper deep-to-light journey is continuous.
+- Boundary: Homepage hashes are unchanged; no other secondary page, production branch, DNS or `main` is modified.
+
 ## D-025 — Homepage master lock and full-site tonal contract (2026-08-28)
 
 - Master lock: The accepted homepage is the final, launch-ready visual contract. Secondary-page propagation must not change its palette, typography, spacing, artwork, behavior, forms, progress, utility bar or footer.
