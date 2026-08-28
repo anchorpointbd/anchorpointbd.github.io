@@ -1,5 +1,13 @@
 # Central decision log
 
+## D-026 — Connected eight-chapter secondary-page architecture (2026-08-28)
+
+- Decision: implement the approved Interest → Trust → Relevance → Confidence → Conversation story across About, Services and Method, with eight chapters per page and distinct choreography within one homepage-derived visual system.
+- Homepage boundary: make no changes to homepage HTML, CSS, JavaScript, content, layout or behavior. Preserve its existing `evidence.html#method` link and resolve that legacy destination from the Services page to the dedicated Method page.
+- Truth boundary: publish only repository-supported identity facts; leave registration, tax, office, telephone and banking fields explicitly unpublished until verified. Never expose bank account details.
+- Contact boundary: prioritize Request a response and Email Anchor Point. Keep contact intake minimal, non-confidential and consent-based; visiting-card upload is optional and WhatsApp is not a primary action.
+- Release boundary: review branch and Cloudflare preview only. Production and `main` remain untouched.
+
 ## D-025 — Homepage master lock and full-site tonal contract (2026-08-28)
 
 - Master lock: The accepted homepage is the final, launch-ready visual contract. Secondary-page propagation must not change its palette, typography, spacing, artwork, behavior, forms, progress, utility bar or footer.

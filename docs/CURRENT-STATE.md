@@ -1,5 +1,14 @@
 # Anchor Point Launch 3.0 — current state
 
+## Milestone 2 content/story architecture review (2026-08-28)
+
+- Review branch: `review/m2-content-architecture-20260828`, based on `milestone-1-homepage-locked`.
+- Homepage files and output remain unchanged. The existing homepage Method destination `evidence.html#method` is preserved and routed by the Services page to the new dedicated `method.html`.
+- About, Services and Method now each use eight visible story chapters with the shared homepage identity, navigation, CTA, segmented progress, utility bar, back-to-top, footer, deep → light → deep journey, restrained reveal motion and reduced-motion behavior.
+- About is institutional/documentary; Services is analytical; Method is technical/process-oriented. Claims remain early-stage and evidence-separated.
+- Each page closes with the light shared response form: name, email or telephone, short context, consent, optional organization/role and optional visiting-card upload. Email remains the non-form alternative; WhatsApp is absent.
+- Production, `main`, DNS and the locked homepage remain untouched pending visual review.
+
 ## Milestone 1 archive and freeze (2026-08-28)
 
 - **Milestone 1 — Homepage Locked is complete.** Forward branch: `milestone-1-homepage-locked` from `b37d552`; accepted homepage record: `2d1235d`; final visual commit: `1497c84`.
