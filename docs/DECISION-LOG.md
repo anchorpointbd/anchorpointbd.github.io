@@ -1,5 +1,18 @@
 # Central decision log
 
+## D-025 — Homepage master lock and full-site tonal contract (2026-08-28)
+
+- Master lock: The accepted homepage is the final, launch-ready visual contract. Secondary-page propagation must not change its palette, typography, spacing, artwork, behavior, forms, progress, utility bar or footer.
+- Sequence: Every public secondary page uses a visible deep-navy opening, gradual light transition, continuous light middle and gradual deep return where page length permits. Navigation follows these explicit tonal zones deep → light → deep.
+- Identity: Original logo geometry, Barlow Condensed wordmark, Barlow tagline, divider proportions, floating header and responsive/mobile behavior are global locks.
+- Components: One gold CTA emblem with no arrow-circle; one segmented right-side progress indicator; accepted utility bar, footer, back-to-top, form, focus, touch and reduced-motion behavior.
+- Hierarchy: The page header is each secondary page's strongest frame, while later headings remain subordinate, calm and generally two lines on desktop where natural.
+- Canvas: Deep navy and light-canvas families are the palette anchors. Transitions are gradual and sfumato-like; near-black interruptions, abrupt color blocks and giant separator seams are rejected.
+- Surfaces: Cards and boxes are not the default language. Editorial material floats on the page canvas with whitespace, typography, fine dividers or embedded linework. Quiet containment remains available only for functional forms, calculators, authentication and other genuine UI groupings.
+- Artwork: Engineering drawings and technical artwork blend into the canvas rather than appearing pasted. Whitespace is intentional but must not become dead gaps.
+- Truth boundary: Do not invent claims, maturity, certifications, clients, offices, team scale, routes or tools.
+- Next review: Page-specific information architecture and copy remain unchanged until the owner reviews secondary pages individually through annotated screenshots/PDFs.
+
 ## D-024 — Homepage production acceptance (2026-08-28)
 
 - Decision: Accept and launch the frozen homepage from `homepage-freeze-global-pattern-20260828` after verifying the Examples utility control follows the identical active-state path already used by Ecosystem and Ask Anchor Point.

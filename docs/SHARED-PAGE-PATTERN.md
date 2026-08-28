@@ -1,6 +1,6 @@
 # Anchor Point shared page pattern
 
-Status: accepted visual/UI contract for secondary-page propagation. The homepage is frozen and remains the reference implementation.
+Status: accepted visual/UI contract for secondary-page propagation. The homepage is frozen, launch-ready and remains the master visual reference.
 
 ## Core rule
 
@@ -26,6 +26,29 @@ Propagate presentation and interaction, not homepage content. Each page keeps it
 - Transitions are soft and sfumato-like. Avoid hard section boundaries, boxed-slide rhythm and unrelated tonal blocks.
 - Cards and tools are embedded surfaces: restrained borders, tonal separation and quiet depth. Do not turn every block into a cage.
 - Engineering drawings, sketches and technical artwork belong to the page canvas. Do not paste them as white rectangular screenshots unless the content is genuinely an interface proof.
+
+## Required page sequence
+
+- Every public secondary page follows a visible **DEEP → LIGHT → DEEP** journey where its length permits.
+- The opening field is deep navy and contains the strongest page title plus a calm supporting line. It has no surrounding card.
+- The opening dissolves gradually into the light canvas; there is no hard horizontal seam or giant separator rule.
+- The middle field holds most page-specific content on one continuous light canvas. Typography, whitespace, fine dividers and embedded linework provide grouping before a card is considered.
+- The final one or two sections make a gradual return to the deep navy family so the closing action, utility bar and footer feel like one connected field.
+- Transition length scales with page length. Short functional pages use a compact blend; long editorial pages allow a slower tonal change.
+- The navigation reads explicit tonal zones and moves deep → light → deep with the page rather than estimating state from transparent computed backgrounds.
+
+## Page-header hierarchy
+
+- The page title is the strongest frame on its page but never exceeds the homepage hero in brand dominance.
+- Page titles should normally occupy one or two desktop lines. Supporting subheaders are calmer, explanatory and normally one or two lines where the existing copy allows.
+- Non-hero section headings are subordinate, use a consistent maximum measure, and generally settle into two desktop lines when natural. No new labels or taxonomy are introduced to force the pattern.
+
+## Transparent canvas rule
+
+- Cards and boxes are not the default language. Ordinary editorial articles and resources remain transparent and use spacing or a fine dividing line.
+- Functional containment—forms, calculators, authentication and interactive workspaces—may retain a quiet, lightly surfaced boundary for usability.
+- Heavy shadows, repeated white rectangles, cage-like borders and isolated dark panels are removed from shared presentation.
+- Deep-page interruptions use the approved navy family only; near-black or unrelated cream blocks require a documented functional reason.
 
 ## Rhythm and responsive behavior
 

@@ -1,5 +1,14 @@
 # Anchor Point Launch 3.0 — current state
 
+## Full-site visual-system propagation (2026-08-28)
+
+- Homepage master visual contract: **FINAL / LOCKED / LAUNCH-READY**. This pass changes no homepage file or visual treatment.
+- Shared page sequence: **DEEP → LIGHT → DEEP**, with explicit tonal zones driving the scroll-responsive navigation state.
+- Global logo/navigation, page-header hierarchy, one-emblem gold CTA, one segmented progress indicator, transparent canvas, bottom utility bar, footer, back-to-top and existing responsive/accessibility behavior are locked shared standards.
+- Cards/boxes are no longer the default secondary-page language. Editorial groups use transparent surfaces, whitespace and fine dividers; functional calculators, forms and authentication panels retain restrained containment where necessary.
+- Milestones: Homepage visual system **COMPLETE / LOCKED**; homepage launch readiness **COMPLETE**; shared design-system propagation **COMPLETE after review QA**; secondary page-by-page screenshot/PDF review **NEXT**.
+- Production and `main` remain untouched. Review occurs on a dedicated branch and Cloudflare preview.
+
 ## Homepage production launch (2026-08-28)
 
 - Homepage status: **LAUNCHED / ACCEPTED**.
