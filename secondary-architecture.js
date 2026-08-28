@@ -1,4 +1,16 @@
 (()=>{
+  const storyLabels={home:'Why It Matters',about:'Who They Are',services:'What They Do',method:'How They Work'};
+  const page=document.body.dataset.page;
+  if(storyLabels[page])document.body.dataset.storyLabel=storyLabels[page];
+
+  const nextChapter=document.querySelector('[data-story-next]');
+  if(nextChapter){
+    const preload=document.createElement('link');
+    preload.rel='prefetch';
+    preload.href=nextChapter.dataset.storyNext;
+    document.head.append(preload);
+  }
+
   if(/\/evidence(?:\.html)?$/.test(location.pathname)&&location.hash==='#method'){
     location.replace('method.html');
     return;

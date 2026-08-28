@@ -1,3 +1,13 @@
+## Milestone 2 correction delta (2026-08-29)
+
+- Guided-story labels are locked as Home `Why It Matters`, About `Who They Are`, Services `What They Do`, and Method `How They Work`.
+- Optional chapter bridges exist only for About → Services and Services → Method. They use native links, next-page prefetch and cross-document view transitions with reduced-motion fallback. Home has no continuation trigger.
+- About origin copy now bridges directly from the capability/opportunity gap. Its former Horizon duplicate is replaced by the proof-gated `How We Grow` maturity ladder: Prove → Build → Connect → Scale.
+- Services owns the full client-facing journey and the seven-step illustrative pump-underperformance demonstration. Its five service families use the reference pattern: when it helps, what we do, what you get, typical first step and practical examples.
+- Method no longer repeats the Services decision journey or client examples. It now deepens the five stages by what each protects, adds five reasoning quality-control checks, and separates verified, supplied, assumed and missing evidence.
+- Duplication ownership: Home owns ambition and the five-stage preview; About owns institutional role/current evidence/proof-gated growth; Services owns commercial scope and the end-to-end engagement; Method owns evidence, assumptions, reasoning QC, governance and traceability.
+- Homepage files were not changed in this correction delta. Production, `main` and DNS remain untouched.
+
 ## Milestone 2 implementation brief pass (2026-08-29)
 
 - Review branch: `review/m2-implementation-20260829`, continuing from the prior Milestone 2 architecture branch.

@@ -244,3 +244,11 @@
 - Simplified About, Services and Method copy while retaining their eight-section architecture and distinct institutional, analytical and technical personalities.
 - Added optional chapter continuation after About and Services footers and a final Method statement after its footer.
 - Kept the shared contact form, responsive behavior, reduced-motion handling, global navigation and production boundary intact.
+
+## 2026-08-29 — Assign one primary home to each repeated concept
+
+- Home remains the sole owner of Horizon and the concise Understand → Diagnose → Explore → Decide → Deliver preview.
+- About growth is governed by proof gates rather than another ambition timeline.
+- Services owns the full client-facing seven-step engagement demonstration and practical product descriptions.
+- Method owns internal reasoning discipline: evidence status, assumptions, sensitivity, missing evidence, authority, governance and traceability.
+- Optional story continuity uses normal page URLs with prefetch and cross-document view transitions; no adjacent-page DOM, scroll trap or Home → About trigger is introduced.
