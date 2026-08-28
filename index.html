@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Anchor Point helps teams frame difficult engineering decisions before committing to a solution.">
+  <meta name="theme-color" content="#07110f">
+  <title>Anchor Point — Start with the question</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Anchor Point home"><span class="mark">A<span>P</span></span><span>ANCHOR POINT<small>ENGINEERING REASONING</small></span></a>
+    <button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Primary"><a href="#workspace">Decision workspace</a><a href="#system">How it works</a><a href="#boundaries">Boundaries</a><a class="nav-cta" href="#start">Bring a question</a></nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="signal"><span></span> Independent engineering reasoning</p>
+        <h1>Before you choose a solution,<br><em>make the question visible.</em></h1>
+        <p class="lede">Anchor Point helps teams examine difficult engineering and project decisions: what is known, what is assumed, what connects, and which paths deserve attention.</p>
+        <div class="hero-actions"><a class="button primary" href="#workspace">Open the decision workspace <span>↘</span></a><a class="text-link" href="#boundaries">See where our role ends</a></div>
+      </div>
+      <div class="question-core" aria-label="Animated decision map showing a question connecting to evidence, constraints, options and consequences">
+        <div class="orbit orbit-a"><span>Evidence</span></div><div class="orbit orbit-b"><span>Constraints</span></div><div class="orbit orbit-c"><span>Options</span></div><div class="orbit orbit-d"><span>Consequences</span></div>
+        <div class="core"><small>START HERE</small><strong>What are we<br>actually deciding?</strong><i></i></div>
+      </div>
+      <div class="scroll-cue">SCROLL TO EXAMINE <span>↓</span></div>
+    </section>
+
+    <section class="workspace" id="workspace">
+      <header class="section-head"><p class="kicker">01 / DECISION WORKSPACE</p><h2>A useful conversation can begin before you know what service to ask for.</h2></header>
+      <div class="workbench">
+        <div class="prompt-panel">
+          <p class="status"><span></span> FRAMING MODE</p>
+          <label for="question">What feels unresolved?</label>
+          <textarea id="question" rows="3" placeholder="Example: Our pump is not reaching the expected output, but replacing it feels premature."></textarea>
+          <fieldset><legend>Where is the decision now?</legend><div class="chips"><button class="chip active" type="button">Unclear</button><button class="chip" type="button">Planning</button><button class="chip" type="button">Procurement</button><button class="chip" type="button">Delivery</button><button class="chip" type="button">Recovery</button></div></fieldset>
+          <button class="frame-button" type="button">Frame the question <span>→</span></button>
+          <p class="privacy">This demo keeps your text in this browser. Nothing is submitted.</p>
+        </div>
+        <div class="map-panel" aria-live="polite">
+          <div class="map-header"><span>DECISION MAP / PREVIEW</span><span class="map-state">WAITING FOR CONTEXT</span></div>
+          <div class="empty-map"><div class="mini-core">?</div><p>Your question becomes a map of the evidence, assumptions, constraints, options and people connected to it.</p></div>
+          <div class="generated-map" hidden>
+            <div class="map-question"><small>WORKING QUESTION</small><p></p></div>
+            <div class="map-grid"><article><b>01</b><h3>Evidence</h3><p>What can be checked now?</p></article><article><b>02</b><h3>Assumptions</h3><p>What are we treating as true?</p></article><article><b>03</b><h3>Constraints</h3><p>What limits a credible path?</p></article><article><b>04</b><h3>Options</h3><p>What else could we do?</p></article></div>
+            <p class="map-note">A framing map is a starting point, not an automated engineering answer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="system" id="system">
+      <div class="sticky-intro"><p class="kicker">02 / THE SYSTEM</p><h2>Reasoning stays inspectable from uncertainty to action.</h2><p>We separate the parts of a decision so they can be checked, challenged and explained to someone else.</p></div>
+      <div class="steps">
+        <article><span>01</span><div><h3>Orient</h3><p>Clarify the decision, the people affected and what a useful next step would look like.</p></div><b>QUESTION</b></article>
+        <article><span>02</span><div><h3>Examine</h3><p>Separate evidence from assumptions. Find gaps, interfaces and competing explanations.</p></div><b>CONTEXT</b></article>
+        <article><span>03</span><div><h3>Compare</h3><p>Place credible paths beside one another with their costs, consequences, risks and confidence.</p></div><b>CHOICES</b></article>
+        <article><span>04</span><div><h3>Record</h3><p>Turn the chosen direction into a usable note that preserves why the decision was made.</p></div><b>TRACE</b></article>
+      </div>
+    </section>
+
+    <section class="outcomes">
+      <p class="kicker">03 / WHAT LEAVES THE ROOM</p>
+      <div class="outcome-title"><h2>Not a black box.<br>A usable record.</h2><p>The format depends on the problem. The standard does not: clear inputs, visible reasoning, practical next action.</p></div>
+      <div class="artifact-strip"><article><span>Q</span><h3>Question brief</h3><p>A precise account of what must be decided.</p></article><article><span>E</span><h3>Evidence map</h3><p>What is known, missing, conflicting or assumed.</p></article><article><span>O</span><h3>Options comparison</h3><p>Credible paths and the consequences of each.</p></article><article><span>D</span><h3>Decision record</h3><p>The chosen action, its limits and the reason behind it.</p></article></div>
+    </section>
+
+    <section class="boundaries" id="boundaries">
+      <div><p class="kicker">04 / AUTHORITY BOUNDARY</p><h2>Clear thinking does not borrow authority.</h2><p>Anchor Point can frame, analyse, compare and coordinate. Where work requires regulated, licensed or specialist authority, that responsibility stays with the properly appointed professional. The client retains the final organizational decision.</p><a class="text-link light" href="#start">Discuss a real situation</a></div>
+      <div class="role-diagram"><div class="role active"><small>ANCHOR POINT</small><strong>Frames · compares · coordinates</strong></div><div class="connector">+</div><div class="role"><small>APPOINTED SPECIALIST</small><strong>Verifies · certifies · signs</strong></div><div class="connector">+</div><div class="role"><small>CLIENT</small><strong>Decides · approves · owns</strong></div></div>
+    </section>
+
+    <section class="institution">
+      <p class="kicker">05 / THE INSTITUTION</p><div class="institution-grid"><h2>Built in public,<br>without pretending<br>to be finished.</h2><div><p>Anchor Point is an early-stage engineering reasoning institution. Its ambition is larger than a consultancy menu: useful tools, public resources, connected specialist capability and a durable practice of clearer decisions.</p><p>That ecosystem has to be earned. We will describe what exists, identify what is still being built, and avoid implying people, projects or authority we cannot verify.</p></div><div class="maturity"><div><span>NOW</span><p>Published reasoning approach<br>Clear engagement boundary<br>Useful public resources</p></div><div><span>BUILDING</span><p>Repeatable tools<br>Verified specialist connections<br>Institutional knowledge systems</p></div><div><span>DIRECTION</span><p>A trusted engineering reasoning ecosystem</p></div></div></div>
+    </section>
+
+    <section class="start" id="start">
+      <div><p class="signal"><span></span> START WITH WHAT IS DIFFICULT</p><h2>You do not need<br>a polished brief.</h2></div>
+      <div class="start-card"><p>Bring the question, the disagreement, the stalled project or the decision that feels premature.</p><a class="button primary invert" href="mailto:hello@anchorpoint.com.bd?subject=An engineering question">Start a conversation <span>↗</span></a><small>We will first decide whether Anchor Point is the right place to help.</small></div>
+    </section>
+  </main>
+  <footer><a class="brand" href="#top"><span class="mark">A<span>P</span></span><span>ANCHOR POINT<small>ENGINEERING REASONING</small></span></a><p>Independent reasoning for difficult engineering decisions.</p><div><a href="#boundaries">Boundaries</a><a href="mailto:hello@anchorpoint.com.bd">Email</a><a href="#top">Back to top ↑</a></div><small>© 2026 Anchor Point. Experimental concept.</small></footer>
+  <script src="site.js"></script>
+</body>
+</html>
