@@ -1,5 +1,12 @@
 # Central decision log
 
+## D-024 — Homepage production acceptance (2026-08-28)
+
+- Decision: Accept and launch the frozen homepage from `homepage-freeze-global-pattern-20260828` after verifying the Examples utility control follows the identical active-state path already used by Ecosystem and Ask Anchor Point.
+- Verification: The deployed review build was checked at desktop and mobile widths for active-state parity, keyboard focus, pointer/tap behavior, unchanged geometry and reduced-motion behavior.
+- Change boundary: No homepage styling, copy, layout, spacing, bar geometry, background, typography or animation was changed in this launch pass beyond the already reviewed Examples interaction-state correction.
+- Milestone: Homepage **LAUNCHED / ACCEPTED**. Shared page pattern remains preserved for the next page-by-page refinement phase.
+
 ## D-023 — Homepage acceptance freeze and shared page contract (2026-08-28)
 
 - Source: Freeze the homepage at accepted commit `1497c84` after replacing only the Curiosity lower-right copy with the approved concise text and equalizing Examples utility activation with the other two controls.

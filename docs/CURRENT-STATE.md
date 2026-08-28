@@ -1,5 +1,12 @@
 # Anchor Point Launch 3.0 — current state
 
+## Homepage production launch (2026-08-28)
+
+- Homepage status: **LAUNCHED / ACCEPTED**.
+- Approved release source: `homepage-freeze-global-pattern-20260828` at commit `31025a9` plus this release-status record.
+- Final launch correction: the existing Examples utility control uses the same active-state handler and unchanged visual effect as Ecosystem and Ask Anchor Point for pointer, keyboard focus, click/tap and reduced-motion behavior.
+- No other homepage visual, content, layout, typography, spacing, color, background, animation or interaction was changed for the production launch pass.
+
 ## Homepage freeze and shared-pattern propagation (2026-08-28)
 
 - Review branch: `homepage-freeze-global-pattern-20260828`, based exactly on accepted homepage commit `1497c84`.
