@@ -1,5 +1,12 @@
 # Anchor Point Launch 3.0 — current state
 
+## Strict homepage rollback review (2026-08-28)
+
+- Review branch: `homepage-strict-rollback-20260828`, based on the latest rollback review at `5a3fe24`.
+- Hero + Your Situation and the complete lower sequence were restored from accepted reference-A commit `b05933f`, including Horizon, contact, the six live ecosystem destinations and accepted orbit motion.
+- A Small Demonstration remains locked. Curiosity retains its accepted artwork and composition; only a feathered 12% local reading veil was added behind the lower-right copy.
+- Production, `main`, DNS and secondary pages remain untouched.
+
 ## Homepage final micro-polish (2026-08-28)
 
 - Review branch: `homepage-micropolish-20260828`, based on `homepage-focus-20260828` at `4181a6d`.

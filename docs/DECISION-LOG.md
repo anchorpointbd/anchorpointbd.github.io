@@ -1,5 +1,11 @@
 # Central decision log
 
+## D-022 — Strict accepted-section rollback (2026-08-28)
+
+- Decision: Use accepted reference-A commit `b05933f` as the source implementation for Hero + Your Situation and the full lower homepage sequence rather than recreating those surfaces manually.
+- Locked boundary: Preserve the current A Small Demonstration and Curiosity artwork/composition; add only a soft 12% local reading veil behind Curiosity's lower-right copy.
+- Release boundary: Review branch and Cloudflare preview only; no production merge, DNS change or secondary-page work.
+
 ## D-021 — Homepage final micro-polish (2026-08-28)
 
 - Decision: reopen only items 8, 10, 23 and 32 from the latest owner review and preserve every other accepted homepage standard.
