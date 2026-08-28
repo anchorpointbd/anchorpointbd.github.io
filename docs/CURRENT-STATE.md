@@ -1,5 +1,12 @@
 # Anchor Point Launch 3.0 — current state
 
+## Final locked homepage micro-correction pass (2026-08-28)
+
+- Review branch: `homepage-final-locked-micro-20260828`, based on Reference B at `fa4dd1a`.
+- Homepage changes are limited to four owner-requested corrections: stronger Your Situation dash/tag color, a 22% feathered Curiosity reading veil, restored AP emblem plus a quiet same-emblem watermark in the existing ecosystem center circle, and a restrained accessible utility-bar selection effect.
+- Desktop and 390 px checks confirm six orbiting destinations, unchanged Curiosity/button geometry, unchanged center-circle dimensions, no horizontal overflow, and reduced-motion support.
+- Production, `main`, DNS, secondary pages and all other Reference B treatments remain untouched.
+
 ## Strict homepage rollback review (2026-08-28)
 
 - Review branch: `homepage-strict-rollback-20260828`, based on the latest rollback review at `5a3fe24`.

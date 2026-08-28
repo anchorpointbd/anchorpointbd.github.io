@@ -182,3 +182,10 @@
 - Decision: Create `review/homepage-v3.0-corrected-2026-08-27` directly from remote `launch-3.0-candidate` at `f6cbb406c8846947803792570bcf783354d3e8d2` and preserve its logo, hero, typography, ivory engineering field, Curiosity section, Ecosystem and form architecture.
 - Donor boundary: Use v3.2 only for explicitly requested comprehension and interaction gains; do not import its page architecture or visual system.
 - Release boundary: Review preview only. Do not merge production, alter `main`, DNS, or the v3.2 preview.
+
+## D-021 — Final locked homepage micro-corrections (2026-08-28)
+
+- Scope: Treat the deployed strict-rollback homepage as authoritative and change only the four owner-specified details.
+- Decision: Darken only the Your Situation kicker and dash; raise only the existing Curiosity local veil from 12% to 22%; restore the accepted AP emblem and add its quiet 8% watermark behind the existing center content; add an active/hover/focus top-edge illumination to the unchanged utility bar.
+- Verification: Preserve all section geometry and copy, the Curiosity CTA position, the 190 px desktop/150 px mobile center circle, all six orbit destinations, and zero horizontal overflow at desktop and 390 px.
+- Release boundary: Review branch and Cloudflare preview only. Production, `main`, DNS and secondary pages remain untouched.
