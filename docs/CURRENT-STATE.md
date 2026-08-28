@@ -1,5 +1,14 @@
 # Anchor Point Launch 3.0 — current state
 
+## About-page review pass (2026-08-28)
+
+- Review branch: `review/about-homepage-lock-20260828`, based on the global-page-system review branch.
+- Homepage governance: **IMMUTABLE / READ-ONLY MASTER**. No homepage HTML, CSS, JavaScript, content, layout or interaction file is changed in this pass.
+- About is the only secondary page modified. It now uses the homepage logo/navigation markup, active nav cue, one-emblem CTA anatomy, segmented progress indicator, three-button utility bar, back-to-top control and exact footer content.
+- About follows the locked deep → light → deep journey, removes boxed novelty artwork, and uses code-native embedded engineering construction linework.
+- “The longer horizon” is removed as duplicated homepage territory. “Why the method matters” is removed and reserved for the Method page. The remaining origin explanation is simplified without inventing claims.
+- Next milestone: owner screenshot/PDF review of About. Other secondary pages and production remain untouched.
+
 ## Full-site visual-system propagation (2026-08-28)
 
 - Homepage master visual contract: **FINAL / LOCKED / LAUNCH-READY**. This pass changes no homepage file or visual treatment.

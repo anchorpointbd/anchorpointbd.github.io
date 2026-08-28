@@ -221,3 +221,12 @@
 - Decision: Darken only the Your Situation kicker and dash; raise only the existing Curiosity local veil from 12% to 22%; restore the accepted AP emblem and add its quiet 8% watermark behind the existing center content; add an active/hover/focus top-edge illumination to the unchanged utility bar.
 - Verification: Preserve all section geometry and copy, the Curiosity CTA position, the 190 px desktop/150 px mobile center circle, all six orbit destinations, and zero horizontal overflow at desktop and 390 px.
 - Release boundary: Review branch and Cloudflare preview only. Production, `main`, DNS and secondary pages remain untouched.
+
+## D-022 — Homepage master lock and About-page boundary (2026-08-28)
+
+- Governance: The accepted homepage is immutable and may be read only as the exact component and visual reference. Any future dependency that appears to require a homepage change must stop for explicit owner confirmation.
+- Global lock: Logo, navigation, top-bar styling, nav active state, one-emblem button anatomy, segmented side indicator, three-button utility bar, footer and deep → light → deep blending use the homepage standard without alternate variants. Section edges stay soft; cards and boxes are not the default language.
+- Hierarchy: Every page hero is the strongest page-level heading; all later subheads use the smaller homepage-derived hierarchy.
+- About scope: Preserve the origin meaning and existing scroll transition. Remove “The longer horizon” because it duplicates the homepage horizon, and remove “Why the method matters” for later Method-page use.
+- About communication: Explain the gap through a plain before → reframe → clarify sequence. Replace the novelty question/AP box with embedded, code-native technical construction linework; no generated image is used.
+- Release boundary: About-only review branch and Cloudflare preview. No production merge, no other secondary-page redesign, and zero homepage file changes.

@@ -6,15 +6,19 @@ Status: accepted visual/UI contract for secondary-page propagation. The homepage
 
 Propagate presentation and interaction, not homepage content. Each page keeps its own purpose, information architecture, wording, tools, forms and order. Do not rewrite page-specific material merely to resemble the homepage.
 
+The homepage itself is immutable. Shared standards are copied outward from it; shared implementation must be scoped so the homepage render cannot change. If a requested secondary-page correction would require a homepage modification, stop and obtain explicit owner confirmation.
+
 ## Identity, header and navigation
 
 - Use the original AP emblem with the Barlow Condensed wordmark, Barlow tagline and accepted divider/lockup proportions.
 - The header belongs to the current canvas: deep state over deep zones, light state over light zones, then deep again where the page returns to navy. State changes must be scroll-responsive, calm and readable.
 - Navigation behavior, keyboard access and mobile menu behavior remain consistent across pages.
+- Logo lockup, nav anatomy, active/selected cue and top-bar presentation are exact homepage standards; alternatives or improvements require explicit owner approval.
 
 ## Actions and progress
 
 - Gold CTAs use one AP emblem, never an arrow-circle or duplicate mark. Maintain the accepted emblem-to-label ratio, gold family and restrained hover/focus/press response.
+- Every webpage button follows the approved homepage anatomy unless a functional control genuinely requires a different native form treatment.
 - Each scrolling page uses one segmented right-side page-progress indicator only. Do not add a second slider, square track or decorative scroll meter.
 - Use the shared bottom utility bar labels exactly: Ecosystem, Ask Anchor Point, Examples. All three use identical active, hover, focus and tap logic; motion is disabled under reduced-motion preferences.
 - Preserve the shared back-to-top control where it is already part of the global implementation.
@@ -22,6 +26,7 @@ Propagate presentation and interaction, not homepage content. Each page keeps it
 ## Type, palette and surfaces
 
 - The page hero is the strongest typographic moment. Major non-hero headings use the accepted smaller, calm hierarchy; body copy stays readable, unhurried and high-contrast.
+- No page-specific hero or later section heading may introduce a competing hierarchy; the homepage-derived hero/subhead relationship is mandatory.
 - Use the accepted deep-navy family and light-canvas family. Build a continuous deep → light → deep journey where the page warrants it.
 - Transitions are soft and sfumato-like. Avoid hard section boundaries, boxed-slide rhythm and unrelated tonal blocks.
 - Cards and tools are embedded surfaces: restrained borders, tonal separation and quiet depth. Do not turn every block into a cage.
