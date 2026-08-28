@@ -1,5 +1,12 @@
 # Central decision log
 
+## D-021 — Homepage final micro-polish (2026-08-28)
+
+- Decision: reopen only items 8, 10, 23 and 32 from the latest owner review and preserve every other accepted homepage standard.
+- Implementation: overlap the lower transition field 22 px beneath the unchanged hero while compensating its padding so the Your Situation copy stays fixed; use local deep text and restrained transparency in the demonstration; select the split Curiosity composition with title upper-left and supporting copy lower-right over the artwork; remove the redundant ecosystem emblem watermark; separate the central `50` label; and add a restrained active top-edge highlight to the unchanged utility bar structure.
+- Verification: desktop and 390 px mobile rendering, text-position comparison, center-label collision measurement, overflow check, single-progress check, JavaScript syntax and browser-console review.
+- Release boundary: review preview only; no production merge, DNS change or `main` modification.
+
 ## D-018 — Focused homepage owner-review closeout (2026-08-28)
 
 - Decision: preserve every accepted element from the 43-point pass and reopen only items 2, 3, 8, 9, 10, 11, 13, 14, 15, 17, 18, 19, 20, 22, 23, 24, 25, 26, 29, 32, 34 and 43.

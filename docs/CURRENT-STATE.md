@@ -1,5 +1,12 @@
 # Anchor Point Launch 3.0 — current state
 
+## Homepage final micro-polish (2026-08-28)
+
+- Review branch: `homepage-micropolish-20260828`, based on `homepage-focus-20260828` at `4181a6d`.
+- Scope remained limited to owner-review items 8, 10, 23 and 32: the hero/Your Situation background layers now overlap without moving their copy; the demonstration decision flow has stronger local contrast; Curiosity uses a transparent split composition in upper-left/lower-right negative space; and the ecosystem watermark, center-label overlap and utility-bar selection state are resolved.
+- Desktop and 390 px mobile verification confirmed one progress indicator, no horizontal overflow, no center-label collision and no browser errors.
+- Production, `main`, DNS and previously accepted homepage work remain untouched.
+
 ## Focused homepage acceptance pass (2026-08-28)
 
 - Review branch: `homepage-focus-20260828`, based on `homepage-v30-pdf43-refine-20260828` at `e4a5617`.
