@@ -237,3 +237,10 @@
 - Decision: keep early founder-origin copy private at `dffb135:founder.html` until the owner performs a personal-information review.
 - Governance: homepage changes require explicit owner confirmation after impact is stated. The next phase may change About, Services, and Method only.
 
+## 2026-08-29 — Milestone 2 implementation brief prepared for visual review
+
+- Continued from `review/m2-content-architecture-20260828` on `review/m2-implementation-20260829`.
+- Authorized the homepage eyebrow change only; verified no calculator/browser screenshot assets exist in the locked baseline rather than altering ecosystem navigation.
+- Simplified About, Services and Method copy while retaining their eight-section architecture and distinct institutional, analytical and technical personalities.
+- Added optional chapter continuation after About and Services footers and a final Method statement after its footer.
+- Kept the shared contact form, responsive behavior, reduced-motion handling, global navigation and production boundary intact.

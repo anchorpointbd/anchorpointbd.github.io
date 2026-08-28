@@ -1,3 +1,12 @@
+## Milestone 2 implementation brief pass (2026-08-29)
+
+- Review branch: `review/m2-implementation-20260829`, continuing from the prior Milestone 2 architecture branch.
+- Homepage scope is limited to the authorized `A different starting point` eyebrow wording and its restrained gold/white treatment. The current locked baseline contains no calculator/browser screenshot assets in homepage HTML, so no unrelated ecosystem link or count was removed.
+- About, Services and Method retain eight chapters each, now use simpler visitor-facing labels and explanatory copy, and include practical examples at the points where decisions, outputs and boundaries are introduced.
+- About continues to Services after its footer; Services continues to Method; Method closes with `There is always room for a better question.` Standard navigation and browser history remain intact.
+- Desktop 1440 × 1000 and mobile 390 × 844 checks passed with no horizontal overflow, no browser warnings/errors, two-font output, accessible contact requirements and no WhatsApp text.
+- Production, `main` and DNS remain untouched pending visual review.
+
 # Anchor Point Launch 3.0 — current state
 
 ## Milestone 2 content/story architecture review (2026-08-28)
