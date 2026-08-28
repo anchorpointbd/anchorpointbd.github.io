@@ -221,3 +221,10 @@
 - Decision: Darken only the Your Situation kicker and dash; raise only the existing Curiosity local veil from 12% to 22%; restore the accepted AP emblem and add its quiet 8% watermark behind the existing center content; add an active/hover/focus top-edge illumination to the unchanged utility bar.
 - Verification: Preserve all section geometry and copy, the Curiosity CTA position, the 190 px desktop/150 px mobile center circle, all six orbit destinations, and zero horizontal overflow at desktop and 390 px.
 - Release boundary: Review branch and Cloudflare preview only. Production, `main`, DNS and secondary pages remain untouched.
+# 2026-08-28 — Milestone 1 archive and recovery freeze
+
+- Decision: establish `milestone-1-homepage-locked` from `b37d552` as the clean forward baseline while retaining `2d1235d` as the homepage acceptance record and `1497c84` as the final visual commit.
+- Decision: preserve old Git branches and prioritized Cloudflare previews during this pass. Cloudflare permits unlimited active Pages preview deployments; deleting history would not restore the 500-build monthly Free-plan allowance.
+- Decision: use immutable milestone tags at the commits in `docs/MILESTONES.md` when tag-writing access is available; v2.0 and v3.2 remain explicitly labelled reconstructed/best-fit mappings.
+- Decision: keep early founder-origin copy private at `dffb135:founder.html` until the owner performs a personal-information review.
+- Governance: homepage changes require explicit owner confirmation after impact is stated. The next phase may change About, Services, and Method only.
