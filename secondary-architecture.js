@@ -1,5 +1,5 @@
 (()=>{
-  if(location.pathname.endsWith('evidence.html')&&location.hash==='#method'){
+  if(/\/evidence(?:\.html)?$/.test(location.pathname)&&location.hash==='#method'){
     location.replace('method.html');
     return;
   }
