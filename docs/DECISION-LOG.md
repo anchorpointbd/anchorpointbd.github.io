@@ -252,3 +252,11 @@
 - Services owns the full client-facing seven-step engagement demonstration and practical product descriptions.
 - Method owns internal reasoning discipline: evidence status, assumptions, sensitivity, missing evidence, authority, governance and traceability.
 - Optional story continuity uses normal page URLs with prefetch and cross-document view transitions; no adjacent-page DOM, scroll trap or Home → About trigger is introduced.
+## 2026-08-29 — Isolated interactive Home + Services experiment
+
+- Decision: create a separate worktree and branch from the committed Milestone 2 benchmark; do not alter the paused benchmark checkout or merge production.
+- Scope: replace only the experimental homepage and add a dedicated Services route. All other institutional pages remain outside this experiment.
+- Interaction language: use live questions, visible evidence/constraints/options, stateful reasoning maps and progressive disclosure without presenting Anchor Point as software or using decorative motion.
+- Curiosity bridge: one central question expands to Equipment, People, Cost, Time, Risk, Evidence, Procurement and Operations, then resolves to one Anchor Point decision marker. This explicitly bridges present method to reusable future capability.
+- Commercial example: use a clearly illustrative BDT 1 crore budget-gap scenario across Question → Evidence → Constraints → Options → Comparison → Decision → Record.
+- Guardrails: no generated imagery, no unsupported counts or proof, no WhatsApp route, reduced-motion behavior, keyboard-operable native controls and non-confidential contact language.

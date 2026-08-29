@@ -260,3 +260,12 @@ Sixty questions established discovery. The six hundred questions that follow can
 - Removed the homepage screenshot composition. The Ecosystem is now represented by a code-native seven-discipline map with restrained motion and no generated imagery.
 - Production remains untouched. Founder identity, credentials and biography remain pending separately approved facts.
 
+## Interactive Home + Services experiment (2026-08-29)
+
+- Experimental branch: `experiment/interactive-home-services-20260829`, based on committed Milestone 2 benchmark `37cb8fb` in a separate worktree.
+- Scope is exactly two new public routes: the homepage and `services.html`. The paused benchmark checkout, production, `main` and DNS are untouched.
+- Home uses eight connected chapters: recognition, starting point, reframe, method, curiosity/system bridge, horizon, ecosystem and conversation.
+- Services uses eight connected chapters: problem-first entry, five service families, lifecycle timing, seven-step budget example, outputs, boundaries, starting path and conversation.
+- The visual system is question-first and diagram-led: live scenario states, evidence/constraint/option relationships, a curiosity map that expands one question across eight meaningful factors, and a decision-resolution state.
+- No client, project, certification, adoption or team-size claims were introduced. Demonstrations remain explicitly illustrative.
+- Desktop and 390 px responsive checks, interaction checks, JavaScript syntax and console checks passed. Preview deployment remains review-only.
