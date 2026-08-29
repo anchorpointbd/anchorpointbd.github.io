@@ -1,5 +1,14 @@
 ## Milestone 2 correction delta (2026-08-29)
 
+## Interactive full-site story experiment (2026-08-29)
+
+- Child review branch: `experiment/interactive-full-story-20260829`, based on the accepted interactive Home + Services experiment at `e27b734`.
+- Home and Services composition remains intact; integration changes are limited to shared navigation and a Services → Method continuation link.
+- Added About, Method and Ecosystem as eight-chapter interactive pages sharing the experiment's navy, ivory, gold, diagram and progressive-disclosure language.
+- Story path: Home / Why It Matters → About / Who They Are → Services / What They Do → Method / How They Work → Ecosystem / What You Can Use.
+- Existing Hub, conversion and scientific routes remain the underlying utility destinations. No unsupported scale, certification, project, client, office or authority claim was added.
+- Production, `main`, DNS and the paused benchmark remain untouched. Multilingual implementation is still separate and was not merged into this experiment.
+
 - Guided-story labels are locked as Home `Why It Matters`, About `Who They Are`, Services `What They Do`, and Method `How They Work`.
 - Optional chapter bridges exist only for About → Services and Services → Method. They use native links, next-page prefetch and cross-document view transitions with reduced-motion fallback. Home has no continuation trigger.
 - About origin copy now bridges directly from the capability/opportunity gap. Its former Horizon duplicate is replaced by the proof-gated `How We Grow` maturity ladder: Prove → Build → Connect → Scale.

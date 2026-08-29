@@ -260,3 +260,12 @@
 - Curiosity bridge: one central question expands to Equipment, People, Cost, Time, Risk, Evidence, Procurement and Operations, then resolves to one Anchor Point decision marker. This explicitly bridges present method to reusable future capability.
 - Commercial example: use a clearly illustrative BDT 1 crore budget-gap scenario across Question → Evidence → Constraints → Options → Comparison → Decision → Record.
 - Guardrails: no generated imagery, no unsupported counts or proof, no WhatsApp route, reduced-motion behavior, keyboard-operable native controls and non-confidential contact language.
+
+## 2026-08-29 — Extend the interactive experiment into one five-page story
+
+- Decision: branch from the praised Home + Services experiment rather than from the paused benchmark; preserve those two page compositions and extend their interaction grammar.
+- About personality: institutional identity field, one changing decision object, authority map, evidence states and proof-gated growth.
+- Method personality: inspectable-versus-black-box reasoning, one evolving method field, quality-control gates, decision scenarios and schematic records.
+- Ecosystem personality: question-led desk, intent pathways, discipline constellation, conversion and theory surfaces, provenance ledger and a living knowledge loop.
+- Continuity: native page links and visible story compasses preserve direct navigation, history and back/forward behavior with no scroll trapping.
+- Caveat: multilingual work remains in a separate experiment; semantic HTML and shared route names keep later integration possible without importing it here.
