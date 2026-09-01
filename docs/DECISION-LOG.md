@@ -1,5 +1,13 @@
 # Central decision log
 
+## 2026-09-02 — Asset 7 cross-industry review rebuild
+
+- Decision: continue from the previous best interactive Asset 7 donor and preserve its navy/ivory/gold technical-field visual grammar.
+- Scope: apply current owner-approved strategic locks across the six-route review experience without changing Asset 1 or production.
+- Experience: use a clearly disclosed interactive landscape across Engineering, Project, Market & Sourcing and Judgment rather than a portfolio card wall.
+- Ecosystem: order the public promise as Learning, Calculators, Sources/References and AI Framing; add only the approved Rabbit Hole, Decision Autopsy, curated Question Archive, Evidence Confidence Map and Assumption Switch.
+- Exclusions: no Red-Flag Lens, Decision Stress Test, client portal, fabricated scale, client history, authority or project outcomes.
+
 ## D-026 — Connected eight-chapter secondary-page architecture (2026-08-28)
 
 - Decision: implement the approved Interest → Trust → Relevance → Confidence → Conversation story across About, Services and Method, with eight chapters per page and distinct choreography within one homepage-derived visual system.

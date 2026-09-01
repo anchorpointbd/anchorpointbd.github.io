@@ -1,5 +1,15 @@
 ## Milestone 2 correction delta (2026-08-29)
 
+## Asset 7 cross-industry owner-review rebuild (2026-09-02)
+
+- Review branch: `review/asset7-cross-industry-20260902`, based only on the accepted interactive Asset 7 donor at `e7b672a`.
+- Six public story routes are connected: Home, About, Services, Method, Ecosystem and 30-Second Brief.
+- Site language now defaults to cross-industry asset, system, process, project, supplier, interface, evidence, commercial and operating language.
+- About includes a disclosed Experience Behind the Method review demo across Engineering, Project, Market & Sourcing and Judgment.
+- Ecosystem priority is Learning → Calculators → Sources/References → AI Framing, plus one Engineering Rabbit Hole, one Decision Autopsy, a human-curated Question Archive, Evidence Confidence Map and Assumption Switch.
+- No Red-Flag Lens, Decision Stress Test, client portal or unsupported `100+` launch claim was added.
+- Asset 1, its locked branch/commit, `main`, production and DNS were not modified.
+
 ## Interactive full-site story experiment (2026-08-29)
 
 - Child review branch: `experiment/interactive-full-story-20260829`, based on the accepted interactive Home + Services experiment at `e27b734`.
