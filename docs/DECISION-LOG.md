@@ -127,6 +127,13 @@
 - AI boundary: Present the assistant as an experimental, capacity-dependent beta; require a public-question confirmation and keep calculators, explainers and resources useful when AI is unavailable.
 - Safety: Voltage drop, pump power and welding heat input remain theory estimates and explicitly refuse equipment selection, protection sizing, WPS substitution, certification or site authority.
 
+## 2026-09-01 — Asset 7 GPT-final multi-page review
+
+- Decision: use `experiment/interactive-full-story-20260829` as the sole donor and isolate the work on `review/asset7-gpt-final-multipage-20260901`.
+- Preserve: the connected technical field, deep/ivory journey, restrained gold, interactive diagrams and page-specific choreography.
+- Extend: add a genuine five-state 30-Second Brief whose five situation choices produce different signals, questions and examination fields; add optional native-link continuation and a shared Brief entry.
+- Boundary: no Asset 1 edit, no production merge, no DNS change, no invented client/project/certification/authority claim.
+
 ## D-011 — Durable continuity protocol (2026-08-22)
 
 - Predominant question: How can the project survive chat-history display failures, context compaction and handoffs without repeatedly asking the owner to reconstruct decisions?

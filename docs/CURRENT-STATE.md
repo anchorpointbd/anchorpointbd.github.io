@@ -1,3 +1,10 @@
+## Asset 7 GPT-final multi-page review (2026-09-01)
+
+- Dedicated branch: `review/asset7-gpt-final-multipage-20260901`, based only on the praised interactive full-story experiment at `e7b672a`.
+- Preserves the donor's navy/ivory/gold decision-field language while strengthening first-read clarity and adding a separate, stateful 30-Second Brief route.
+- Native route architecture remains Home → About → Services → Method → Ecosystem, with Brief as an optional fast lane. Direct URLs, history, back/forward and ordinary scrolling remain intact.
+- Asset 1, `milestone-1-homepage-locked`, `main`, production and DNS are untouched. No merge is authorized by this review branch.
+
 ## Milestone 2 correction delta (2026-08-29)
 
 ## Interactive full-site story experiment (2026-08-29)
