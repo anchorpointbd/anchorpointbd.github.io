@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Page Not Found | Anchor Point</title>
+
+  <meta name="description"
+        content="The page you are looking for could not be found. Return to Anchor Point.">
+
+  <link rel="icon"
+        href="Logo_test.svg"
+        type="image/svg+xml">
+
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 30px;
+
+      background:
+        radial-gradient(
+          circle at 70% 30%,
+          rgba(0,168,232,.10),
+          transparent 35%
+        ),
+        #061828;
+
+      color: white;
+
+      font-family: 'Inter', sans-serif;
+
+      text-align: center;
+    }
+
+    .error-page {
+      width: 100%;
+      max-width: 620px;
+    }
+
+    .logo {
+      width: 180px;
+      max-width: 70%;
+      margin: 0 auto 50px;
+    }
+
+    .error-code {
+      font-family: 'Barlow Condensed', sans-serif;
+
+      font-size: clamp(6rem, 20vw, 11rem);
+
+      font-weight: 800;
+
+      line-height: .8;
+
+      color: #00a8e8;
+
+      letter-spacing: -4px;
+    }
+
+    h1 {
+      margin-top: 30px;
+
+      font-family: 'Barlow Condensed', sans-serif;
+
+      font-size: clamp(2rem, 7vw, 3.4rem);
+
+      font-weight: 800;
+    }
+
+    p {
+      margin: 18px auto 32px;
+
+      max-width: 500px;
+
+      color: #aac4df;
+
+      line-height: 1.8;
+    }
+
+    a {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      min-height: 46px;
+
+      padding: 13px 28px;
+
+      border-radius: 4px;
+
+      background: #00a8e8;
+
+      color: white;
+
+      font-family: 'Barlow Condensed', sans-serif;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      text-decoration: none;
+
+      transition:
+        transform .2s ease,
+        background .2s ease;
+    }
+
+    a:hover {
+      background: #0085c3;
+      transform: translateY(-2px);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <main class="error-page">
+
+    <img
+      class="logo"
+      src="Logo_test.svg"
+      alt="Anchor Point">
+
+    <div class="error-code">
+      404
+    </div>
+
+    <h1>
+      This page has gone off course.
+    </h1>
+
+    <p>
+      The page you are looking for does not exist or may have
+      been moved. Let's get you back to Anchor Point.
+    </p>
+
+    <a href="/">
+      Return to Anchor Point
+    </a>
+
+  </main>
+
+</body>
+</html>
