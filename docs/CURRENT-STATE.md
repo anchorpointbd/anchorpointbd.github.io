@@ -4,6 +4,7 @@
 
 - Review branch: `review/owner-final-20260903`; production, `main`, DNS and the immutable Asset 1 baseline remain untouched.
 - Ecosystem decision-learning content now follows the approved order after Sources/References: human-curated Question Archive → Engineering Rabbit Hole → Decision Autopsy → Evidence Confidence Map → Assumption Switch / What would change this answer?
+- The visitor-facing desk route now explicitly follows Learning → Calculators → Conversions → premium Scientific Calculator → Sources/References.
 - The capacity-dependent experimental AI section is excluded from this review checkpoint because AI framing is allowed only when its reliability is established.
 
 ## Milestone 1 archive and freeze (2026-08-28)

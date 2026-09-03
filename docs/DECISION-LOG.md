@@ -232,4 +232,5 @@
 
 - Kept work isolated on `review/owner-final-20260903`; no production merge, DNS change or Asset 1 edit.
 - Reordered the Ecosystem decision-learning sequence to match the approved lock.
+- Reordered the primary Ecosystem desk route to the approved Learning-first sequence.
 - Removed the capacity-dependent experimental AI section from the review checkpoint. This is a reversible review-branch correction, not a production deletion.
