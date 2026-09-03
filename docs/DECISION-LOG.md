@@ -228,3 +228,8 @@
 - Decision: use immutable milestone tags at the commits in `docs/MILESTONES.md` when tag-writing access is available; v2.0 and v3.2 remain explicitly labelled reconstructed/best-fit mappings.
 - Decision: keep early founder-origin copy private at `dffb135:founder.html` until the owner performs a personal-information review.
 - Governance: homepage changes require explicit owner confirmation after impact is stated. The next phase may change About, Services, and Method only.
+# 2026-09-03 — Owner Final review-lock correction
+
+- Kept work isolated on `review/owner-final-20260903`; no production merge, DNS change or Asset 1 edit.
+- Reordered the Ecosystem decision-learning sequence to match the approved lock.
+- Removed the capacity-dependent experimental AI section from the review checkpoint. This is a reversible review-branch correction, not a production deletion.

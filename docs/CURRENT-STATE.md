@@ -1,5 +1,11 @@
 # Anchor Point Launch 3.0 — current state
 
+## Owner Final review-lock correction (2026-09-03)
+
+- Review branch: `review/owner-final-20260903`; production, `main`, DNS and the immutable Asset 1 baseline remain untouched.
+- Ecosystem decision-learning content now follows the approved order after Sources/References: human-curated Question Archive → Engineering Rabbit Hole → Decision Autopsy → Evidence Confidence Map → Assumption Switch / What would change this answer?
+- The capacity-dependent experimental AI section is excluded from this review checkpoint because AI framing is allowed only when its reliability is established.
+
 ## Milestone 1 archive and freeze (2026-08-28)
 
 - **Milestone 1 — Homepage Locked is complete.** Forward branch: `milestone-1-homepage-locked` from `b37d552`; accepted homepage record: `2d1235d`; final visual commit: `1497c84`.
