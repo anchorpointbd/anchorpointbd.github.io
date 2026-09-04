@@ -1,5 +1,14 @@
 # Anchor Point Launch 3.0 — current state
 
+## Owner Final visual refinement candidate (2026-09-05)
+
+- Review branch: `review/owner-final-visual-refine-20260905`, created from the frozen Owner Final checkpoint at `12c0c4e27db4e2ea66e94662de582c9206a3b3af`.
+- The pass preserves the six-route architecture and locked copy while consolidating public navigation, footer metadata, focus language, responsive behavior and visual tokens.
+- Home Curiosity retains the approved artwork and gains a restrained relationship layer connecting technical performance, cost, people, time, risk, evidence, procurement and operations.
+- Services now starts with a meaningful situation selector whose question, likely service, evidence, output and next step all change together; the BDT 1 crore example remains explicitly illustrative.
+- Public footer metadata is sourced from one site constant: `Website last updated · 05 Sep 2026`.
+- Asset 1, frozen Owner Final, GPT Asset 7, `main`, production and DNS remain untouched.
+
 ## Owner Final review-lock correction (2026-09-03)
 
 - Review branch: `review/owner-final-20260903`; production, `main`, DNS and the immutable Asset 1 baseline remain untouched.

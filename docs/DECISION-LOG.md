@@ -1,5 +1,14 @@
 # Central decision log
 
+## D-026 — Owner Final controlled visual refinement (2026-09-05)
+
+- Decision: refine the frozen Owner Final descendant rather than redesigning it or importing Asset 7 as a replacement.
+- Visual system: retain Calm Institutional and the deep → editorial light → deep journey; use restrained atmospheric bridges, one token layer and motion only for reveal, relationship or state change.
+- Interaction: add one situation-first Services workspace with materially different states; keep the Home hero free of selectors; retain and clarify the original Home Curiosity artwork.
+- Truth boundary: preserve the exact proposition, five-stage method, five service names, professional-context disclosure and cross-industry framing. Add no new claims, clients, certifications, authority or AI theatre.
+- Operations: centralize the public last-updated date and canonical navigation/footer links; deploy only as a review preview from the child branch.
+- Escape route: the refinement is isolated in `final-refine.css`, `site-meta.js` and bounded HTML changes and can be reviewed or reverted without touching the frozen checkpoint.
+
 ## D-025 — Homepage master lock and full-site tonal contract (2026-08-28)
 
 - Master lock: The accepted homepage is the final, launch-ready visual contract. Secondary-page propagation must not change its palette, typography, spacing, artwork, behavior, forms, progress, utility bar or footer.
