@@ -63,6 +63,7 @@ document.querySelectorAll('.scientific-keys button').forEach(button=>button.addE
 }));
 scienceInput?.addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();evaluateScience();}});
 byId('angleMode')?.addEventListener('change',evaluateScience);byId('sciencePrecision')?.addEventListener('change',evaluateScience);
+document.querySelectorAll('[data-expression]').forEach(button=>button.addEventListener('click',()=>{if(!scienceInput)return;scienceInput.value=button.dataset.expression||'';evaluateScience();scienceInput.focus()}));
 
 const quantityData={
   length:{label:'Length',base:'m',sectors:['everyday','civil','mechanical','marine','materials'],units:{m:['metre',1],km:['kilometre',1000],cm:['centimetre',.01],mm:['millimetre',.001],'µm':['micrometre',1e-6],in:['inch',.0254],ft:['foot',.3048],yd:['yard',.9144],mi:['mile',1609.344],nmi:['nautical mile',1852]}},

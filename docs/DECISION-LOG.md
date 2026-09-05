@@ -243,3 +243,14 @@
 - Reordered the Ecosystem decision-learning sequence to match the approved lock.
 - Reordered the primary Ecosystem desk route to the approved Learning-first sequence.
 - Removed the capacity-dependent experimental AI section from the review checkpoint. This is a reversible review-branch correction, not a production deletion.
+
+## D-022 — Owner Final finish-line continuity and useful Ecosystem (2026-09-05)
+
+- Predominant question: How can the selected Owner Final become a coherent launch candidate without losing its institutional soul or restarting the work in disconnected tasks?
+- Continuity decision: keep all implementation on `review/owner-final-visual-refine-20260905`, and treat the workbook, Asset 4 final wording register, frozen Owner Final and approved Experience Notes as one acceptance set. Record the state here so task compaction or a later handoff does not erase the reasoning.
+- Journey decision: make the public sequence explicit as Home → About → Services → Method → Ecosystem → 30-Second Brief, with a visible continuation panel at the bottom of every required route and a direct Home-to-Brief action.
+- Copy boundary: restore only locked or explicitly approved wording; preserve the exact proposition, five Method verbs, five service names, sector line and permission sentence. Do not introduce a new slogan or founder biography.
+- Ecosystem decision: replace the disconnected old public surface with one question-led engineering desk composed only of working or clearly bounded modules. Preserve the 50-calculator engine, local conversion/scientific tools and authoritative outbound sources; add decision-learning interactions only where every control changes visible state.
+- Experience decision: publish four concise, cross-industry Experience Notes inside About, with professional-context disclosure and no client, employer, confidential-value, ownership or project-track-record implication.
+- Motion and mobile decision: remove continuous pointer/magnetic work and redundant runtime asset loading; keep short reveal/state transitions, show initial content immediately, remove fixed overlays, enforce 390px no-overflow behavior, visible mobile navigation and 44px primary touch targets.
+- Release boundary: review branch and Cloudflare preview only. Asset 1, frozen Owner Final, GPT Asset 7, `main`, production and DNS remain untouched.

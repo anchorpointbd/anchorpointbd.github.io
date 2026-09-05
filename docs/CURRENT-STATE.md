@@ -3,9 +3,14 @@
 ## Owner Final visual refinement candidate (2026-09-05)
 
 - Review branch: `review/owner-final-visual-refine-20260905`, created from the frozen Owner Final checkpoint at `12c0c4e27db4e2ea66e94662de582c9206a3b3af`.
-- The pass preserves the six-route architecture and locked copy while consolidating public navigation, footer metadata, focus language, responsive behavior and visual tokens.
+- Primary acceptance sources: `Refine 1.xlsx`, the Asset 4 final wording/decision register in `ASSETS COMPARISON.xlsx`, the frozen Owner Final, and the approved four Experience Notes. Continue this work in this branch/task; do not create a replacement concept or restart from a different checkpoint.
+- The pass preserves the six-route architecture and locked copy while consolidating public navigation, footer metadata, focus language, responsive behavior, visual tokens and the Home → About → Services → Method → Ecosystem → Brief continuation path.
 - Home Curiosity retains the approved artwork and gains a restrained relationship layer connecting technical performance, cost, people, time, risk, evidence, procurement and operations.
-- Services now starts with a meaningful situation selector whose question, likely service, evidence, output and next step all change together; the BDT 1 crore example remains explicitly illustrative.
+- Home now exposes a direct 30-Second Brief route, the locked Asset 4 starting-point language, the refined cross-industry demonstration and an Experience Behind the Method bridge.
+- About now contains the full age-neutral institutional sequence and four interactive Experience Notes with the disclosure `Professional context · Not an Anchor Point client engagement`.
+- Services starts with a meaningful situation selector whose question, likely service, evidence, output and next step all change together; the BDT 1 crore example remains explicitly illustrative.
+- Ecosystem is a question-led engineering desk with Learning, 50 working screening calculators, Conversions, one local Scientific Calculator, curated Sources, Question Archive, Engineering Rabbit Hole, illustrative Decision Autopsy, Assumption Switch and Evidence Confidence Map.
+- Continuous pointer and magnetic effects, redundant runtime stylesheet loading and fixed mobile utility overlays were removed. Reveals are short, off-screen, and bypassed for initial hero content.
 - Public footer metadata is sourced from one site constant: `Website last updated · 05 Sep 2026`.
 - Asset 1, frozen Owner Final, GPT Asset 7, `main`, production and DNS remain untouched.
 
